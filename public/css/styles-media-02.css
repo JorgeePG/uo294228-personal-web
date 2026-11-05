@@ -1,0 +1,22 @@
+
+@media (max-width: 900px) {
+#inicio main > section {
+  min-height: 0;
+  grid-template-columns: 1fr;
+}
+#inicio main header {
+  padding-top: 3rem;
+  padding-right: 0;
+  padding-bottom: 3rem;
+  padding-left: 0;
+}
+#inicio main figure {
+  height: 270px;
+}
+#vehiculos main > ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+#multimedia main > section {
+  grid-template-columns: 1fr;
+}
+}

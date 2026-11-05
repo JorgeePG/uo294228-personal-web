@@ -1,0 +1,352 @@
+[
+  {
+    "file": "p2-web-personal/404.html",
+    "width": 1440,
+    "status": 200,
+    "errors": [],
+    "violations": [],
+    "overflow": false,
+    "images": [],
+    "h1": 1,
+    "interactions": []
+  },
+  {
+    "file": "p2-web-personal/404.html",
+    "width": 390,
+    "status": 200,
+    "errors": [],
+    "violations": [],
+    "overflow": false,
+    "images": [],
+    "h1": 1,
+    "interactions": []
+  },
+  {
+    "file": "p2-web-personal/index.html",
+    "width": 1440,
+    "status": 200,
+    "errors": [],
+    "violations": [],
+    "overflow": false,
+    "images": [
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/escudo-uniovi-100.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/t72-museo-960.webp",
+        "loaded": true
+      }
+    ],
+    "h1": 1,
+    "interactions": []
+  },
+  {
+    "file": "p2-web-personal/index.html",
+    "width": 390,
+    "status": 200,
+    "errors": [],
+    "violations": [],
+    "overflow": false,
+    "images": [
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/escudo-uniovi-100.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/t72-museo-480.webp",
+        "loaded": true
+      }
+    ],
+    "h1": 1,
+    "interactions": []
+  },
+  {
+    "file": "p2-web-personal/multimedia/index.html",
+    "width": 1440,
+    "status": 200,
+    "errors": [],
+    "violations": [],
+    "overflow": false,
+    "images": [
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/escudo-uniovi-100.webp",
+        "loaded": true
+      }
+    ],
+    "h1": 1,
+    "interactions": [
+      "video: {\"duration\":8.68,\"advanced\":true}",
+      "audio: {\"duration\":1581.34855,\"advanced\":true}"
+    ]
+  },
+  {
+    "file": "p2-web-personal/multimedia/index.html",
+    "width": 390,
+    "status": 200,
+    "errors": [],
+    "violations": [],
+    "overflow": false,
+    "images": [
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/escudo-uniovi-100.webp",
+        "loaded": true
+      }
+    ],
+    "h1": 1,
+    "interactions": [
+      "video: {\"duration\":8.68,\"advanced\":true}",
+      "audio: {\"duration\":1581.34855,\"advanced\":true}"
+    ]
+  },
+  {
+    "file": "p2-web-personal/public/transcripciones/war-on-wheels.html",
+    "width": 1440,
+    "status": 200,
+    "errors": [],
+    "violations": [],
+    "overflow": false,
+    "images": [],
+    "h1": 1,
+    "interactions": []
+  },
+  {
+    "file": "p2-web-personal/public/transcripciones/war-on-wheels.html",
+    "width": 390,
+    "status": 200,
+    "errors": [],
+    "violations": [],
+    "overflow": false,
+    "images": [],
+    "h1": 1,
+    "interactions": []
+  },
+  {
+    "file": "p2-web-personal/series-y-peliculas/index.html",
+    "width": 1440,
+    "status": 200,
+    "errors": [],
+    "violations": [],
+    "overflow": false,
+    "images": [
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/escudo-uniovi-100.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/cultura/fury-960.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/cultura/top-gun-maverick-960.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/cultura/masters-of-the-air-960.webp",
+        "loaded": true
+      }
+    ],
+    "h1": 1,
+    "interactions": [
+      "carrusel: anterior, circular, siguiente y teclado"
+    ]
+  },
+  {
+    "file": "p2-web-personal/series-y-peliculas/index.html",
+    "width": 390,
+    "status": 200,
+    "errors": [],
+    "violations": [],
+    "overflow": false,
+    "images": [
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/escudo-uniovi-100.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/cultura/fury-480.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/cultura/top-gun-maverick-480.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/cultura/masters-of-the-air-480.webp",
+        "loaded": true
+      }
+    ],
+    "h1": 1,
+    "interactions": [
+      "carrusel: anterior, circular, siguiente y teclado"
+    ]
+  },
+  {
+    "file": "p2-web-personal/sobre-mi/index.html",
+    "width": 1440,
+    "status": 200,
+    "errors": [],
+    "violations": [],
+    "overflow": false,
+    "images": [
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/escudo-uniovi-100.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/Jorge-480.webp",
+        "loaded": true
+      }
+    ],
+    "h1": 1,
+    "interactions": []
+  },
+  {
+    "file": "p2-web-personal/sobre-mi/index.html",
+    "width": 390,
+    "status": 200,
+    "errors": [],
+    "violations": [],
+    "overflow": false,
+    "images": [
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/escudo-uniovi-100.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/Jorge-480.webp",
+        "loaded": true
+      }
+    ],
+    "h1": 1,
+    "interactions": []
+  },
+  {
+    "file": "p2-web-personal/videojuegos/index.html",
+    "width": 1440,
+    "status": 200,
+    "errors": [],
+    "violations": [],
+    "overflow": false,
+    "images": [
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/escudo-uniovi-100.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/cultura/war-thunder-960.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/cultura/world-of-tanks-960.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/cultura/il2-sturmovik-960.webp",
+        "loaded": true
+      }
+    ],
+    "h1": 1,
+    "interactions": [
+      "carrusel: anterior, circular, siguiente y teclado"
+    ]
+  },
+  {
+    "file": "p2-web-personal/videojuegos/index.html",
+    "width": 390,
+    "status": 200,
+    "errors": [],
+    "violations": [],
+    "overflow": false,
+    "images": [
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/escudo-uniovi-100.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/cultura/war-thunder-480.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/cultura/world-of-tanks-480.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/cultura/il2-sturmovik-480.webp",
+        "loaded": true
+      }
+    ],
+    "h1": 1,
+    "interactions": [
+      "carrusel: anterior, circular, siguiente y teclado"
+    ]
+  },
+  {
+    "file": "p2-web-personal/intereses/index.html",
+    "width": 1440,
+    "status": 200,
+    "errors": [],
+    "violations": [],
+    "overflow": false,
+    "images": [
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/escudo-uniovi-100.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/t90m-480.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/strela-10-480.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/su57-480.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/t72-museo-480.webp",
+        "loaded": true
+      }
+    ],
+    "h1": 1,
+    "interactions": [
+      "galería: abrir y cerrar con Escape"
+    ]
+  },
+  {
+    "file": "p2-web-personal/intereses/index.html",
+    "width": 390,
+    "status": 200,
+    "errors": [],
+    "violations": [],
+    "overflow": false,
+    "images": [
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/escudo-uniovi-100.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/t90m-480.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/strela-10-480.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/su57-480.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4568/p2-web-personal/public/img/t72-museo-480.webp",
+        "loaded": true
+      }
+    ],
+    "h1": 1,
+    "interactions": [
+      "galería: abrir y cerrar con Escape"
+    ]
+  }
+]

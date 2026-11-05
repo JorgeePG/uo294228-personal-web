@@ -1,0 +1,85 @@
+
+@media (max-width: 650px) {
+main {
+  width: calc(100% - 2rem);
+}
+body > header {
+  padding-inline: 1rem;
+}
+#inicio main > section {
+  padding-inline: 1rem;
+}
+body > header nav ul {
+  gap: .1rem .45rem;
+}
+body > header nav a {
+  font-size: .82rem;
+}
+#inicio main header {
+  padding-top: 2.5rem;
+  padding-right: 0;
+  padding-bottom: 2.5rem;
+  padding-left: 0;
+}
+#inicio main figure {
+  height: 210px;
+}
+#sobre-mi main > section {
+  grid-template-columns: 1fr;
+}
+#vehiculos main > ul {
+  grid-template-columns: 1fr;
+}
+#vehiculos main > section {
+  grid-template-columns: 1fr;
+}
+body > footer section {
+  width: calc(100% - 2rem);
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+#sobre-mi main figure {
+  max-width: 260px;
+  grid-row-start: auto;
+  grid-row-end: auto;
+}
+#sobre-mi main > section > h2 {
+  grid-column-start: 1;
+  grid-column-end: auto;
+}
+#sobre-mi main > section > p {
+  grid-column-start: 1;
+  grid-column-end: auto;
+}
+#sobre-mi main > section > dl {
+  grid-column-start: 1;
+  grid-column-end: auto;
+}
+#vehiculos main > ul img {
+  height: 210px;
+}
+#vehiculos main > section ul {
+  grid-column-start: 1;
+  grid-column-end: auto;
+  grid-row-start: auto;
+  grid-row-end: auto;
+  margin-top: .7rem;
+}
+[data-track] > article {
+  display: block;
+  height: auto;
+}
+[data-track] figure {
+  height: 260px;
+}
+[data-track] article > header {
+  min-height: 265px;
+  padding-top: 1.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1.25rem;
+}
+[data-track] h2 {
+  font-size: 2.4rem;
+}
+}

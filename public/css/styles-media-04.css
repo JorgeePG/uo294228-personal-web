@@ -1,0 +1,54 @@
+
+@media (prefers-reduced-motion: reduce) {
+html {
+  scroll-behavior: auto;
+}
+[data-track] {
+  scroll-behavior: auto;
+}
+#inicio main header {
+  animation: none;
+}
+#inicio main figure img {
+  animation: none;
+}
+main > header {
+  animation: none;
+}
+#inicio main header > p:last-child a:first-child {
+  transition: none;
+}
+body > header nav a {
+  transition: none;
+}
+#vehiculos main > ul article {
+  transition: none;
+}
+#vehiculos main > ul img {
+  transition: none;
+}
+[data-carousel] button {
+  transition: none;
+}
+[data-track] img {
+  transition: none;
+}
+[data-track] article > header a {
+  transition: none;
+}
+#inicio main header > p:last-child a:first-child:hover {
+  transform: none;
+}
+body > header nav a:hover {
+  transform: none;
+}
+#vehiculos main > ul article:hover {
+  transform: none;
+}
+[data-carousel] button:hover {
+  transform: none;
+}
+[data-track] article:hover img {
+  transform: none;
+}
+}

@@ -1,0 +1,15 @@
+
+@media (max-width: 1080px) {
+body > header {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: .5rem;
+  padding-block: .75rem;
+}
+body > header nav {
+  width: 100%;
+}
+#inicio main > section {
+  min-height: calc(100vh - 245px);
+}
+}

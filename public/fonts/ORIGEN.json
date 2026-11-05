@@ -1,0 +1,114 @@
+[
+  {
+    "family": "Barlow Condensed",
+    "weight": "500",
+    "subset": "latin-ext",
+    "name": "barlow-condensed-500-latin-ext.woff2",
+    "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4-Lwz3jWuZEC.woff2",
+    "bytes": 14180
+  },
+  {
+    "family": "Barlow Condensed",
+    "weight": "500",
+    "subset": "latin",
+    "name": "barlow-condensed-500-latin.woff2",
+    "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4-Lwz3bWuQ.woff2",
+    "bytes": 21424
+  },
+  {
+    "family": "Barlow Condensed",
+    "weight": "600",
+    "subset": "latin-ext",
+    "name": "barlow-condensed-600-latin-ext.woff2",
+    "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873z3jWuZEC.woff2",
+    "bytes": 14516
+  },
+  {
+    "family": "Barlow Condensed",
+    "weight": "600",
+    "subset": "latin",
+    "name": "barlow-condensed-600-latin.woff2",
+    "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873z3bWuQ.woff2",
+    "bytes": 22308
+  },
+  {
+    "family": "Barlow Condensed",
+    "weight": "700",
+    "subset": "latin-ext",
+    "name": "barlow-condensed-700-latin-ext.woff2",
+    "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3jWuZEC.woff2",
+    "bytes": 14640
+  },
+  {
+    "family": "Barlow Condensed",
+    "weight": "700",
+    "subset": "latin",
+    "name": "barlow-condensed-700-latin.woff2",
+    "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3bWuQ.woff2",
+    "bytes": 22444
+  },
+  {
+    "family": "IBM Plex Sans",
+    "weight": "400",
+    "subset": "latin-ext",
+    "name": "ibm-plex-sans-400-latin-ext.woff2",
+    "url": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxQKYbABA.woff2",
+    "bytes": 30964
+  },
+  {
+    "family": "IBM Plex Sans",
+    "weight": "400",
+    "subset": "latin",
+    "name": "ibm-plex-sans-400-latin.woff2",
+    "url": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxeKYY.woff2",
+    "bytes": 45712
+  },
+  {
+    "family": "IBM Plex Sans",
+    "weight": "500",
+    "subset": "latin-ext",
+    "name": "ibm-plex-sans-500-latin-ext.woff2",
+    "url": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxQKYbABA.woff2",
+    "bytes": 30964
+  },
+  {
+    "family": "IBM Plex Sans",
+    "weight": "500",
+    "subset": "latin",
+    "name": "ibm-plex-sans-500-latin.woff2",
+    "url": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxeKYY.woff2",
+    "bytes": 45712
+  },
+  {
+    "family": "IBM Plex Sans",
+    "weight": "600",
+    "subset": "latin-ext",
+    "name": "ibm-plex-sans-600-latin-ext.woff2",
+    "url": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxQKYbABA.woff2",
+    "bytes": 30964
+  },
+  {
+    "family": "IBM Plex Sans",
+    "weight": "600",
+    "subset": "latin",
+    "name": "ibm-plex-sans-600-latin.woff2",
+    "url": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxeKYY.woff2",
+    "bytes": 45712
+  },
+  {
+    "family": "IBM Plex Sans",
+    "weight": "700",
+    "subset": "latin-ext",
+    "name": "ibm-plex-sans-700-latin-ext.woff2",
+    "url": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxQKYbABA.woff2",
+    "bytes": 30964
+  },
+  {
+    "family": "IBM Plex Sans",
+    "weight": "700",
+    "subset": "latin",
+    "name": "ibm-plex-sans-700-latin.woff2",
+    "url": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxeKYY.woff2",
+    "bytes": 45712
+  }
+]
