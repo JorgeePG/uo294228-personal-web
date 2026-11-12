@@ -1,0 +1,68 @@
+[
+  {
+    "file": "public/img/t90m.jpg",
+    "width": 960,
+    "height": 640,
+    "bytes": 173740
+  },
+  {
+    "file": "public/img/strela-10.jpg",
+    "width": 960,
+    "height": 640,
+    "bytes": 150509
+  },
+  {
+    "file": "public/img/su57.jpg",
+    "width": 960,
+    "height": 640,
+    "bytes": 86979
+  },
+  {
+    "file": "public/img/t72-museo.jpg",
+    "width": 960,
+    "height": 640,
+    "bytes": 101345
+  },
+  {
+    "file": "public/img/cultura/fury.jpg",
+    "width": 640,
+    "height": 960,
+    "bytes": 123463
+  },
+  {
+    "file": "public/img/cultura/top-gun-maverick.jpg",
+    "width": 640,
+    "height": 960,
+    "bytes": 94608
+  },
+  {
+    "file": "public/img/cultura/masters-of-the-air.jpg",
+    "width": 640,
+    "height": 960,
+    "bytes": 125046
+  },
+  {
+    "file": "public/img/cultura/war-thunder.jpg",
+    "width": 960,
+    "height": 640,
+    "bytes": 126552
+  },
+  {
+    "file": "public/img/cultura/world-of-tanks.jpg",
+    "width": 960,
+    "height": 640,
+    "bytes": 130327
+  },
+  {
+    "file": "public/img/cultura/il2-sturmovik.jpg",
+    "width": 960,
+    "height": 640,
+    "bytes": 79937
+  },
+  {
+    "file": "public/img/Jorge.jpg",
+    "width": 400,
+    "height": 400,
+    "bytes": 26259
+  }
+]

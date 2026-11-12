@@ -6,25 +6,11 @@
   <meta name="theme-color" content="#111111">
   <title>Inicio · Jorge Puente García</title>
   <link rel="icon" href="public/favicon.png" type="image/png">
-  <link rel="stylesheet" href="public/fonts/font-face-01.css">
-<link rel="stylesheet" href="public/fonts/font-face-02.css">
-<link rel="stylesheet" href="public/fonts/font-face-03.css">
-<link rel="stylesheet" href="public/fonts/font-face-04.css">
-<link rel="stylesheet" href="public/fonts/font-face-05.css">
-<link rel="stylesheet" href="public/fonts/font-face-06.css">
-<link rel="stylesheet" href="public/fonts/font-face-07.css">
-<link rel="stylesheet" href="public/fonts/font-face-08.css">
-<link rel="stylesheet" href="public/fonts/font-face-09.css">
-<link rel="stylesheet" href="public/fonts/font-face-10.css">
-<link rel="stylesheet" href="public/fonts/font-face-11.css">
-<link rel="stylesheet" href="public/fonts/font-face-12.css">
-<link rel="stylesheet" href="public/fonts/font-face-13.css">
-<link rel="stylesheet" href="public/fonts/font-face-14.css">
-<link rel="stylesheet" href="public/css/styles.css?v=666fdcd77316">
-<link rel="stylesheet" href="public/css/styles-media-01.css">
-<link rel="stylesheet" href="public/css/styles-media-02.css">
-<link rel="stylesheet" href="public/css/styles-media-03.css">
-<link rel="stylesheet" href="public/css/styles-media-04.css">
+<link rel="stylesheet" href="public/fonts/fonts.css">
+<link rel="preload" href="public/fonts/barlow-condensed-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="public/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="public/fonts/ibm-plex-sans-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="public/css/site.min.css">
 </head>
 <body id="inicio">
   <a href="#contenido">Saltar al contenido</a>
@@ -40,25 +26,27 @@
         <li><a href="videojuegos/index.html">Videojuegos</a></li>
       </ul>
     </nav>
+ <a data-utility href="buscar/index.html">Buscar</a>
+ <a data-language href="en/index.html" lang="en" hreflang="en">English</a>
   </header>
-  <main id="contenido">
+  <main id="contenido" tabindex="-1">
     <section>
       <header>
         <p>Sitio personal · Jorge Puente García</p>
         <h1>Tanques, aviones y museos.</h1>
-        <p>Me gustan los tanques y los aviones de combate. Disfruto descubriendo sus detalles en museos y viendo cómo aparecen en películas, juegos y otros medios. Aquí comparto lo que voy encontrando.</p>
+        <p>Me gustan los tanques y los aviones de combate. He visitado pocos museos, pero sigo sus colecciones y disfruto descubriendo vehículos en películas y videojuegos. En War Thunder juego con un enfoque de coleccionismo: me atrae el detalle con el que representa y explica tanques y aviones.</p>
         <p><a href="intereses/index.html">Ver vehículos</a><a href="multimedia/index.html">Vídeo y podcast</a></p>
       </header>
-      <figure><picture><source type="image/webp" srcset="public/img/t72-museo-480.webp 480w, public/img/t72-museo-960.webp 960w" sizes="(max-width: 900px) 100vw, 590px"><img src="public/img/t72-museo.jpg" alt="Tanque T-72 expuesto en The Tank Museum de Bovington" width="1920" height="1440" fetchpriority="high"></picture></figure>
+      <figure><picture><source type="image/webp" srcset="public/img/t72-museo-480.webp 480w, public/img/t72-museo-768.webp 768w, public/img/t72-museo-960.webp 960w" sizes="(max-width: 900px) 100vw, 590px"><img src="public/img/t72-museo.jpg" alt="Tanque T-72 expuesto en The Tank Museum de Bovington" width="960" height="640" fetchpriority="high"></picture></figure>
     </section>
-  </main>
+  <section data-overview aria-labelledby="explora"><h2 id="explora">Explora mis intereses</h2><p><a href="sobre-mi/index.html">Sobre mí y mi formación</a> · <a href="intereses/index.html">Vehículos y museos</a> · <a href="multimedia/index.html">Vídeo y podcast</a> · <a href="series-y-peliculas/index.html">Series y películas</a> · <a href="videojuegos/index.html">Videojuegos</a></p></section></main>
   <footer>
     <section aria-label="Información personal y contacto">
-      <p><strong>Jorge Puente García</strong><span>Estudio Ingeniería Web y comparto aquí mis intereses.</span></p>
+      <p><strong>Jorge Puente García</strong><span>Desarrollo software y comparto aquí mis intereses.</span></p>
       <p><strong>Desde Asturias</strong><span>Me interesan los blindados, la aviación y los museos.</span></p>
       <address><strong>Contacto</strong><a href="mailto:uo294228@uniovi.es">uo294228@uniovi.es</a></address>
     </section>
-  </footer>
+  <p data-updated>Última actualización: <time datetime="2026-11-12">12 de noviembre de 2026</time> · <a href="ayuda/index.html">Ayuda y mapa del sitio</a></p><!-- profile-links --><p data-updated><a href="https://www.linkedin.com/in/jorge-puente-garc%C3%ADa">LinkedIn</a> · <a href="https://github.com/JorgeePG">GitHub</a></p><!-- /profile-links --></footer>
 
 
 </body></html>

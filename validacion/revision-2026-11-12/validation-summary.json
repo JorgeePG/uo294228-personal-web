@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-12T19:18:13.478Z",
+  "validator": "Nu Html Checker 26.11.9",
+  "results": [
+    {
+      "type": "html",
+      "files": 19,
+      "exitCode": 0,
+      "messages": 0,
+      "passed": true
+    },
+    {
+      "type": "css",
+      "files": 22,
+      "exitCode": 0,
+      "messages": 0,
+      "passed": true
+    }
+  ],
+  "resources": {
+    "missing": [],
+    "passed": true
+  }
+}

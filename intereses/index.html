@@ -6,26 +6,12 @@
   <meta name="theme-color" content="#111111">
   <title>Vehículos y museos · Jorge Puente García</title>
   <link rel="icon" href="../public/favicon.png" type="image/png">
-  <link rel="stylesheet" href="../public/fonts/font-face-01.css">
-<link rel="stylesheet" href="../public/fonts/font-face-02.css">
-<link rel="stylesheet" href="../public/fonts/font-face-03.css">
-<link rel="stylesheet" href="../public/fonts/font-face-04.css">
-<link rel="stylesheet" href="../public/fonts/font-face-05.css">
-<link rel="stylesheet" href="../public/fonts/font-face-06.css">
-<link rel="stylesheet" href="../public/fonts/font-face-07.css">
-<link rel="stylesheet" href="../public/fonts/font-face-08.css">
-<link rel="stylesheet" href="../public/fonts/font-face-09.css">
-<link rel="stylesheet" href="../public/fonts/font-face-10.css">
-<link rel="stylesheet" href="../public/fonts/font-face-11.css">
-<link rel="stylesheet" href="../public/fonts/font-face-12.css">
-<link rel="stylesheet" href="../public/fonts/font-face-13.css">
-<link rel="stylesheet" href="../public/fonts/font-face-14.css">
-<link rel="stylesheet" href="../public/css/styles.css?v=666fdcd77316">
-<link rel="stylesheet" href="../public/css/styles-media-01.css">
-<link rel="stylesheet" href="../public/css/styles-media-02.css">
-<link rel="stylesheet" href="../public/css/styles-media-03.css">
-<link rel="stylesheet" href="../public/css/styles-media-04.css">
+<link rel="stylesheet" href="../public/fonts/fonts.css">
   <script src="../public/js/gallery.js" defer=""></script>
+<link rel="preload" href="../public/fonts/barlow-condensed-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../public/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../public/fonts/ibm-plex-sans-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../public/css/site.min.css">
 </head>
 <body id="vehiculos">
   <a href="#contenido">Saltar al contenido</a>
@@ -41,27 +27,29 @@
         <li><a href="../videojuegos/index.html">Videojuegos</a></li>
       </ul>
     </nav>
+ <a data-utility href="../buscar/index.html">Buscar</a>
+ <a data-language href="../en/intereses/index.html" lang="en" hreflang="en">English</a>
   </header>
-  <main id="contenido">
+  <main id="contenido" tabindex="-1">
     <header>
       <h1>Vehículos y museos</h1>
       <p>He escogido cuatro vehículos que me gusta observar con calma: dos tanques, un antiaéreo y un caza. Puedes ampliar las fotos y abrir cada ficha para saber por qué me interesan.</p>
     </header>
     <ul>
         <li><article>
-          <figure><a href="../public/img/t90m.jpg" data-enlarge="" aria-label="Ampliar fotografía de T-90M"><picture><source type="image/webp" srcset="../public/img/t90m-480.webp 480w, ../public/img/t90m-960.webp 960w" sizes="(max-width: 650px) 100vw, (max-width: 900px) 50vw, 285px"><img fetchpriority="high" src="../public/img/t90m.jpg" alt="Carro de combate ruso T-90M visto de frente y de lado" width="1200" height="800"></picture></a><figcaption><h2>T-90M</h2><span>Carro de combate</span></figcaption></figure>
+          <figure><a href="../public/img/t90m.jpg" data-enlarge="" aria-label="Ampliar fotografía de T-90M"><picture><source type="image/webp" srcset="../public/img/t90m-480.webp 480w, ../public/img/t90m-960.webp 960w" sizes="(max-width: 650px) 100vw, (max-width: 900px) 50vw, 285px"><img fetchpriority="high" src="../public/img/t90m.jpg" alt="Carro de combate ruso T-90M visto de frente y de lado" width="960" height="640"></picture></a><figcaption><h2>T-90M</h2><span>Carro de combate</span></figcaption></figure>
           <details><summary>Qué me interesa</summary><p>Del T-90M me gusta fijarme en cómo se combinan protección, movilidad y armamento. Compararlo con otros carros me ayuda a entender su evolución.</p><p><a href="https://commons.wikimedia.org/wiki/File:T-90M.jpg">Autoría y licencia de la foto</a></p></details>
         </article></li>
         <li><article>
-          <figure><a href="../public/img/strela-10.jpg" data-enlarge="" aria-label="Ampliar fotografía de Strela-10"><picture><source type="image/webp" srcset="../public/img/strela-10-480.webp 480w, ../public/img/strela-10-960.webp 960w" sizes="(max-width: 650px) 100vw, (max-width: 900px) 50vw, 285px"><img loading="lazy" src="../public/img/strela-10.jpg" alt="Dos sistemas antiaéreos soviéticos Strela-10 en un campo" width="1920" height="1280"></picture></a><figcaption><h2>Strela-10</h2><span>Defensa antiaérea</span></figcaption></figure>
+          <figure><a href="../public/img/strela-10.jpg" data-enlarge="" aria-label="Ampliar fotografía de Strela-10"><picture><source type="image/webp" srcset="../public/img/strela-10-480.webp 480w, ../public/img/strela-10-960.webp 960w" sizes="(max-width: 650px) 100vw, (max-width: 900px) 50vw, 285px"><img loading="lazy" src="../public/img/strela-10.jpg" alt="Dos sistemas antiaéreos soviéticos Strela-10 en un campo" width="960" height="640"></picture></a><figcaption><h2>Strela-10</h2><span>Defensa antiaérea</span></figcaption></figure>
           <details><summary>Qué me interesa</summary><p>El Strela-10 me llama la atención porque lleva la defensa antiaérea sobre orugas. Me interesa cómo puede moverse junto a otros vehículos.</p><p><a href="https://commons.wikimedia.org/wiki/File:Granit_2023_-_91_-_Strela-10.jpg">Autoría y licencia de la foto</a></p></details>
         </article></li>
         <li><article>
-          <figure><a href="../public/img/su57.jpg" data-enlarge="" aria-label="Ampliar fotografía de Su-57"><picture><source type="image/webp" srcset="../public/img/su57-480.webp 480w, ../public/img/su57-960.webp 960w" sizes="(max-width: 650px) 100vw, (max-width: 900px) 50vw, 285px"><img loading="lazy" src="../public/img/su57.jpg" alt="Caza ruso Su-57 volando contra un cielo despejado" width="1920" height="1220"></picture></a><figcaption><h2>Su-57</h2><span>Aviación militar</span></figcaption></figure>
+          <figure><a href="../public/img/su57.jpg" data-enlarge="" aria-label="Ampliar fotografía de Su-57"><picture><source type="image/webp" srcset="../public/img/su57-480.webp 480w, ../public/img/su57-960.webp 960w" sizes="(max-width: 650px) 100vw, (max-width: 900px) 50vw, 285px"><img loading="lazy" src="../public/img/su57.jpg" alt="Caza ruso Su-57 volando contra un cielo despejado" width="960" height="640"></picture></a><figcaption><h2>Su-57</h2><span>Aviación militar</span></figcaption></figure>
           <details><summary>Qué me interesa</summary><p>Del Su-57 me atrae la silueta. Me gusta comparar las decisiones de diseño de un caza con las de un vehículo terrestre.</p><p><a href="https://commons.wikimedia.org/wiki/File:%D0%A1%D1%83-57.jpg">Autoría y licencia de la foto</a></p></details>
         </article></li>
         <li><article>
-          <figure><a href="../public/img/t72-museo.jpg" data-enlarge="" aria-label="Ampliar fotografía de T-72"><picture><source type="image/webp" srcset="../public/img/t72-museo-480.webp 480w, ../public/img/t72-museo-960.webp 960w" sizes="(max-width: 650px) 100vw, (max-width: 900px) 50vw, 285px"><img loading="lazy" src="../public/img/t72-museo.jpg" alt="Tanque T-72 expuesto en The Tank Museum de Bovington" width="1920" height="1440"></picture></a><figcaption><h2>T-72</h2><span>The Tank Museum</span></figcaption></figure>
+          <figure><a href="../public/img/t72-museo.jpg" data-enlarge="" aria-label="Ampliar fotografía de T-72"><picture><source type="image/webp" srcset="../public/img/t72-museo-480.webp 480w, ../public/img/t72-museo-960.webp 960w" sizes="(max-width: 650px) 100vw, (max-width: 900px) 50vw, 285px"><img loading="lazy" src="../public/img/t72-museo.jpg" alt="Tanque T-72 expuesto en The Tank Museum de Bovington" width="960" height="640"></picture></a><figcaption><h2>T-72</h2><span>The Tank Museum</span></figcaption></figure>
           <details><summary>Qué me interesa</summary><p>Ver este T-72 expuesto me ayuda a imaginar su tamaño real. Me gusta que el museo permita ir más allá de las cifras y conocer su historia.</p><p><a href="https://commons.wikimedia.org/wiki/File:T-72_Main_Battle_Tank.jpg">Autoría y licencia de la foto</a></p></details>
         </article></li>
     </ul>
@@ -77,15 +65,15 @@
     <dialog id="photo-dialog" aria-label="Fotografía ampliada">
       <button type="button">Cerrar imagen</button>
       <figure><img loading="lazy" src="../public/img/t90m.jpg" alt="Fotografía ampliada de T-90M"><figcaption></figcaption></figure>
-    </dialog>
-  </main>
+    <p>También puedes cerrar la imagen con Escape.</p></dialog>
+  <nav aria-label="Ruta de navegación"><a href="../index.html">Inicio</a> / <span>Vehículos y museos</span></nav></main>
   <footer>
     <section aria-label="Información personal y contacto">
-      <p><strong>Jorge Puente García</strong><span>Estudio Ingeniería Web y comparto aquí mis intereses.</span></p>
+      <p><strong>Jorge Puente García</strong><span>Desarrollo software y comparto aquí mis intereses.</span></p>
       <p><strong>Desde Asturias</strong><span>Me interesan los blindados, la aviación y los museos.</span></p>
       <address><strong>Contacto</strong><a href="mailto:uo294228@uniovi.es">uo294228@uniovi.es</a></address>
     </section>
-  </footer>
+  <p data-updated>Última actualización: <time datetime="2026-11-12">12 de noviembre de 2026</time> · <a href="../ayuda/index.html">Ayuda y mapa del sitio</a></p><!-- profile-links --><p data-updated><a href="https://www.linkedin.com/in/jorge-puente-garc%C3%ADa">LinkedIn</a> · <a href="https://github.com/JorgeePG">GitHub</a></p><!-- /profile-links --></footer>
 
 
 </body></html>

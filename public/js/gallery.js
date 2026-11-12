@@ -19,5 +19,7 @@ if (dialog && typeof dialog.showModal === 'function') {
   dialog.addEventListener('click', (event) => {
     if (event.target === dialog) dialog.close();
   });
-  dialog.addEventListener('close', () => enlargedImage.removeAttribute('src'));
+  enlargedImage.addEventListener('error', () => {
+    caption.textContent = document.documentElement.lang === 'en' ? 'The image could not be loaded. Close it and try again.' : 'No se ha podido cargar la imagen. Ciérrala y vuelve a intentarlo.';
+  });
 }

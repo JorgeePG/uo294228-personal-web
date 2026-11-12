@@ -1,0 +1,86 @@
+/* Consistent media geometry and compact navigation, retaining the original visual identity. */
+body > header { flex-wrap: wrap; gap: .5rem 1rem; padding-block: .7rem; }
+body > header > a { min-width: 0; white-space: normal; }
+body > header > a:first-child { font-size: clamp(1.2rem, 2.2vw, 1.7rem); }
+body > header nav { flex: 1 1 600px; }
+body > header nav a, [data-utility], [data-language] { min-height: 44px; align-content: center; }
+body > header [data-utility], body > header [data-language] { font: 700 .9rem 'IBM Plex Sans', Arial, sans-serif; text-decoration: underline; }
+main { min-width: 0; }
+main[tabindex]:focus { outline: none; }
+main > nav { margin-block: 1rem; font-size: .9rem; }
+[data-updated] { width: min(1180px, calc(100% - 2rem)); margin: 0 auto; padding-bottom: 1rem; font-size: .85rem; }
+#inicio main > [data-overview] { display: block; min-height: 0; padding-block: 1.5rem; background: var(--paper); color: var(--ink); }
+[data-overview] h2 { margin-bottom: .5rem; }
+[data-overview] p { margin-bottom: 0; line-height: 2; }
+#inicio main figure { height: 480px; align-self: center; }
+#inicio main figure img { height: 100%; object-fit: cover; }
+#inicio main header > p:last-child a:first-child:hover { color: var(--ink); }
+#vehiculos main > ul img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+#vehiculos main > ul picture { aspect-ratio: 3 / 2; }
+#vehiculos main > ul figure a { min-height: 44px; }
+#vehiculos main > ul figure a::after { pointer-events: none; }
+html[lang="en"] #vehiculos main > ul figure a::after { content: 'Enlarge +'; }
+[data-carousel] > [data-help] { font-size: .9rem; margin-top: 1rem; }
+[data-carousel] button { width: auto; min-width: 44px; min-height: 44px; height: auto; padding: .55rem .8rem; font-size: 1rem; border-radius: 999px; }
+[data-carousel] button:hover { color: #fff; }
+[data-track] { align-items: stretch; }
+[data-track] > article { height: auto; min-height: 410px; grid-template-columns: 44% minmax(0, 1fr); }
+[data-track] figure { height: 360px; align-self: center; }
+[data-track] picture { width: 100%; height: 100%; }
+[data-track] picture img { height: 100%; object-fit: cover; }
+#series [data-track] picture img { object-fit: contain; }
+[data-track] article > header { padding: clamp(1rem, 3vw, 2.5rem); }
+[data-track] h2 { font-size: clamp(2rem, 3.5vw, 3.3rem); overflow-wrap: anywhere; }
+[data-track] figcaption { flex-shrink: 0; }
+#sobre-mi main > [data-profile] { display: block; border-top: 1px solid var(--line); }
+#sobre-mi [data-profile] p { max-width: 75ch; }
+#sobre-mi main figure img { height: auto; }
+#sobre-mi [data-profile] ul { padding-left: 1.25rem; }
+#sobre-mi [data-profile] li { margin-bottom: 1.2rem; }
+#sobre-mi [data-profile] li p { margin-block: .4rem; }
+#sobre-mi [data-profile] > [data-reference-photo] { width: min(100%, 640px); max-width: 640px; margin: 0 0 1.5rem; border: 0; box-shadow: none; }
+#sobre-mi [data-reference-photo] img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
+#sobre-mi [data-reference-photo] figcaption { padding-top: .6rem; font-size: .85rem; line-height: 1.5; }
+#sobre-mi [data-profile] [data-reference-cards] { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; padding: 0; list-style: none; }
+#sobre-mi [data-reference-card] { display: flex; align-items: flex-start; gap: 1rem; margin: 0; padding: 1rem; border: 2px solid var(--line); background: #fff; min-width: 0; }
+#sobre-mi [data-reference-card] > div { min-width: 0; overflow-wrap: anywhere; }
+#sobre-mi img[data-reference-portrait] { width: 96px; height: 96px; aspect-ratio: 1; object-fit: cover; flex: 0 0 96px; border-radius: 4px; }
+@media (max-width: 900px) { #sobre-mi [data-profile] [data-reference-cards] { grid-template-columns: 1fr; } }
+#transcript-page main { max-width: 75ch; padding-block: 1.5rem; }
+form[role="search"] { margin-block: 1.5rem; max-width: 60ch; }
+form label { display: block; font-weight: 700; margin-bottom: .6rem; }
+form input { width: 100%; min-height: 48px; border: 2px solid var(--ink); padding: .7rem; font: inherit; background: white; color: var(--ink); }
+form button { margin-top: .7rem; min-height: 44px; padding: .6rem 1.2rem; background: var(--ink); color: white; border: 2px solid var(--ink); border-radius: 999px; font: inherit; cursor: pointer; }
+input:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+[data-results] { padding-left: 1.3rem; }
+[data-results] li { margin-block: 1rem; }
+[data-results] a { font-weight: 700; }
+#utilidad main > section { padding-block: 1.3rem; max-width: 75ch; }
+@media (max-width: 1080px) {
+ body > header { flex-direction: row; align-items: center; }
+ body > header nav { order: 2; flex-basis: 100%; }
+ body > header > a:first-child { margin-right: auto; }
+ body > header nav ul { gap: .15rem; }
+ body > header nav a { padding-inline: .6rem; }
+}
+@media (max-width: 650px) {
+ body > header > a:first-child img { width: 32px; height: 32px; }
+ body > header nav ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+ body > header nav a { width: 100%; padding: .4rem .25rem; font-size: .76rem; text-align: center; line-height: 1.3; }
+ body > header [data-utility], body > header [data-language] { font-size: .8rem; }
+ #inicio main header { padding-block: 1.5rem; }
+ #inicio h1 { font-size: clamp(2.5rem, 10vw, 3.4rem); margin-bottom: 1rem; }
+ #inicio main figure { height: auto; aspect-ratio: 3 / 2; }
+ [data-track] > article { display: flex; flex-direction: column; min-height: 0; }
+ [data-track] figure { width: 100%; height: 220px; flex: 0 0 220px; }
+ [data-track] article > header { min-height: 0; flex: 1; justify-content: flex-start; padding: 1rem; }
+ [data-track] article > header a { margin-top: auto; }
+ [data-track] h2 { font-size: 2rem; }
+ #sobre-mi main > section { gap: 1rem; }
+ #sobre-mi main figure { max-width: 180px; }
+ #vehiculos main > section li { flex-wrap: wrap; }
+ #vehiculos main > section li span { text-align: left; }
+}
+@media (prefers-reduced-motion: reduce) {
+ *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
+}

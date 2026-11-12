@@ -1,0 +1,163 @@
+{
+  "socialProfiles": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/jorge-puente-garcía"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/JorgeePG"
+    }
+  ],
+  "professionalEmail": "jorgepq20018@gmail.com",
+  "education": [
+    {
+      "title": {
+        "es": "Grado en Ingeniería Informática",
+        "en": "Degree in Computer Engineering"
+      },
+      "organisation": {
+        "es": "Universidad de Oviedo",
+        "en": "University of Oviedo"
+      },
+      "start": "2022",
+      "end": {
+        "es": "En curso",
+        "en": "In progress"
+      },
+      "description": {
+        "es": "Formación universitaria en Ingeniería Informática.",
+        "en": "University studies in Computer Engineering."
+      }
+    }
+  ],
+  "experience": [
+    {
+      "title": {
+        "es": "Programador informático",
+        "en": "Software developer"
+      },
+      "organisation": "TWave · Cayés",
+      "start": {
+        "es": "Febrero de 2026",
+        "en": "February 2026"
+      },
+      "description": {
+        "es": "Desarrollo de un programa de monitorización de tickets en Python, corrección de errores en producción y refactorización de código en Go para mejorar su eficiencia y escalabilidad. Desarrollo de una herramienta en Go para configurar la red con ConnMan a través de D-Bus.",
+        "en": "Development of a ticket monitoring application in Python, production bug fixes and Go refactoring to improve efficiency and scalability. Development of a Go tool for network configuration using ConnMan over D-Bus."
+      }
+    },
+    {
+      "title": {
+        "es": "Prácticas de ingeniería de software",
+        "en": "Software engineering internship"
+      },
+      "organisation": "TWave · Cayés",
+      "start": {
+        "es": "Junio de 2025",
+        "en": "June 2025"
+      },
+      "end": {
+        "es": "Febrero de 2026",
+        "en": "February 2026"
+      },
+      "description": {
+        "es": "Implementación de un RAG agéntico con Go, Qdrant, SQLite, almacenamiento S3 y modelos de OpenRouter. Desarrollo de backend para sensores inalámbricos con MQTT, NATS y Go, e integración de un modelo de lenguaje para asistir al usuario.",
+        "en": "Implementation of an agentic RAG system using Go, Qdrant, SQLite, S3 storage and models accessed through OpenRouter. Backend development for wireless sensors using MQTT, NATS and Go, and integration of a language model for user assistance."
+      }
+    },
+    {
+      "title": {
+        "es": "Especialista del metal",
+        "en": "Metalworking specialist"
+      },
+      "organisation": "SERVEO · Trasona",
+      "start": {
+        "es": "Junio de 2024",
+        "en": "June 2024"
+      },
+      "end": {
+        "es": "Agosto de 2024",
+        "en": "August 2024"
+      },
+      "description": {
+        "es": "Reparación y mantenimiento de maquinaria pesada. Participación en protocolos de paradas de emergencia, con atención a la seguridad y al trabajo en equipo.",
+        "en": "Repair and maintenance of heavy machinery. Participation in emergency shutdown procedures, with a focus on safety and teamwork."
+      }
+    }
+  ],
+  "references": [
+    {
+      "name": "José Ramón Blanco González",
+      "role": {
+        "es": "CEO y cofundador de TWave",
+        "en": "CEO and co-founder of TWave"
+      },
+      "description": {
+        "es": "Referencia profesional de mi entorno de trabajo en TWave.",
+        "en": "Professional reference from my work environment at TWave."
+      },
+      "contact": "https://www.linkedin.com/in/jose-r-blanco-2580a920/",
+      "publishPublicProfile": true,
+      "consent": null,
+      "photo": {
+        "path": "public/img/referencias/jose-ramon-blanco.webp",
+        "alt": {
+          "es": "Foto de perfil de José Ramón Blanco en LinkedIn",
+          "en": "José Ramón Blanco’s LinkedIn profile photograph"
+        },
+        "source": "https://www.linkedin.com/in/jose-r-blanco-2580a920/"
+      }
+    },
+    {
+      "name": "Juan Menéndez Blanco",
+      "role": {
+        "es": "CTO de TWave",
+        "en": "CTO of TWave"
+      },
+      "description": {
+        "es": "Referencia profesional de mi entorno de trabajo en TWave.",
+        "en": "Professional reference from my work environment at TWave."
+      },
+      "contact": "https://www.linkedin.com/in/juan-men%C3%A9ndez-blanco-b8589313/",
+      "publishPublicProfile": true,
+      "consent": null,
+      "photo": {
+        "path": "public/img/referencias/juan-menendez-blanco.webp",
+        "alt": {
+          "es": "Foto de perfil de Juan Menéndez Blanco",
+          "en": "Juan Menéndez Blanco’s profile photograph"
+        },
+        "source": "https://www.linkedin.com/in/juan-men%C3%A9ndez-blanco-b8589313/"
+      }
+    }
+  ],
+  "skills": [
+    {
+      "es": "Backend: Go, C# (.NET), Java y Python.",
+      "en": "Backend: Go, C# (.NET), Java and Python."
+    },
+    "Frontend: React, Preact, TypeScript.",
+    {
+      "es": "Protocolos y comunicaciones: MQTT, NATS, OPC, Modbus y D-Bus.",
+      "en": "Protocols and communications: MQTT, NATS, OPC, Modbus and D-Bus."
+    },
+    {
+      "es": "Resolución de problemas, adaptabilidad, trabajo en equipo y proactividad.",
+      "en": "Problem solving, adaptability, teamwork and initiative."
+    }
+  ],
+  "languages": {
+    "es": "Español nativo e inglés B1 (intermedio).",
+    "en": "Native Spanish and B1 English (intermediate)."
+  },
+  "provenance": {
+    "cv": "CV proporcionado por Jorge el 12/11/2026",
+    "references": "Personas designadas por el autor. Los perfiles públicos identifican sus cargos; no se atribuyen testimonios ni se afirma consentimiento de los terceros.",
+    "sources": [
+      "https://www.lavozdeasturias.es/noticia/inasturias/2020/12/26/twave-supervisor-maquinaria-industrial/00031608997863980440274.htm",
+      "https://twave.es/es/blog/fade-asturias-crece-es",
+      "https://twave.es/en/blog/asturex-en"
+    ]
+  }
+}

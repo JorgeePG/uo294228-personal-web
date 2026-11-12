@@ -7,6 +7,7 @@ document.querySelectorAll('[data-carousel]').forEach((showcase) => {
   const next = controls.querySelector('[data-next]');
   const status = controls.querySelector('[aria-live]');
   if (slides.length < 2) return;
+  const english = document.documentElement.lang === 'en';
 
   let current = 0;
   let scrollFrame = 0;
@@ -16,9 +17,14 @@ document.querySelectorAll('[data-carousel]').forEach((showcase) => {
 
   function update(index) {
     current = (index + slides.length) % slides.length;
-    status.textContent = `${current + 1} de ${slides.length}`;
-    previous.setAttribute('aria-label', current === 0 ? 'Ir al último' : 'Ver anterior');
-    next.setAttribute('aria-label', current === slides.length - 1 ? 'Volver al primero' : 'Ver siguiente');
+    status.textContent = `${current + 1} ${english ? 'of' : 'de'} ${slides.length}`;
+    const previousLabel = current === 0 ? (english ? 'Go to last' : 'Ir al último') : (english ? 'Previous' : 'Anterior');
+    const nextLabel = current === slides.length - 1 ? (english ? 'Back to first' : 'Volver al primero') : (english ? 'Next' : 'Siguiente');
+    previous.setAttribute('aria-label', previousLabel);
+    next.setAttribute('aria-label', nextLabel);
+    previous.textContent = `← ${current === 0 ? (english ? 'Last' : 'Último') : previousLabel}`;
+    next.textContent = `${current === slides.length - 1 ? (english ? 'First' : 'Primero') : nextLabel} →`;
+    slides.forEach((slide, position) => { slide.inert = position !== current; });
   }
 
   function goTo(index) {
@@ -59,4 +65,8 @@ document.querySelectorAll('[data-carousel]').forEach((showcase) => {
   track.dataset.enhanced = '';
   controls.hidden = false;
   update(0);
+  new ResizeObserver(() => {
+    targetLeft = slides[current].offsetLeft - slides[0].offsetLeft;
+    track.scrollTo({ left: targetLeft, behavior: 'instant' });
+  }).observe(track);
 });

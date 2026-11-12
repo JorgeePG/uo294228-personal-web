@@ -1,0 +1,50 @@
+WEB PERSONAL — REVISIÓN 12/11/2026
+
+Esta es la copia local mejorada por petición del autor. No se ha publicado.
+La versión anterior se conserva en el historial Git (base acc7adf).
+Las mejoras se mantienen en la rama feat/mejoras-ux-accesibilidad.
+La antigua entrega y sus evidencias de octubre no describen esta revisión.
+
+COMANDOS (Node 24+, pnpm y Java 17+; pruebas con Chrome instalado)
+pnpm install --frozen-lockfile
+pnpm dev                 Servidor local http://127.0.0.1:4173
+pnpm images              Normaliza JPG y genera WebP 480/768/960
+pnpm build               Genera CSS minificado, versiones EN e índices de búsqueda
+pnpm test                Pruebas funcionales, responsive y axe en Chrome
+pnpm validate            Validador Nu HTML/CSS y rutas de recursos locales
+pnpm performance         Lighthouse de las seis secciones (requiere pnpm dev)
+node scripts/screenshots.mjs   Capturas de QA (requiere pnpm dev)
+node scripts/report.mjs        Actualiza evidencias resumidas y manifiesto
+
+La web sigue siendo estática y no necesita Node en producción. El buscador
+requiere HTTP y JavaScript; sin JavaScript hay enlace al mapa del sitio.
+No se añaden dependencias JavaScript al navegador. Las dependencias de pnpm
+se usan únicamente para desarrollo, optimización y validación.
+Se usa el Java instalado: no hace falta ejecutar el postinstall de vnu-jar.
+
+EDICIÓN
+Editar las páginas españolas como fuente. No editar en/ directamente:
+pnpm build regenera sus páginas, usando scripts/translations.json y
+scripts/translation-details.json. No traduce las obras ni la transcripción
+de terceros. Las interfaces y los textos alternativos sí están traducidos.
+Editar public/css/styles*.css o refinements.css, después pnpm build.
+No editar site.min.css: es generado. Se mantienen las familias tipográficas
+Barlow Condensed e IBM Plex Sans, sus licencias y la paleta original.
+
+DATOS DEL PERFIL
+profile.pending.json contiene los datos confirmados por el autor y su CV:
+socialProfiles: [{label:{es,en},url:'https://...'}]
+education/experience: [{title:{es,en},organisation:{es,en},start,end,description:{es,en}}]
+references: [{name,role:{es,en},contact:'https://...',publishPublicProfile:true}]
+Los arrays vacíos no generan contenido ni enlaces vacíos. Al completar los
+datos, ejecutar pnpm build, pnpm test y pnpm validate. publishPublicProfile
+indica que el autor solicita enlazar el perfil profesional público, sin
+afirmar que esa persona ha aportado un testimonio. No introducir datos privados.
+El CV no se ofrece para descarga pública. Los datos seleccionados de
+formación y experiencia se presentan en HTML accesible en español e inglés.
+
+PUBLICACIÓN
+Publicar los HTML y las carpetas en/, public/, buscar/, ayuda/ y las seis
+secciones. Excluir node_modules, scripts, tests, validacion, test-results,
+archivos de configuración y datos pendientes. No se ha realizado despliegue.
+VALIDACION.txt detalla pruebas, resultados y límites actuales.

@@ -1,0 +1,33 @@
+{
+  "active": [
+    {
+      "name": "José Ramón Blanco González",
+      "profile": "https://www.linkedin.com/in/jose-r-blanco-2580a920/",
+      "image": "https://media.licdn.com/dms/image/v2/D4E03AQHjdJYdapHlBw/profile-displayphoto-scale_200_200/B4EaD92scdGQAc-/0/1790965370266?e=2147483647&v=beta&t=RAScMxdCrL19TvRZ02RMtrvrIADHs4PquKgokuOGIJ4",
+      "file": "jose-ramon-blanco.webp",
+      "width": 200,
+      "height": 200,
+      "downloaded": "2026-11-12",
+      "transformation": "Conversión a WebP, manteniendo el encuadre cuadrado de la imagen de perfil."
+    },
+    {
+      "name": "Juan Menéndez Blanco",
+      "profile": "https://www.linkedin.com/in/juan-men%C3%A9ndez-blanco-b8589313/",
+      "file": "juan-menendez-blanco.webp",
+      "width": 200,
+      "height": 200,
+      "provided": "2026-11-12",
+      "source": "Imagen de perfil facilitada por Jorge en la conversación.",
+      "transformation": "Reducción del original cuadrado a WebP 200x200; sin recorte ni deformación."
+    }
+  ],
+  "pending": [],
+  "archived": {
+    "source": "https://www.lavozdeasturias.es/noticia/inasturias/2020/12/26/twave-supervisor-maquinaria-industrial/00031608997863980440274.htm",
+    "image": "https://img.lavdg.com/sc/3YvKR8YA-VJI--T7FakMKHFlqf8=/1280x/2020/12/26/00121608998267983657766/Foto/idepa.jpg",
+    "caption": "José Ramón Blanco y Juan Menéndez en una fotografía publicada sobre TWave",
+    "downloaded": "2026-11-12",
+    "transform": "Reducción completa a 960x540 WebP. No se recorta ni se identifica a cada persona por su posición.",
+    "rights": "No consta licencia abierta. La atribución enlaza la publicación original; no se declara libre de derechos."
+  }
+}

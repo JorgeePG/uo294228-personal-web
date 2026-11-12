@@ -1,0 +1,3 @@
+# Nu's bundled jar uses the installed Java; no dependency install scripts are needed.
+allowBuilds:
+  vnu-jar: false

@@ -1,0 +1,74 @@
+REVISIÓN LOCAL — 12/11/2026
+Proyecto: uo294228-personal-web. Esta revisión sustituye las conclusiones
+de los informes históricos; no modifica ni certifica el despliegue público.
+
+CAMBIOS
+Imágenes JPG y WebP normalizadas: fotos 960x640; carteles 640x960 con bandas
+para conservar todo el cartel; retrato 400x400. Variantes WebP 480/768/960.
+Carruseles con altura estable, teclado, foco, estado anunciado, etiquetas
+visibles, contenido fuera de vista inerte y conservación del elemento al redimensionar.
+Ayuda, mapa, buscador local con acentos y varios términos, recuperación de
+errores, versiones estáticas en español/inglés y fecha de revisión real.
+Menú móvil compacto, enlaces de descarga multimedia permanentes, navegación
+común en la transcripción. CSS agrupado/minificado y fuentes precargadas.
+Actualización del 12/11: LinkedIn y GitHub del autor, formación, experiencia
+en TWave/SERVEO, competencias e idiomas del CV proporcionado. Interés por
+War Thunder como coleccionismo descrito por el autor, sin visitas inventadas.
+Referencias profesionales designadas por Jorge: José Ramón Blanco y Juan
+Menéndez Blanco. Perfiles públicos enlazados y fichas individuales. La foto
+de José Ramón procede de la imagen publicada en su perfil de LinkedIn; la
+de Juan ha sido facilitada por Jorge. Ambas se conservan a 200x200, sin deformación.
+La fotografía conjunta de prensa ya no se muestra. No se inventan imágenes,
+recomendaciones, testimonios o consentimiento de las personas mencionadas.
+
+PRUEBAS REPRODUCIBLES
+27 pruebas Playwright correctas; 0 fallidas; 0 omitidas.
+19 rutas: seis secciones ES/EN, búsqueda y ayuda ES/EN, 404 ES/EN y transcripción.
+Anchos 320, 375, 768, 1280 y 1920: sin desbordamiento horizontal global.
+Axe-core 4.14.0: cero infracciones detectadas en las rutas comprobadas.
+Teclado real: salto a main, galería, Escape, retorno del foco y desplegables.
+Carrusel: avance circular, estabilidad de altura, redimensionado y botones.
+Búsqueda: tildes, varios términos, ausencia de resultados, entrada HTML,
+fallo de red y resultados en inglés. Cambio de idioma conserva la sección.
+Navegación sin JavaScript y con imágenes bloqueadas comprobada en galería.
+Enlaces internos comprobados por HTTP. Recursos locales referenciados:
+0 ausentes. No se certifican todos los enlaces externos.
+
+VALIDADORES
+Nu Html Checker 26.11.9 con advertencias tratadas como fallo, sin filtros:
+html: 19 archivos, salida 0, 0 mensajes.
+css: 22 archivos, salida 0, 0 mensajes.
+CSS incluye fuentes, hojas originales y hoja minificada generada.
+Jigsaw W3C remoto: el envío del CSS el 11/11 devolvió HTTP 500. No se presenta como
+validación superada; la evidencia vigente de CSS es el comprobador Nu local.
+
+LIGHTHOUSE 13.6.0 — MÓVIL, SIMULACIÓN DE RED/CPU
+home: rendimiento 99; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 2.13 s; CLS 0.
+vehicles: rendimiento 94; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 2.99 s; CLS 0.
+media: rendimiento 100; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 1.10 s; CLS 0.
+films: rendimiento 100; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 1.10 s; CLS 0.
+games: rendimiento 97; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 2.50 s; CLS 0.
+about: rendimiento 100; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 1.08 s; CLS 0.
+Una ejecución final por sección. Son mediciones locales de laboratorio;
+no equivalen a tiempo de descarga en GitHub Pages o en la red universitaria.
+No se ocultan recomendaciones de Lighthouse: conservar los HTML/JSON íntegros.
+Las pruebas automáticas no son una certificación WCAG ni garantizan una nota.
+
+CONTENIDO Y PROCEDENCIA
+profile.pending.json contiene los datos facilitados por Jorge y su CV el
+12/11/2026. Los cargos de los contactos se contrastaron con las publicaciones
+de TWave y sus perfiles públicos. public/img/referencias/ORIGEN.json registra
+la procedencia de ambas fotografías de perfil; no quedan fotos pendientes.
+Las referencias designadas por el autor se publican con publishPublicProfile;
+esto no equivale a afirmar que hayan dado un testimonio o un aval.
+Única discrepancia de contenido pendiente: el CV indica grado en curso y la
+web anterior indicaba máster. Se usa provisionalmente la formación del CV;
+confirmar el estado académico actual antes de publicar la revisión.
+
+EVIDENCIAS
+validacion/revision-2026-11-12/: html.json, css.json, validation-summary.json,
+playwright.json, performance-summary.json, informes Lighthouse HTML/JSON,
+images.json y capturas de escritorio/móvil.
+Los informes de octubre y del 11/11 se conservan como históricos. Algunos
+JSON de pruebas del directorio del 11/11 se actualizaron durante la primera
+pasada del 12/11: sus fechas internas prevalecen; el directorio vigente es este.
