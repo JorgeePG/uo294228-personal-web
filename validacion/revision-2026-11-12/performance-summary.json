@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-12T19:11:11.626Z",
+  "date": "2026-11-12T19:40:48.633Z",
   "environment": "localhost; mobile simulated throttling; Lighthouse 13.6.0; not production/network field measurements",
   "pages": [
     {
@@ -13,18 +13,6 @@
       "lcp": 2131.1182,
       "cls": 0,
       "load": 134
-    },
-    {
-      "name": "vehicles",
-      "scores": {
-        "performance": 94,
-        "accessibility": 100,
-        "best-practices": 100,
-        "seo": 100
-      },
-      "lcp": 2987.3463,
-      "cls": 0,
-      "load": 183
     },
     {
       "name": "media",
@@ -73,6 +61,18 @@
       "lcp": 1079.1539,
       "cls": 0,
       "load": 122
+    },
+    {
+      "name": "vehicles",
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 2960.2465999999995,
+      "cls": 0,
+      "load": 86
     }
   ]
 }

@@ -11,6 +11,9 @@ Ayuda, mapa, buscador local con acentos y varios términos, recuperación de
 errores, versiones estáticas en español/inglés y fecha de revisión real.
 Menú móvil compacto, enlaces de descarga multimedia permanentes, navegación
 común en la transcripción. CSS agrupado/minificado y fuentes precargadas.
+Galería: las tarjetas conservan su altura natural al abrir una ficha vecina;
+no se estiran ni se desplazan verticalmente al recibir foco o pasar el ratón.
+Comprobación de regresión geométrica y capturas en escritorio/móvil incluidas.
 Actualización del 12/11: LinkedIn y GitHub del autor, formación, experiencia
 en TWave/SERVEO, competencias e idiomas del CV proporcionado. Interés por
 War Thunder como coleccionismo descrito por el autor, sin visitas inventadas.
@@ -22,7 +25,7 @@ La fotografía conjunta de prensa ya no se muestra. No se inventan imágenes,
 recomendaciones, testimonios o consentimiento de las personas mencionadas.
 
 PRUEBAS REPRODUCIBLES
-27 pruebas Playwright correctas; 0 fallidas; 0 omitidas.
+28 pruebas Playwright correctas; 0 fallidas; 0 omitidas.
 19 rutas: seis secciones ES/EN, búsqueda y ayuda ES/EN, 404 ES/EN y transcripción.
 Anchos 320, 375, 768, 1280 y 1920: sin desbordamiento horizontal global.
 Axe-core 4.14.0: cero infracciones detectadas en las rutas comprobadas.
@@ -44,11 +47,11 @@ validación superada; la evidencia vigente de CSS es el comprobador Nu local.
 
 LIGHTHOUSE 13.6.0 — MÓVIL, SIMULACIÓN DE RED/CPU
 home: rendimiento 99; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 2.13 s; CLS 0.
-vehicles: rendimiento 94; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 2.99 s; CLS 0.
 media: rendimiento 100; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 1.10 s; CLS 0.
 films: rendimiento 100; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 1.10 s; CLS 0.
 games: rendimiento 97; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 2.50 s; CLS 0.
 about: rendimiento 100; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 1.08 s; CLS 0.
+vehicles: rendimiento 95; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 2.96 s; CLS 0.
 Una ejecución final por sección. Son mediciones locales de laboratorio;
 no equivalen a tiempo de descarga en GitHub Pages o en la red universitaria.
 No se ocultan recomendaciones de Lighthouse: conservar los HTML/JSON íntegros.
