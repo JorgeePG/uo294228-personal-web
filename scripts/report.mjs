@@ -77,7 +77,8 @@ pasada del 12/11: sus fechas internas prevalecen; el directorio vigente es este.
 await fs.writeFile('VALIDACION.txt',report);
 await fs.writeFile('leeme.txt',`WEB PERSONAL — REVISIÓN 12/11/2026
 
-Esta es la copia local mejorada por petición del autor. No se ha publicado.
+GitHub Pages publica esta web desde feat/mejoras-ux-accesibilidad, carpeta /.
+URL: https://jorgeepg.github.io/uo294228-personal-web/
 La versión anterior se conserva en el historial Git (base acc7adf).
 Las mejoras se mantienen en la rama feat/mejoras-ux-accesibilidad.
 La antigua entrega y sus evidencias de octubre no describen esta revisión.
@@ -121,9 +122,12 @@ El CV no se ofrece para descarga pública. Los datos seleccionados de
 formación y experiencia se presentan en HTML accesible en español e inglés.
 
 PUBLICACIÓN
-Publicar los HTML y las carpetas en/, public/, buscar/, ayuda/ y las seis
-secciones. Excluir node_modules, scripts, tests, validacion, test-results,
-archivos de configuración y datos pendientes. No se ha realizado despliegue.
+Pages está configurado como Deploy from a branch, usando la raíz de
+feat/mejoras-ux-accesibilidad. Cada push a esa rama actualiza el sitio.
+main conserva la versión anterior. No es necesario borrar ninguna rama.
+node_modules, test-results y .cache no se versionan ni forman parte del despliegue.
+La raíz publicada incluye los archivos públicos del repositorio; no añadir
+secretos ni datos privados al control de versiones.
 VALIDACION.txt detalla pruebas, resultados y límites actuales.
 `);
 async function files(dir){const out=[];for(const e of await fs.readdir(dir,{withFileTypes:true})){if(['node_modules','validacion','test-results','.git'].includes(e.name)||e.name==='MANIFIESTO-SHA256.txt')continue;const p=path.join(dir,e.name);if(e.isDirectory())out.push(...await files(p));else out.push(p);}return out;}
