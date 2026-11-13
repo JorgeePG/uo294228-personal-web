@@ -20,7 +20,7 @@ test('keyboard skip, gallery, focus restoration and disclosure',async({page})=>{
  await page.keyboard.press('Tab');await page.keyboard.press('Enter');await expect(page.locator('dialog')).toBeVisible();await expect(page.getByRole('button',{name:'Cerrar imagen'})).toBeFocused();await page.keyboard.press('Escape');await expect(page.locator('dialog')).not.toBeVisible();await expect(page.locator('[data-enlarge]').first()).toBeFocused();await page.keyboard.press('Tab');await page.keyboard.press('Enter');await expect(page.locator('details').first()).toHaveAttribute('open','');
 });
 
-test('opening one vehicle card does not stretch or move its neighbours',async({page})=>{
+test('vehicle cards match the tallest expanded card without moving on hover',async({page})=>{
  await page.goto('/intereses/');await page.setViewportSize({width:1440,height:1000});await page.emulateMedia({reducedMotion:'reduce'});
  await page.evaluate(()=>document.fonts.ready);
  const cards=page.locator('#vehiculos main > ul > li > article');
@@ -28,8 +28,16 @@ test('opening one vehicle card does not stretch or move its neighbours',async({p
  await cards.nth(1).locator('summary').click();
  const after=await cards.evaluateAll(nodes=>nodes.map(node=>({height:node.getBoundingClientRect().height,top:node.getBoundingClientRect().top})));
  expect(after[1].height).toBeGreaterThan(before[1].height+50);
- for(const i of [0,2,3]){expect(Math.abs(after[i].height-before[i].height)).toBeLessThan(1);expect(Math.abs(after[i].top-after[1].top)).toBeLessThan(1);}
+ for(const i of [0,2,3]){expect(Math.abs(after[i].height-after[1].height)).toBeLessThan(1);expect(Math.abs(after[i].top-after[1].top)).toBeLessThan(1);}
  await cards.first().hover();expect(Math.abs((await cards.first().boundingBox()).y-after[1].top)).toBeLessThan(1);
+ await cards.first().locator('summary').click();
+ for(const width of [1440,768,375]){
+  await page.setViewportSize({width,height:1000});
+  const heights=await cards.evaluateAll(nodes=>nodes.map(n=>n.getBoundingClientRect().height));expect(Math.max(...heights)-Math.min(...heights)).toBeLessThan(1);
+  for(const card of await cards.all())expect(await card.evaluate(n=>n.scrollHeight<=n.clientHeight+1)).toBeTruthy();
+ }
+ await cards.first().locator('summary').click();await cards.nth(1).locator('summary').click();
+ const closed=await cards.evaluateAll(nodes=>nodes.map(n=>n.getBoundingClientRect().height));expect(Math.max(...closed)-Math.min(...closed)).toBeLessThan(1);
 });
 test('carousel keyboard, circular navigation and stable height',async({page})=>{
  await page.goto('/videojuegos/');await page.emulateMedia({reducedMotion:'reduce'});

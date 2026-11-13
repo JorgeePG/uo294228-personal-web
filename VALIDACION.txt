@@ -11,8 +11,9 @@ Ayuda, mapa, buscador local con acentos y varios términos, recuperación de
 errores, versiones estáticas en español/inglés y fecha de revisión real.
 Menú móvil compacto, enlaces de descarga multimedia permanentes, navegación
 común en la transcripción. CSS agrupado/minificado y fuentes precargadas.
-Galería: las tarjetas conservan su altura natural al abrir una ficha vecina;
-no se estiran ni se desplazan verticalmente al recibir foco o pasar el ratón.
+Galería: todas las tarjetas igualan su altura con la ficha abierta más larga,
+incluso si la cuadrícula ocupa varias filas. Al cerrar, la altura se recalcula.
+No se desplazan verticalmente al recibir foco o pasar el ratón.
 Comprobación de regresión geométrica y capturas en escritorio/móvil incluidas.
 Actualización del 12/11: LinkedIn y GitHub del autor, formación, experiencia
 en TWave/SERVEO, competencias e idiomas del CV proporcionado. Interés por
@@ -51,7 +52,7 @@ media: rendimiento 100; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 1
 films: rendimiento 100; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 1.10 s; CLS 0.
 games: rendimiento 97; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 2.50 s; CLS 0.
 about: rendimiento 100; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 1.08 s; CLS 0.
-vehicles: rendimiento 95; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 2.96 s; CLS 0.
+vehicles: rendimiento 92; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 3.29 s; CLS 0.
 Una ejecución final por sección. Son mediciones locales de laboratorio;
 no equivalen a tiempo de descarga en GitHub Pages o en la red universitaria.
 No se ocultan recomendaciones de Lighthouse: conservar los HTML/JSON íntegros.

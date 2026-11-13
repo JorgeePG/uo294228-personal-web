@@ -18,8 +18,9 @@ Ayuda, mapa, buscador local con acentos y varios términos, recuperación de
 errores, versiones estáticas en español/inglés y fecha de revisión real.
 Menú móvil compacto, enlaces de descarga multimedia permanentes, navegación
 común en la transcripción. CSS agrupado/minificado y fuentes precargadas.
-Galería: las tarjetas conservan su altura natural al abrir una ficha vecina;
-no se estiran ni se desplazan verticalmente al recibir foco o pasar el ratón.
+Galería: todas las tarjetas igualan su altura con la ficha abierta más larga,
+incluso si la cuadrícula ocupa varias filas. Al cerrar, la altura se recalcula.
+No se desplazan verticalmente al recibir foco o pasar el ratón.
 Comprobación de regresión geométrica y capturas en escritorio/móvil incluidas.
 Actualización del 12/11: LinkedIn y GitHub del autor, formación, experiencia
 en TWave/SERVEO, competencias e idiomas del CV proporcionado. Interés por
