@@ -1,4 +1,4 @@
-const form = document.querySelector('form[role="search"]');
+const form = document.querySelector('main form[role="search"]');
 const output = document.querySelector('[data-results]');
 const status = document.querySelector('[data-results-status]');
 const english = document.documentElement.lang === 'en';

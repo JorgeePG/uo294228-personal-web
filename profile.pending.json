@@ -22,12 +22,26 @@
       },
       "start": "2022",
       "end": {
+        "es": "Finalizado",
+        "en": "Completed"
+      },
+      "description": {
+        "es": "Graduado en Ingeniería Informática.",
+        "en": "Graduate in Computer Engineering."
+      }
+    },
+    {
+      "title": {
+        "es": "Máster en Ingeniería Web",
+        "en": "Master’s degree in Web Engineering"
+      },
+      "end": {
         "es": "En curso",
         "en": "In progress"
       },
       "description": {
-        "es": "Formación universitaria en Ingeniería Informática.",
-        "en": "University studies in Computer Engineering."
+        "es": "Actualmente curso el máster en Ingeniería Web.",
+        "en": "I am currently studying for a master’s degree in Web Engineering."
       }
     }
   ],

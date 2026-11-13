@@ -1,54 +1,18 @@
 {
-  "date": "2026-11-13T18:23:06.382Z",
+  "date": "2026-11-13T19:11:54.636Z",
   "environment": "localhost; mobile simulated throttling; Lighthouse 13.6.0; not production/network field measurements",
   "pages": [
     {
       "name": "home",
       "scores": {
-        "performance": 99,
-        "accessibility": 100,
-        "best-practices": 100,
-        "seo": 100
-      },
-      "lcp": 2131.1182,
-      "cls": 0,
-      "load": 134
-    },
-    {
-      "name": "media",
-      "scores": {
         "performance": 100,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 100
       },
-      "lcp": 1095.8276,
+      "lcp": 1104.6848,
       "cls": 0,
-      "load": 103
-    },
-    {
-      "name": "films",
-      "scores": {
-        "performance": 100,
-        "accessibility": 100,
-        "best-practices": 100,
-        "seo": 100
-      },
-      "lcp": 1097.6763,
-      "cls": 0,
-      "load": 183
-    },
-    {
-      "name": "games",
-      "scores": {
-        "performance": 97,
-        "accessibility": 100,
-        "best-practices": 100,
-        "seo": 100
-      },
-      "lcp": 2496.0926,
-      "cls": 0,
-      "load": 166
+      "load": 144
     },
     {
       "name": "about",
@@ -58,21 +22,57 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcp": 1079.1539,
+      "lcp": 1106.4348,
       "cls": 0,
-      "load": 122
+      "load": 157
     },
     {
       "name": "vehicles",
       "scores": {
-        "performance": 96,
+        "performance": 95,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 100
       },
-      "lcp": 2723.2294999999995,
+      "lcp": 2917.482,
       "cls": 0,
-      "load": 94
+      "load": 209
+    },
+    {
+      "name": "media",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 1114.728,
+      "cls": 0,
+      "load": 252
+    },
+    {
+      "name": "films",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 1089.2242,
+      "cls": 0,
+      "load": 232
+    },
+    {
+      "name": "games",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 2528.7825000000003,
+      "cls": 0,
+      "load": 290
     }
   ]
 }

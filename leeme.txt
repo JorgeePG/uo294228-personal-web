@@ -1,4 +1,4 @@
-WEB PERSONAL — REVISIÓN 12/11/2026
+WEB PERSONAL — REVISIÓN 13/11/2026
 
 GitHub Pages publica esta web desde feat/mejoras-ux-accesibilidad, carpeta /.
 URL: https://jorgeepg.github.io/uo294228-personal-web/

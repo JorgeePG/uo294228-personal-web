@@ -5,6 +5,8 @@ const axe=fs.readFileSync('node_modules/axe-core/axe.min.js','utf8');
 for(const route of pages)test(`responsive, links and axe: /${route}`,async({page,request})=>{
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('/'+route);
+ await expect(page.locator('body > header input[type="search"]')).toBeVisible();
+ await expect(page.locator('body > header button[type="submit"]')).toBeVisible();
  for(const width of [320,375,768,1280,1920]){
   await page.setViewportSize({width,height:900});
   await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
@@ -49,9 +51,9 @@ test('carousel keyboard, circular navigation and stable height',async({page})=>{
  for(const width of [320,375,768]){await page.setViewportSize({width,height:812});for(let i=0;i<3;i++){await page.keyboard.press('ArrowRight');await page.getByRole('button').last().click();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();}}
 });
 test('search accents, multi-term, no results, injection and English',async({page})=>{
- await page.goto('/buscar/');const input=page.getByRole('searchbox');
- for(const q of ['aviacion','T-90M','tanques aviones']){await input.fill(q);await page.getByRole('button',{name:'Buscar',exact:true}).click();await expect(page.locator('[data-results] li').first()).toBeVisible();}
- await input.fill('<img src=x onerror=alert(1)>');await page.getByRole('button',{name:'Buscar',exact:true}).click();await expect(page.getByRole('status')).toContainText('Sin resultados');await expect(page.locator('[data-results] img')).toHaveCount(0);
+ await page.goto('/buscar/');const input=page.locator('main').getByRole('searchbox');
+ for(const q of ['aviacion','T-90M','tanques aviones']){await input.fill(q);await page.locator('main').getByRole('button',{name:'Buscar',exact:true}).click();await expect(page.locator('[data-results] li').first()).toBeVisible();}
+ await input.fill('<img src=x onerror=alert(1)>');await page.locator('main').getByRole('button',{name:'Buscar',exact:true}).click();await expect(page.getByRole('status')).toContainText('Sin resultados');await expect(page.locator('[data-results] img')).toHaveCount(0);
  await page.goto('/en/buscar/?q=aircraft');await expect(page.locator('[data-results] li').first()).toBeVisible();await expect(page.getByRole('status')).toContainText('results');
 });
 test('search failure offers recovery',async({page})=>{await page.route('**/search-index.json',r=>r.abort());await page.goto('/buscar/?q=museo');await expect(page.getByRole('status')).toContainText('mapa del sitio');});
@@ -74,4 +76,12 @@ test('CV, references and both profile portraits are published in both languages'
 test('collecting interest is searchable in Spanish and English',async({page})=>{
  await page.goto('/buscar/?q=coleccionismo');await expect(page.locator('[data-results]')).toContainText('Videojuegos');
  await page.goto('/en/buscar/?q=collecting');await expect(page.locator('[data-results]')).toContainText('Video games');
+});
+
+test('header search works by button and Enter in both languages and on transcript',async({page})=>{
+ for(const [route,term,title,viaEnter] of [['sobre-mi/','tanques','Buscar',false],['en/intereses/','tanks','Search',true],['public/transcripciones/war-on-wheels.html','coleccionismo','Buscar',true],['404.html','T-90M','Buscar',false]]){
+  await page.goto('/'+route);const header=page.locator('body > header');await header.getByRole('searchbox').fill(term);
+  if(viaEnter)await header.getByRole('searchbox').press('Enter');else await header.getByRole('button',{name:title,exact:true}).click();
+  await expect(page.locator('main h1')).toHaveText(title);await expect(page.locator('[data-results] li').first()).toBeVisible();
+ }
 });

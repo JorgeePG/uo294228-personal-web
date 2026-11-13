@@ -84,3 +84,19 @@ input:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) {
  *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
 }
+/* Búsqueda nativa visible: mismo formulario GET en todas las cabeceras. */
+body > header { display: grid; grid-template-columns: minmax(220px, 1fr) minmax(240px, 340px) auto; align-items: center; }
+body > header > a:first-child { grid-column: 1; grid-row: 1; }
+body > header > [data-language] { grid-column: 3; grid-row: 1; }
+body > header > nav { grid-column: 1 / -1; grid-row: 2; }
+body > header > form[data-header-search] { display: flex; gap: .4rem; grid-column: 2; grid-row: 1; min-width: 0; width: 100%; max-width: none; margin: 0; }
+[data-header-search] label { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+[data-header-search] input { flex: 1; width: 0; min-width: 0; min-height: 44px; padding: .5rem .65rem; border-radius: 4px; }
+[data-header-search] button { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; min-height: 44px; margin: 0; padding: .5rem .75rem; white-space: nowrap; }
+[data-header-search] svg { flex-shrink: 0; }
+@media (max-width: 650px) {
+ body > header { grid-template-columns: minmax(0, 1fr) auto; }
+ body > header > [data-language] { grid-column: 2; }
+ body > header > form[data-header-search] { grid-column: 1 / -1; grid-row: 2; }
+ body > header > nav { grid-row: 3; }
+}

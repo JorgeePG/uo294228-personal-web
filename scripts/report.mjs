@@ -5,7 +5,7 @@ const dir='validacion/revision-2026-11-12';
 const validation=JSON.parse(await fs.readFile(dir+'/validation-summary.json','utf8'));
 const tests=JSON.parse(await fs.readFile(dir+'/playwright.json','utf8'));
 const performance=JSON.parse(await fs.readFile(dir+'/performance-summary.json','utf8'));
-const report=`REVISIÓN LOCAL — 12/11/2026
+const report=`REVISIÓN LOCAL — 13/11/2026
 Proyecto: uo294228-personal-web. Esta revisión sustituye las conclusiones
 de los informes históricos; no modifica ni certifica el despliegue público.
 
@@ -18,6 +18,9 @@ Ayuda, mapa, buscador local con acentos y varios términos, recuperación de
 errores, versiones estáticas en español/inglés y fecha de revisión real.
 Menú móvil compacto, enlaces de descarga multimedia permanentes, navegación
 común en la transcripción. CSS agrupado/minificado y fuentes precargadas.
+Buscador GET visible con campo, lupa y botón en todas las cabeceras (también
+404 y transcripción). Resultados en el idioma activo y envío por Enter o botón.
+Fecha visible 13/11/2026. Grado terminado y máster en curso confirmados por Jorge.
 Galería: únicamente las fichas abiertas igualan su altura con la abierta más larga.
 Las fichas cerradas conservan su altura natural y compacta. Al cerrar, cambiar
 el ancho o cargar las fuentes, la altura del grupo abierto se recalcula.
@@ -67,9 +70,9 @@ de TWave y sus perfiles públicos. public/img/referencias/ORIGEN.json registra
 la procedencia de ambas fotografías de perfil; no quedan fotos pendientes.
 Las referencias designadas por el autor se publican con publishPublicProfile;
 esto no equivale a afirmar que hayan dado un testimonio o un aval.
-Única discrepancia de contenido pendiente: el CV indica grado en curso y la
-web anterior indicaba máster. Se usa provisionalmente la formación del CV;
-confirmar el estado académico actual antes de publicar la revisión.
+El autor confirmó el 13/11/2026 que finalizó el grado y está cursando el máster.
+La revisión palabra por palabra de la transcripción no se ha realizado y queda
+fuera del alcance por decisión del autor. Sigue identificada como automática.
 
 EVIDENCIAS
 ${dir}/: html.json, css.json, validation-summary.json,
@@ -80,7 +83,7 @@ JSON de pruebas del directorio del 11/11 se actualizaron durante la primera
 pasada del 12/11: sus fechas internas prevalecen; el directorio vigente es este.
 `;
 await fs.writeFile('VALIDACION.txt',report);
-await fs.writeFile('leeme.txt',`WEB PERSONAL — REVISIÓN 12/11/2026
+await fs.writeFile('leeme.txt',`WEB PERSONAL — REVISIÓN 13/11/2026
 
 GitHub Pages publica esta web desde feat/mejoras-ux-accesibilidad, carpeta /.
 URL: https://jorgeepg.github.io/uo294228-personal-web/
