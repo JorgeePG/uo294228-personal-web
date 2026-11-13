@@ -405,8 +405,7 @@ body > footer a {
 }
 #vehiculos main > ul {
   display: grid;
-  align-items: stretch;
-  grid-auto-rows: 1fr;
+  align-items: start;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: .9rem;
   margin-top: 0;
@@ -423,11 +422,13 @@ body > footer a {
   min-width: 0;
 }
 #vehiculos main > ul article {
-  height: 100%;
   border: 2px solid var(--line);
   background: #fff;
   transition: transform .25s, box-shadow .25s;
   color: inherit;
+}
+#vehiculos main > ul article[data-expanded] {
+  min-height: var(--expanded-card-height, 0px);
 }
 #vehiculos main > ul article:hover {
   box-shadow: 0 12px 24px #1113;

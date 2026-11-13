@@ -20,24 +20,25 @@ test('keyboard skip, gallery, focus restoration and disclosure',async({page})=>{
  await page.keyboard.press('Tab');await page.keyboard.press('Enter');await expect(page.locator('dialog')).toBeVisible();await expect(page.getByRole('button',{name:'Cerrar imagen'})).toBeFocused();await page.keyboard.press('Escape');await expect(page.locator('dialog')).not.toBeVisible();await expect(page.locator('[data-enlarge]').first()).toBeFocused();await page.keyboard.press('Tab');await page.keyboard.press('Enter');await expect(page.locator('details').first()).toHaveAttribute('open','');
 });
 
-test('vehicle cards match the tallest expanded card without moving on hover',async({page})=>{
- await page.goto('/intereses/');await page.setViewportSize({width:1440,height:1000});await page.emulateMedia({reducedMotion:'reduce'});
- await page.evaluate(()=>document.fonts.ready);
- const cards=page.locator('#vehiculos main > ul > li > article');
- const before=await cards.evaluateAll(nodes=>nodes.map(node=>({height:node.getBoundingClientRect().height,top:node.getBoundingClientRect().top})));
- await cards.nth(1).locator('summary').click();
- const after=await cards.evaluateAll(nodes=>nodes.map(node=>({height:node.getBoundingClientRect().height,top:node.getBoundingClientRect().top})));
- expect(after[1].height).toBeGreaterThan(before[1].height+50);
- for(const i of [0,2,3]){expect(Math.abs(after[i].height-after[1].height)).toBeLessThan(1);expect(Math.abs(after[i].top-after[1].top)).toBeLessThan(1);}
- await cards.first().hover();expect(Math.abs((await cards.first().boundingBox()).y-after[1].top)).toBeLessThan(1);
- await cards.first().locator('summary').click();
+test('only expanded vehicle cards share height; closed cards stay compact',async({page})=>{
  for(const width of [1440,768,375]){
-  await page.setViewportSize({width,height:1000});
-  const heights=await cards.evaluateAll(nodes=>nodes.map(n=>n.getBoundingClientRect().height));expect(Math.max(...heights)-Math.min(...heights)).toBeLessThan(1);
-  for(const card of await cards.all())expect(await card.evaluate(n=>n.scrollHeight<=n.clientHeight+1)).toBeTruthy();
+  await page.setViewportSize({width,height:1000});await page.goto('/intereses/');await page.evaluate(()=>document.fonts.ready);
+  const cards=page.locator('#vehiculos main > ul > li > article');
+  const heights=()=>cards.evaluateAll(nodes=>nodes.map(n=>n.getBoundingClientRect().height));
+  const before=await heights();
+  await cards.nth(0).locator('summary').click();await expect(cards.nth(0)).toHaveAttribute('data-expanded','');
+  const first=(await heights())[0];expect(first).toBeGreaterThan(before[0]+50);
+  await expect.poll(async()=>Math.abs((await heights())[1]-before[1])).toBeLessThan(1);
+  await cards.nth(0).locator('summary').click();await expect(cards.nth(0)).not.toHaveAttribute('data-expanded');
+  await cards.nth(2).locator('summary').click();await expect(cards.nth(2)).toHaveAttribute('data-expanded','');
+  const second=(await heights())[2];
+  await cards.nth(0).locator('summary').click();
+  await expect.poll(async()=>{const h=await heights();return Math.max(Math.abs(h[0]-h[2]),Math.abs(h[0]-Math.max(first,second)),Math.abs(h[1]-before[1]),Math.abs(h[3]-before[3]));}).toBeLessThan(1.1);
+  await cards.nth(0).locator('summary').click();
+  await expect.poll(async()=>Math.abs((await heights())[2]-second)).toBeLessThan(1.1);
+  await cards.nth(2).locator('summary').click();
+  await expect.poll(async()=>Math.max(...(await heights()).map((h,i)=>Math.abs(h-before[i])))).toBeLessThan(1);
  }
- await cards.first().locator('summary').click();await cards.nth(1).locator('summary').click();
- const closed=await cards.evaluateAll(nodes=>nodes.map(n=>n.getBoundingClientRect().height));expect(Math.max(...closed)-Math.min(...closed)).toBeLessThan(1);
 });
 test('carousel keyboard, circular navigation and stable height',async({page})=>{
  await page.goto('/videojuegos/');await page.emulateMedia({reducedMotion:'reduce'});

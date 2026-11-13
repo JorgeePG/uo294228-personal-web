@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-13T18:13:24.496Z",
+  "date": "2026-11-13T18:23:06.382Z",
   "environment": "localhost; mobile simulated throttling; Lighthouse 13.6.0; not production/network field measurements",
   "pages": [
     {
@@ -65,14 +65,14 @@
     {
       "name": "vehicles",
       "scores": {
-        "performance": 92,
+        "performance": 96,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 100
       },
-      "lcp": 3285.5068499999998,
+      "lcp": 2723.2294999999995,
       "cls": 0,
-      "load": 174
+      "load": 94
     }
   ]
 }

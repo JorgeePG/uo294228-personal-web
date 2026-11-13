@@ -18,8 +18,9 @@ Ayuda, mapa, buscador local con acentos y varios términos, recuperación de
 errores, versiones estáticas en español/inglés y fecha de revisión real.
 Menú móvil compacto, enlaces de descarga multimedia permanentes, navegación
 común en la transcripción. CSS agrupado/minificado y fuentes precargadas.
-Galería: todas las tarjetas igualan su altura con la ficha abierta más larga,
-incluso si la cuadrícula ocupa varias filas. Al cerrar, la altura se recalcula.
+Galería: únicamente las fichas abiertas igualan su altura con la abierta más larga.
+Las fichas cerradas conservan su altura natural y compacta. Al cerrar, cambiar
+el ancho o cargar las fuentes, la altura del grupo abierto se recalcula.
 No se desplazan verticalmente al recibir foco o pasar el ratón.
 Comprobación de regresión geométrica y capturas en escritorio/móvil incluidas.
 Actualización del 12/11: LinkedIn y GitHub del autor, formación, experiencia
