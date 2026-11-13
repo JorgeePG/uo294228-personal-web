@@ -1,0 +1,37 @@
+PREFERENCIAS DE LECTURA — 13/11/2026
+
+Interfaz y lógica implementadas desde cero para esta web. Sin código, activos,
+servicios ni dependencias de Viewser. Sin suscripción ni peticiones externas.
+
+Opciones: tamaño 100/125/150/200 %, espaciado, títulos Arial, destacar enlaces,
+reducir movimiento y restablecer. Cabecera común ES/EN, 404 y transcripción.
+Se respeta prefers-reduced-motion incluso después de restablecer las opciones.
+Persistencia en localStorage (clave jorge-reading-v1). Solo preferencias de
+presentación, sin datos personales, sin cookies y sin envío a ningún servicio.
+Si no hay almacenamiento, funciona durante la visita a la página; sin JS,
+el panel queda oculto y la navegación principal conserva sus controles nativos.
+
+Pruebas: tests/reading-settings.spec.mjs y tests/site.spec.mjs.
+Capturas: reading-desktop/mobile/english.png, reading-maximum-mobile.png y
+reading-maximum-home-mobile.png. Texto al 200 % con las otras opciones activas,
+19 rutas, anchos 320/375/768/1280, comprobaciones de desbordamiento y axe.
+También se prueban teclado, Escape, retorno del foco, recarga, cambio de idioma,
+reset, almacenamiento bloqueado y alturas de fichas abiertas de vehículos.
+
+El panel proporciona preferencias opcionales. No corrige automáticamente
+errores semánticos ni certifica conformidad WCAG. Las validaciones generales
+se documentan por separado en VALIDACION.txt, con sus límites.
+
+FUENTES CONSULTADAS PARA DECIDIR LA IMPLEMENTACIÓN
+https://goviewser.com/precios/
+Publica planes basados en tráfico y un proceso de contratación/pago.
+No se ha encontrado un plan gratuito publicado; no se afirma que no pueda
+existir una oferta particular solicitada al proveedor.
+https://goviewser.com/widget/
+Describe opciones de personalización. Sirve de referencia funcional general.
+https://www.bemyvega.com/legal-notice/
+Aviso legal enlazado desde Viewser: reserva derechos sobre software y diseño;
+no se ha encontrado una licencia abierta que autorice su reutilización.
+https://www.w3.org/WAI/test-evaluate/tools/
+WAI explica que algunas comprobaciones requieren intervención manual y que
+las herramientas no sustituyen la evaluación de la experiencia de uso.

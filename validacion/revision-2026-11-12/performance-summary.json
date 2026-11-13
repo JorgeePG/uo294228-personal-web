@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-13T19:11:54.636Z",
+  "date": "2026-11-13T19:37:48.146Z",
   "environment": "localhost; mobile simulated throttling; Lighthouse 13.6.0; not production/network field measurements",
   "pages": [
     {
@@ -10,9 +10,9 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcp": 1104.6848,
+      "lcp": 1223.5798,
       "cls": 0,
-      "load": 144
+      "load": 98
     },
     {
       "name": "about",
@@ -22,21 +22,21 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcp": 1106.4348,
+      "lcp": 1217.482,
       "cls": 0,
-      "load": 157
+      "load": 87
     },
     {
       "name": "vehicles",
       "scores": {
-        "performance": 95,
+        "performance": 96,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 100
       },
-      "lcp": 2917.482,
+      "lcp": 2676.891,
       "cls": 0,
-      "load": 209
+      "load": 247
     },
     {
       "name": "media",
@@ -46,9 +46,9 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcp": 1114.728,
+      "lcp": 1216.8867,
       "cls": 0,
-      "load": 252
+      "load": 102
     },
     {
       "name": "films",
@@ -58,21 +58,21 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcp": 1089.2242,
+      "lcp": 1228.4988,
       "cls": 0,
-      "load": 232
+      "load": 90
     },
     {
       "name": "games",
       "scores": {
-        "performance": 97,
+        "performance": 98,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 100
       },
-      "lcp": 2528.7825000000003,
+      "lcp": 2351.6677499999996,
       "cls": 0,
-      "load": 290
+      "load": 120
     }
   ]
 }

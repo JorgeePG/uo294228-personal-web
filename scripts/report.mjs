@@ -21,6 +21,12 @@ común en la transcripción. CSS agrupado/minificado y fuentes precargadas.
 Buscador GET visible con campo, lupa y botón en todas las cabeceras (también
 404 y transcripción). Resultados en el idioma activo y envío por Enter o botón.
 Fecha visible 13/11/2026. Grado terminado y máster en curso confirmados por Jorge.
+Panel propio Accesibilidad/Accessibility en las 19 rutas: texto 100/125/150/200 %,
+espaciado, títulos con Arial, enlaces destacados, movimiento reducido y reset.
+Guardado local entre páginas/idiomas, sin peticiones a servicios externos.
+Panel integrado en el flujo, cierre con Escape y retorno de foco; oculto sin JS.
+Resiste almacenamiento bloqueado. Restablecer elimina la clave de preferencias
+y mantiene el respeto a prefers-reduced-motion del sistema. Ayuda bilingüe.
 Galería: únicamente las fichas abiertas igualan su altura con la abierta más larga.
 Las fichas cerradas conservan su altura natural y compacta. Al cerrar, cambiar
 el ancho o cargar las fuentes, la altura del grupo abierto se recalcula.
@@ -46,6 +52,11 @@ Carrusel: avance circular, estabilidad de altura, redimensionado y botones.
 Búsqueda: tildes, varios términos, ausencia de resultados, entrada HTML,
 fallo de red y resultados en inglés. Cambio de idioma conserva la sección.
 Navegación sin JavaScript y con imágenes bloqueadas comprobada en galería.
+Preferencias: teclado, persistencia, cambio de idioma, recarga, reset y
+almacenamiento bloqueado. Las 19 rutas también se comprueban con todos los
+ajustes activados, texto al 200 %, axe y anchos 320/375/768/1280; sin
+desbordamiento horizontal global ni controles de preferencias fuera de pantalla.
+Se verifica que solo las fichas abiertas comparten altura con estos ajustes.
 Enlaces internos comprobados por HTTP. Recursos locales referenciados:
 ${validation.resources.missing.length} ausentes. No se certifican todos los enlaces externos.
 
@@ -100,6 +111,7 @@ pnpm test                Pruebas funcionales, responsive y axe en Chrome
 pnpm validate            Validador Nu HTML/CSS y rutas de recursos locales
 pnpm performance         Lighthouse de las seis secciones (requiere pnpm dev)
 node scripts/screenshots.mjs   Capturas de QA (requiere pnpm dev)
+node scripts/reading-settings-qa.mjs  Capturas de preferencias (requiere pnpm dev)
 node scripts/report.mjs        Actualiza evidencias resumidas y manifiesto
 
 La web sigue siendo estática y no necesita Node en producción. El buscador
@@ -138,7 +150,7 @@ La raíz publicada incluye los archivos públicos del repositorio; no añadir
 secretos ni datos privados al control de versiones.
 VALIDACION.txt detalla pruebas, resultados y límites actuales.
 `);
-async function files(dir){const out=[];for(const e of await fs.readdir(dir,{withFileTypes:true})){if(['node_modules','validacion','test-results','.git'].includes(e.name)||e.name==='MANIFIESTO-SHA256.txt')continue;const p=path.join(dir,e.name);if(e.isDirectory())out.push(...await files(p));else out.push(p);}return out;}
+async function files(dir){const out=[];for(const e of await fs.readdir(dir,{withFileTypes:true})){if(['node_modules','validacion','test-results','.git','.cache'].includes(e.name)||e.name==='MANIFIESTO-SHA256.txt')continue;const p=path.join(dir,e.name);if(e.isDirectory())out.push(...await files(p));else out.push(p);}return out;}
 const hashes=[];for(const file of (await files('.')).sort())hashes.push(createHash('sha256').update(await fs.readFile(file)).digest('hex')+'  '+file.replaceAll('\\','/'));
 await fs.writeFile('MANIFIESTO-SHA256.txt',hashes.join('\n')+'\n');
 console.log(`Informe actualizado: ${tests.stats.expected} pruebas, ${validation.results.map(r=>r.files+' '+r.type).join(', ')}; ${hashes.length} hashes.`);

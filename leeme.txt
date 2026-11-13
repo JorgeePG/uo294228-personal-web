@@ -15,6 +15,7 @@ pnpm test                Pruebas funcionales, responsive y axe en Chrome
 pnpm validate            Validador Nu HTML/CSS y rutas de recursos locales
 pnpm performance         Lighthouse de las seis secciones (requiere pnpm dev)
 node scripts/screenshots.mjs   Capturas de QA (requiere pnpm dev)
+node scripts/reading-settings-qa.mjs  Capturas de preferencias (requiere pnpm dev)
 node scripts/report.mjs        Actualiza evidencias resumidas y manifiesto
 
 La web sigue siendo estática y no necesita Node en producción. El buscador

@@ -30,7 +30,7 @@ document.querySelectorAll('[data-carousel]').forEach((showcase) => {
   function goTo(index) {
     const wrapped = index < 0 || index >= slides.length;
     update(index);
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches || document.documentElement.hasAttribute('data-reading-motion');
     targetLeft = slides[current].offsetLeft - slides[0].offsetLeft;
     navigating = true;
     clearTimeout(navigationTimer);

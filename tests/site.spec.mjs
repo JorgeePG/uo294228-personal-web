@@ -19,7 +19,7 @@ for(const route of pages)test(`responsive, links and axe: /${route}`,async({page
 });
 test('keyboard skip, gallery, focus restoration and disclosure',async({page})=>{
  await page.goto('/intereses/');await page.keyboard.press('Tab');await expect(page.getByRole('link',{name:'Saltar al contenido'})).toBeFocused();await page.keyboard.press('Enter');await expect(page.locator('main')).toBeFocused();
- await page.keyboard.press('Tab');await page.keyboard.press('Enter');await expect(page.locator('dialog')).toBeVisible();await expect(page.getByRole('button',{name:'Cerrar imagen'})).toBeFocused();await page.keyboard.press('Escape');await expect(page.locator('dialog')).not.toBeVisible();await expect(page.locator('[data-enlarge]').first()).toBeFocused();await page.keyboard.press('Tab');await page.keyboard.press('Enter');await expect(page.locator('details').first()).toHaveAttribute('open','');
+  await page.keyboard.press('Tab');await page.keyboard.press('Enter');await expect(page.locator('dialog')).toBeVisible();await expect(page.getByRole('button',{name:'Cerrar imagen'})).toBeFocused();await page.keyboard.press('Escape');await expect(page.locator('dialog')).not.toBeVisible();await expect(page.locator('[data-enlarge]').first()).toBeFocused();await page.keyboard.press('Tab');await page.keyboard.press('Enter');await expect(page.locator('main details').first()).toHaveAttribute('open','');
 });
 
 test('only expanded vehicle cards share height; closed cards stay compact',async({page})=>{
@@ -58,7 +58,7 @@ test('search accents, multi-term, no results, injection and English',async({page
 });
 test('search failure offers recovery',async({page})=>{await page.route('**/search-index.json',r=>r.abort());await page.goto('/buscar/?q=museo');await expect(page.getByRole('status')).toContainText('mapa del sitio');});
 test('without JavaScript and images',async({browser})=>{
- const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();await page.route(/\.(webp|jpg|png)$/,r=>r.abort());await page.goto('http://127.0.0.1:4173/intereses/');await expect(page.getByRole('navigation',{name:'Navegación principal'})).toBeVisible();await page.locator('summary').first().click();await expect(page.locator('details').first()).toHaveAttribute('open','');await context.close();
+ const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();await page.route(/\.(webp|jpg|png)$/,r=>r.abort());await page.goto('http://127.0.0.1:4173/intereses/');await expect(page.getByRole('navigation',{name:'Navegación principal'})).toBeVisible();await page.locator('main summary').first().click();await expect(page.locator('main details').first()).toHaveAttribute('open','');await context.close();
 });
 test('language switch retains current page',async({page})=>{await page.goto('/videojuegos/');await page.getByRole('link',{name:'English',exact:true}).click();await expect(page.locator('html')).toHaveAttribute('lang','en');await expect(page.getByRole('heading',{level:1})).toHaveText('Video games');await page.getByRole('link',{name:'Español',exact:true}).click();await expect(page).toHaveURL(/\/videojuegos\/index.html$/);});
 test('CV, references and both profile portraits are published in both languages',async({page})=>{

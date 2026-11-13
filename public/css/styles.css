@@ -491,10 +491,10 @@ body > footer a {
 #vehiculos figcaption span {
   font-size: .82rem;
 }
-#vehiculos details {
+#vehiculos main details {
   border-top: 1px solid var(--line);
 }
-#vehiculos summary {
+#vehiculos main summary {
   padding-top: .55rem;
   padding-right: .8rem;
   padding-bottom: .55rem;
@@ -502,22 +502,22 @@ body > footer a {
   cursor: pointer;
   font-weight: 700;
 }
-#vehiculos summary:hover {
+#vehiculos main summary:hover {
   background: var(--ink);
   color: #fff;
 }
-#vehiculos summary:focus-visible {
+#vehiculos main summary:focus-visible {
   background: var(--ink);
   color: #fff;
 }
-#vehiculos details p {
+#vehiculos main details p {
   margin-top: .7rem;
   margin-right: .8rem;
   margin-bottom: .7rem;
   margin-left: .8rem;
   font-size: .88rem;
 }
-#vehiculos details a {
+#vehiculos main details a {
   font-weight: 700;
 }
 #vehiculos main > section {

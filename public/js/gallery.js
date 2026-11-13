@@ -19,6 +19,7 @@ if (gallery) {
   gallery.querySelectorAll('details').forEach(details => details.addEventListener('toggle', scheduleHeights));
   if (typeof ResizeObserver === 'function') new ResizeObserver(scheduleHeights).observe(gallery);
   window.addEventListener('resize', scheduleHeights);
+  document.addEventListener('reading-settings-change', scheduleHeights);
   document.fonts.ready.then(scheduleHeights);
   scheduleHeights();
 }
