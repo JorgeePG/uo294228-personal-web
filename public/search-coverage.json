@@ -1,0 +1,937 @@
+{
+  "schema": 1,
+  "pages": [
+    {
+      "file": "404.html",
+      "state": "excluded",
+      "reason": "Página de error; no aporta contenido recuperable.",
+      "language": "es"
+    },
+    {
+      "file": "ayuda/index.html",
+      "state": "indexed",
+      "reason": "Contenido principal enlazado",
+      "language": "es"
+    },
+    {
+      "file": "buscar/index.html",
+      "state": "excluded",
+      "reason": "Interfaz de resultados; evita resultados autorreferentes.",
+      "language": "es"
+    },
+    {
+      "file": "en/404.html",
+      "state": "excluded",
+      "reason": "Error page; no searchable content.",
+      "language": "en"
+    },
+    {
+      "file": "en/ayuda/index.html",
+      "state": "indexed",
+      "reason": "Contenido principal enlazado",
+      "language": "en"
+    },
+    {
+      "file": "en/buscar/index.html",
+      "state": "excluded",
+      "reason": "Results interface; avoids self-referential results.",
+      "language": "en"
+    },
+    {
+      "file": "en/index.html",
+      "state": "indexed",
+      "reason": "Contenido principal enlazado",
+      "language": "en"
+    },
+    {
+      "file": "en/intereses/index.html",
+      "state": "indexed",
+      "reason": "Contenido principal enlazado",
+      "language": "en"
+    },
+    {
+      "file": "en/multimedia/index.html",
+      "state": "indexed",
+      "reason": "Contenido principal enlazado",
+      "language": "en"
+    },
+    {
+      "file": "en/series-y-peliculas/index.html",
+      "state": "indexed",
+      "reason": "Contenido principal enlazado",
+      "language": "en"
+    },
+    {
+      "file": "en/sobre-mi/index.html",
+      "state": "indexed",
+      "reason": "Contenido principal enlazado",
+      "language": "en"
+    },
+    {
+      "file": "en/videojuegos/index.html",
+      "state": "indexed",
+      "reason": "Contenido principal enlazado",
+      "language": "en"
+    },
+    {
+      "file": "index.html",
+      "state": "indexed",
+      "reason": "Contenido principal enlazado",
+      "language": "es"
+    },
+    {
+      "file": "intereses/index.html",
+      "state": "indexed",
+      "reason": "Contenido principal enlazado",
+      "language": "es"
+    },
+    {
+      "file": "multimedia/index.html",
+      "state": "indexed",
+      "reason": "Contenido principal enlazado",
+      "language": "es"
+    },
+    {
+      "file": "public/transcripciones/war-on-wheels.html",
+      "state": "indexed",
+      "reason": "Contenido principal enlazado",
+      "language": "en"
+    },
+    {
+      "file": "series-y-peliculas/index.html",
+      "state": "indexed",
+      "reason": "Contenido principal enlazado",
+      "language": "es"
+    },
+    {
+      "file": "sobre-mi/index.html",
+      "state": "indexed",
+      "reason": "Contenido principal enlazado",
+      "language": "es"
+    },
+    {
+      "file": "videojuegos/index.html",
+      "state": "indexed",
+      "reason": "Contenido principal enlazado",
+      "language": "es"
+    }
+  ],
+  "links": [
+    {
+      "from": "index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "index.html",
+      "to": "sobre-mi/index.html"
+    },
+    {
+      "from": "index.html",
+      "to": "intereses/index.html"
+    },
+    {
+      "from": "index.html",
+      "to": "multimedia/index.html"
+    },
+    {
+      "from": "index.html",
+      "to": "series-y-peliculas/index.html"
+    },
+    {
+      "from": "index.html",
+      "to": "videojuegos/index.html"
+    },
+    {
+      "from": "index.html",
+      "to": "intereses/index.html"
+    },
+    {
+      "from": "index.html",
+      "to": "multimedia/index.html"
+    },
+    {
+      "from": "index.html",
+      "to": "sobre-mi/index.html"
+    },
+    {
+      "from": "index.html",
+      "to": "intereses/index.html"
+    },
+    {
+      "from": "index.html",
+      "to": "multimedia/index.html"
+    },
+    {
+      "from": "index.html",
+      "to": "series-y-peliculas/index.html"
+    },
+    {
+      "from": "index.html",
+      "to": "videojuegos/index.html"
+    },
+    {
+      "from": "index.html",
+      "to": "ayuda/index.html"
+    },
+    {
+      "from": "en/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "en/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/index.html",
+      "to": "en/sobre-mi/index.html"
+    },
+    {
+      "from": "en/index.html",
+      "to": "en/intereses/index.html"
+    },
+    {
+      "from": "en/index.html",
+      "to": "en/multimedia/index.html"
+    },
+    {
+      "from": "en/index.html",
+      "to": "en/series-y-peliculas/index.html"
+    },
+    {
+      "from": "en/index.html",
+      "to": "en/videojuegos/index.html"
+    },
+    {
+      "from": "en/index.html",
+      "to": "en/intereses/index.html"
+    },
+    {
+      "from": "en/index.html",
+      "to": "en/multimedia/index.html"
+    },
+    {
+      "from": "en/index.html",
+      "to": "en/sobre-mi/index.html"
+    },
+    {
+      "from": "en/index.html",
+      "to": "en/intereses/index.html"
+    },
+    {
+      "from": "en/index.html",
+      "to": "en/multimedia/index.html"
+    },
+    {
+      "from": "en/index.html",
+      "to": "en/series-y-peliculas/index.html"
+    },
+    {
+      "from": "en/index.html",
+      "to": "en/videojuegos/index.html"
+    },
+    {
+      "from": "en/index.html",
+      "to": "en/ayuda/index.html"
+    },
+    {
+      "from": "sobre-mi/index.html",
+      "to": "sobre-mi/index.html"
+    },
+    {
+      "from": "sobre-mi/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "sobre-mi/index.html",
+      "to": "en/sobre-mi/index.html"
+    },
+    {
+      "from": "sobre-mi/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "sobre-mi/index.html",
+      "to": "sobre-mi/index.html"
+    },
+    {
+      "from": "sobre-mi/index.html",
+      "to": "intereses/index.html"
+    },
+    {
+      "from": "sobre-mi/index.html",
+      "to": "multimedia/index.html"
+    },
+    {
+      "from": "sobre-mi/index.html",
+      "to": "series-y-peliculas/index.html"
+    },
+    {
+      "from": "sobre-mi/index.html",
+      "to": "videojuegos/index.html"
+    },
+    {
+      "from": "sobre-mi/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "sobre-mi/index.html",
+      "to": "ayuda/index.html"
+    },
+    {
+      "from": "intereses/index.html",
+      "to": "intereses/index.html"
+    },
+    {
+      "from": "intereses/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "intereses/index.html",
+      "to": "en/intereses/index.html"
+    },
+    {
+      "from": "intereses/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "intereses/index.html",
+      "to": "sobre-mi/index.html"
+    },
+    {
+      "from": "intereses/index.html",
+      "to": "intereses/index.html"
+    },
+    {
+      "from": "intereses/index.html",
+      "to": "multimedia/index.html"
+    },
+    {
+      "from": "intereses/index.html",
+      "to": "series-y-peliculas/index.html"
+    },
+    {
+      "from": "intereses/index.html",
+      "to": "videojuegos/index.html"
+    },
+    {
+      "from": "intereses/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "intereses/index.html",
+      "to": "ayuda/index.html"
+    },
+    {
+      "from": "multimedia/index.html",
+      "to": "multimedia/index.html"
+    },
+    {
+      "from": "multimedia/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "multimedia/index.html",
+      "to": "en/multimedia/index.html"
+    },
+    {
+      "from": "multimedia/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "multimedia/index.html",
+      "to": "sobre-mi/index.html"
+    },
+    {
+      "from": "multimedia/index.html",
+      "to": "intereses/index.html"
+    },
+    {
+      "from": "multimedia/index.html",
+      "to": "multimedia/index.html"
+    },
+    {
+      "from": "multimedia/index.html",
+      "to": "series-y-peliculas/index.html"
+    },
+    {
+      "from": "multimedia/index.html",
+      "to": "videojuegos/index.html"
+    },
+    {
+      "from": "multimedia/index.html",
+      "to": "public/transcripciones/war-on-wheels.html"
+    },
+    {
+      "from": "multimedia/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "multimedia/index.html",
+      "to": "ayuda/index.html"
+    },
+    {
+      "from": "series-y-peliculas/index.html",
+      "to": "series-y-peliculas/index.html"
+    },
+    {
+      "from": "series-y-peliculas/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "series-y-peliculas/index.html",
+      "to": "en/series-y-peliculas/index.html"
+    },
+    {
+      "from": "series-y-peliculas/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "series-y-peliculas/index.html",
+      "to": "sobre-mi/index.html"
+    },
+    {
+      "from": "series-y-peliculas/index.html",
+      "to": "intereses/index.html"
+    },
+    {
+      "from": "series-y-peliculas/index.html",
+      "to": "multimedia/index.html"
+    },
+    {
+      "from": "series-y-peliculas/index.html",
+      "to": "series-y-peliculas/index.html"
+    },
+    {
+      "from": "series-y-peliculas/index.html",
+      "to": "videojuegos/index.html"
+    },
+    {
+      "from": "series-y-peliculas/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "series-y-peliculas/index.html",
+      "to": "ayuda/index.html"
+    },
+    {
+      "from": "videojuegos/index.html",
+      "to": "videojuegos/index.html"
+    },
+    {
+      "from": "videojuegos/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "videojuegos/index.html",
+      "to": "en/videojuegos/index.html"
+    },
+    {
+      "from": "videojuegos/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "videojuegos/index.html",
+      "to": "sobre-mi/index.html"
+    },
+    {
+      "from": "videojuegos/index.html",
+      "to": "intereses/index.html"
+    },
+    {
+      "from": "videojuegos/index.html",
+      "to": "multimedia/index.html"
+    },
+    {
+      "from": "videojuegos/index.html",
+      "to": "series-y-peliculas/index.html"
+    },
+    {
+      "from": "videojuegos/index.html",
+      "to": "videojuegos/index.html"
+    },
+    {
+      "from": "videojuegos/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "videojuegos/index.html",
+      "to": "ayuda/index.html"
+    },
+    {
+      "from": "ayuda/index.html",
+      "to": "ayuda/index.html"
+    },
+    {
+      "from": "ayuda/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "ayuda/index.html",
+      "to": "en/ayuda/index.html"
+    },
+    {
+      "from": "ayuda/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "ayuda/index.html",
+      "to": "sobre-mi/index.html"
+    },
+    {
+      "from": "ayuda/index.html",
+      "to": "intereses/index.html"
+    },
+    {
+      "from": "ayuda/index.html",
+      "to": "multimedia/index.html"
+    },
+    {
+      "from": "ayuda/index.html",
+      "to": "series-y-peliculas/index.html"
+    },
+    {
+      "from": "ayuda/index.html",
+      "to": "videojuegos/index.html"
+    },
+    {
+      "from": "ayuda/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "ayuda/index.html",
+      "to": "sobre-mi/index.html"
+    },
+    {
+      "from": "ayuda/index.html",
+      "to": "intereses/index.html"
+    },
+    {
+      "from": "ayuda/index.html",
+      "to": "multimedia/index.html"
+    },
+    {
+      "from": "ayuda/index.html",
+      "to": "series-y-peliculas/index.html"
+    },
+    {
+      "from": "ayuda/index.html",
+      "to": "videojuegos/index.html"
+    },
+    {
+      "from": "ayuda/index.html",
+      "to": "buscar/index.html"
+    },
+    {
+      "from": "ayuda/index.html",
+      "to": "ayuda/index.html"
+    },
+    {
+      "from": "en/sobre-mi/index.html",
+      "to": "en/sobre-mi/index.html"
+    },
+    {
+      "from": "en/sobre-mi/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/sobre-mi/index.html",
+      "to": "sobre-mi/index.html"
+    },
+    {
+      "from": "en/sobre-mi/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/sobre-mi/index.html",
+      "to": "en/sobre-mi/index.html"
+    },
+    {
+      "from": "en/sobre-mi/index.html",
+      "to": "en/intereses/index.html"
+    },
+    {
+      "from": "en/sobre-mi/index.html",
+      "to": "en/multimedia/index.html"
+    },
+    {
+      "from": "en/sobre-mi/index.html",
+      "to": "en/series-y-peliculas/index.html"
+    },
+    {
+      "from": "en/sobre-mi/index.html",
+      "to": "en/videojuegos/index.html"
+    },
+    {
+      "from": "en/sobre-mi/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/sobre-mi/index.html",
+      "to": "en/ayuda/index.html"
+    },
+    {
+      "from": "en/intereses/index.html",
+      "to": "en/intereses/index.html"
+    },
+    {
+      "from": "en/intereses/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/intereses/index.html",
+      "to": "intereses/index.html"
+    },
+    {
+      "from": "en/intereses/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/intereses/index.html",
+      "to": "en/sobre-mi/index.html"
+    },
+    {
+      "from": "en/intereses/index.html",
+      "to": "en/intereses/index.html"
+    },
+    {
+      "from": "en/intereses/index.html",
+      "to": "en/multimedia/index.html"
+    },
+    {
+      "from": "en/intereses/index.html",
+      "to": "en/series-y-peliculas/index.html"
+    },
+    {
+      "from": "en/intereses/index.html",
+      "to": "en/videojuegos/index.html"
+    },
+    {
+      "from": "en/intereses/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/intereses/index.html",
+      "to": "en/ayuda/index.html"
+    },
+    {
+      "from": "en/multimedia/index.html",
+      "to": "en/multimedia/index.html"
+    },
+    {
+      "from": "en/multimedia/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/multimedia/index.html",
+      "to": "multimedia/index.html"
+    },
+    {
+      "from": "en/multimedia/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/multimedia/index.html",
+      "to": "en/sobre-mi/index.html"
+    },
+    {
+      "from": "en/multimedia/index.html",
+      "to": "en/intereses/index.html"
+    },
+    {
+      "from": "en/multimedia/index.html",
+      "to": "en/multimedia/index.html"
+    },
+    {
+      "from": "en/multimedia/index.html",
+      "to": "en/series-y-peliculas/index.html"
+    },
+    {
+      "from": "en/multimedia/index.html",
+      "to": "en/videojuegos/index.html"
+    },
+    {
+      "from": "en/multimedia/index.html",
+      "to": "public/transcripciones/war-on-wheels.html"
+    },
+    {
+      "from": "en/multimedia/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/multimedia/index.html",
+      "to": "en/ayuda/index.html"
+    },
+    {
+      "from": "en/series-y-peliculas/index.html",
+      "to": "en/series-y-peliculas/index.html"
+    },
+    {
+      "from": "en/series-y-peliculas/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/series-y-peliculas/index.html",
+      "to": "series-y-peliculas/index.html"
+    },
+    {
+      "from": "en/series-y-peliculas/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/series-y-peliculas/index.html",
+      "to": "en/sobre-mi/index.html"
+    },
+    {
+      "from": "en/series-y-peliculas/index.html",
+      "to": "en/intereses/index.html"
+    },
+    {
+      "from": "en/series-y-peliculas/index.html",
+      "to": "en/multimedia/index.html"
+    },
+    {
+      "from": "en/series-y-peliculas/index.html",
+      "to": "en/series-y-peliculas/index.html"
+    },
+    {
+      "from": "en/series-y-peliculas/index.html",
+      "to": "en/videojuegos/index.html"
+    },
+    {
+      "from": "en/series-y-peliculas/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/series-y-peliculas/index.html",
+      "to": "en/ayuda/index.html"
+    },
+    {
+      "from": "en/videojuegos/index.html",
+      "to": "en/videojuegos/index.html"
+    },
+    {
+      "from": "en/videojuegos/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/videojuegos/index.html",
+      "to": "videojuegos/index.html"
+    },
+    {
+      "from": "en/videojuegos/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/videojuegos/index.html",
+      "to": "en/sobre-mi/index.html"
+    },
+    {
+      "from": "en/videojuegos/index.html",
+      "to": "en/intereses/index.html"
+    },
+    {
+      "from": "en/videojuegos/index.html",
+      "to": "en/multimedia/index.html"
+    },
+    {
+      "from": "en/videojuegos/index.html",
+      "to": "en/series-y-peliculas/index.html"
+    },
+    {
+      "from": "en/videojuegos/index.html",
+      "to": "en/videojuegos/index.html"
+    },
+    {
+      "from": "en/videojuegos/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/videojuegos/index.html",
+      "to": "en/ayuda/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
+      "to": "en/ayuda/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
+      "to": "ayuda/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
+      "to": "en/sobre-mi/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
+      "to": "en/intereses/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
+      "to": "en/multimedia/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
+      "to": "en/series-y-peliculas/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
+      "to": "en/videojuegos/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
+      "to": "en/sobre-mi/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
+      "to": "en/intereses/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
+      "to": "en/multimedia/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
+      "to": "en/series-y-peliculas/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
+      "to": "en/videojuegos/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
+      "to": "en/buscar/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
+      "to": "en/ayuda/index.html"
+    },
+    {
+      "from": "public/transcripciones/war-on-wheels.html",
+      "to": "public/transcripciones/war-on-wheels.html"
+    },
+    {
+      "from": "public/transcripciones/war-on-wheels.html",
+      "to": "index.html"
+    },
+    {
+      "from": "public/transcripciones/war-on-wheels.html",
+      "to": "en/multimedia/index.html"
+    },
+    {
+      "from": "public/transcripciones/war-on-wheels.html",
+      "to": "index.html"
+    },
+    {
+      "from": "public/transcripciones/war-on-wheels.html",
+      "to": "sobre-mi/index.html"
+    },
+    {
+      "from": "public/transcripciones/war-on-wheels.html",
+      "to": "intereses/index.html"
+    },
+    {
+      "from": "public/transcripciones/war-on-wheels.html",
+      "to": "multimedia/index.html"
+    },
+    {
+      "from": "public/transcripciones/war-on-wheels.html",
+      "to": "series-y-peliculas/index.html"
+    },
+    {
+      "from": "public/transcripciones/war-on-wheels.html",
+      "to": "videojuegos/index.html"
+    },
+    {
+      "from": "public/transcripciones/war-on-wheels.html",
+      "to": "multimedia/index.html"
+    },
+    {
+      "from": "public/transcripciones/war-on-wheels.html",
+      "to": "ayuda/index.html"
+    }
+  ],
+  "nonHTMLAssets": [
+    "public/audio/war-on-wheels.mp3",
+    "public/img/strela-10.jpg",
+    "public/img/su57.jpg",
+    "public/img/t72-museo.jpg",
+    "public/img/t90m.jpg",
+    "public/video/matilda-ii-tankfest.webm"
+  ],
+  "indexes": {
+    "es": {
+      "file": "public/search-index.json",
+      "entries": 8,
+      "bytes": 33785,
+      "sha256": "19256baf7d44ff9b8d5c987bae5168f85593b76b072cc5163ef8e27aca70c43f"
+    },
+    "en": {
+      "file": "public/search-index-en.json",
+      "entries": 8,
+      "bytes": 33418,
+      "sha256": "2f98cc6fd834771e138fd954b8d41aa53e91229db0eda4c58ff87ec96a784bc4"
+    }
+  },
+  "pairs": [
+    {
+      "es": "ayuda/index.html",
+      "en": "en/ayuda/index.html"
+    },
+    {
+      "es": "index.html",
+      "en": "en/index.html"
+    },
+    {
+      "es": "intereses/index.html",
+      "en": "en/intereses/index.html"
+    },
+    {
+      "es": "multimedia/index.html",
+      "en": "en/multimedia/index.html"
+    },
+    {
+      "es": "series-y-peliculas/index.html",
+      "en": "en/series-y-peliculas/index.html"
+    },
+    {
+      "es": "sobre-mi/index.html",
+      "en": "en/sobre-mi/index.html"
+    },
+    {
+      "es": "videojuegos/index.html",
+      "en": "en/videojuegos/index.html"
+    }
+  ]
+}

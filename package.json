@@ -1,29 +1,31 @@
 {
-    "name":  "p2-web-personal",
-    "version":  "1.0.0",
-    "description":  "",
-    "main":  "index.js",
-    "scripts":  {
-                    "dev":  "node scripts/serve.mjs",
-                    "build":  "node scripts/build.mjs",
-                    "test":  "playwright test",
-                    "validate":  "node scripts/validate.mjs",
-                    "images":  "node scripts/images.mjs",
-                    "performance":  "node scripts/performance.mjs"
-                },
-    "keywords":  [
-
-                 ],
-    "author":  "",
-    "license":  "ISC",
-    "devDependencies":  {
-                            "@playwright/test":  "^1.65.0",
-                            "axe-core":  "^4.14.0",
-                            "chrome-launcher":  "^1.2.3",
-                            "css-tree":  "^3.2.1",
-                            "lighthouse":  "^13.6.0",
-                            "sharp":  "^0.35.5",
-                            "vnu-jar":  "^26.11.9"
-                        },
-    "private":  true
+    "name": "p2-web-personal",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "node scripts/serve.mjs",
+        "build": "node scripts/build.mjs",
+        "test": "node scripts/run-tests.mjs",
+        "test:search": "node scripts/run-tests.mjs tests/search.spec.mjs",
+        "validate": "node scripts/validate.mjs",
+        "images": "node scripts/images.mjs",
+        "performance": "node scripts/performance.mjs"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@playwright/test": "^1.65.0",
+        "axe-core": "^4.14.0",
+        "chrome-launcher": "^1.2.3",
+        "css-tree": "^3.2.1",
+        "lighthouse": "^13.6.0",
+        "parse5": "8.0.1",
+        "sharp": "^0.35.5",
+        "vnu-jar": "^26.11.9"
+    },
+    "private": true,
+    "engines": {"node": ">=24"},
+    "packageManager": "pnpm@12.10.1"
 }

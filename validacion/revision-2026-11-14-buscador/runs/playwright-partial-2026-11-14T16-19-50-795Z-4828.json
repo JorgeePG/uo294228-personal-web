@@ -1,0 +1,1739 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/search.spec.mjs"
+    ],
+    "configFile": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\playwright.config.mjs",
+    "rootDir": "C:/Users/jorge/OneDrive/Desktop/Master/UX/uo294228-personal-web/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "evidenceScope": "partial",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/jorge/OneDrive/Desktop/Master/UX/uo294228-personal-web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "evidenceScope": "partial",
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/jorge/OneDrive/Desktop/Master/UX/uo294228-personal-web/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "evidenceScope": "partial",
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests",
+        "snapshotDir": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "channel": "chrome",
+          "headless": true
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "validacion/revision-2026-11-14-buscador/runs/playwright-partial-2026-11-14T16-19-50-795Z-4828.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 2,
+    "webServer": {
+      "command": "node scripts/serve.mjs",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "search.spec.mjs",
+      "file": "search.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S01 empty and whitespace queries",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S01"
+                },
+                {
+                  "type": "input",
+                  "description": "q vacío y tres espacios"
+                },
+                {
+                  "type": "expected",
+                  "description": "Mensaje para escribir un término; cero peticiones de índice y q eliminado"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'on')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'on')\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:16:25)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 25,
+                      "line": 16
+                    },
+                    "snippet": " \u001b[90m 14 |\u001b[39m })\u001b[33m;\u001b[39m}\n \u001b[90m 15 |\u001b[39m scenario(\u001b[32m'S01'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'empty and whitespace queries'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'q vacío y tres espacios'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Mensaje para escribir un término; cero peticiones de índice y q eliminado'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m  \u001b[36mconst\u001b[39m requests\u001b[33m=\u001b[39m[]\u001b[33m;\u001b[39mpage\u001b[33m.\u001b[39mon(\u001b[32m'request'\u001b[39m\u001b[33m,\u001b[39mr\u001b[33m=>\u001b[39m{\u001b[36mif\u001b[39m(\u001b[35m/search-index.*\\.json/\u001b[39m\u001b[33m.\u001b[39mtest(r\u001b[33m.\u001b[39murl()))requests\u001b[33m.\u001b[39mpush(r\u001b[33m.\u001b[39murl())\u001b[33m;\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m  \u001b[36mconst\u001b[39m seen\u001b[33m=\u001b[39m[]\u001b[33m;\u001b[39m\u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m query \u001b[36mof\u001b[39m [\u001b[32m''\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'   '\u001b[39m]){\u001b[36mconst\u001b[39m result\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39mquery)\u001b[33m;\u001b[39mexpect(result\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoContain(\u001b[32m'Escribe un término'\u001b[39m)\u001b[33m;\u001b[39mexpect(result\u001b[33m.\u001b[39mtitles)\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39mexpect(\u001b[36mnew\u001b[39m \u001b[33mURL\u001b[39m(page\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39msearchParams\u001b[33m.\u001b[39mhas(\u001b[32m'q'\u001b[39m))\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39mseen\u001b[33m.\u001b[39mpush(result)\u001b[33m;\u001b[39m}\n \u001b[90m 18 |\u001b[39m  expect(requests)\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m {seen\u001b[33m,\u001b[39mrequests}\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m })\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 25,
+                        "line": 16
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'on')\n\n  14 | });}\n  15 | scenario('S01','empty and whitespace queries','q vacío y tres espacios','Mensaje para escribir un término; cero peticiones de índice y q eliminado',async({page})=>{\n> 16 |  const requests=[];page.on('request',r=>{if(/search-index.*\\.json/.test(r.url()))requests.push(r.url());});await page.goto('/buscar/');\n     |                         ^\n  17 |  const seen=[];for(const query of ['', '   ']){const result=await submit(page,query);expect(result.status).toContain('Escribe un término');expect(result.titles).toEqual([]);expect(new URL(page.url()).searchParams.has('q')).toBe(false);seen.push(result);}\n  18 |  expect(requests).toEqual([]);return {seen,requests};\n  19 | });\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:16:25)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:19:52.942Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S01"
+                    },
+                    {
+                      "type": "input",
+                      "description": "q vacío y tres espacios"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Mensaje para escribir un término; cero peticiones de índice y q eliminado"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S01-empty-and-whitespace-queries\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 25,
+                    "line": 16
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-67361d1f5549d598686a",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S02 case and accent equivalence",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S02"
+                },
+                {
+                  "type": "input",
+                  "description": "AVIACIÓN y aviacion"
+                },
+                {
+                  "type": "expected",
+                  "description": "Misma lista no vacía y mismo orden"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'goto')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:21:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 13,
+                      "line": 21
+                    },
+                    "snippet": " \u001b[90m 19 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m scenario(\u001b[32m'S02'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'case and accent equivalence'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'AVIACIÓN y aviacion'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Misma lista no vacía y mismo orden'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m accented\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39m\u001b[32m'AVIACIÓN'\u001b[39m)\u001b[33m,\u001b[39mplain\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39m\u001b[32m'aviacion'\u001b[39m)\u001b[33m;\u001b[39mexpect(accented\u001b[33m.\u001b[39mhrefs\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39mexpect(plain\u001b[33m.\u001b[39mhrefs)\u001b[33m.\u001b[39mtoEqual(accented\u001b[33m.\u001b[39mhrefs)\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m {accented\u001b[33m,\u001b[39mplain}\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m scenario(\u001b[32m'S03'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'all terms and repeated terms'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'tanques aviones; tanques aviones tanques; tanques terminoimposiblexyz'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Todos los términos presentes; repetir no cambia el orden; un término ausente da cero'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m 24 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m both\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39m\u001b[32m'tanques aviones'\u001b[39m)\u001b[33m;\u001b[39mexpect(both\u001b[33m.\u001b[39mtitles\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 13,
+                        "line": 21
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'goto')\n\n  19 | });\n  20 | scenario('S02','case and accent equivalence','AVIACIÓN y aviacion','Misma lista no vacía y mismo orden',async({page})=>{\n> 21 |  await page.goto('/buscar/');const accented=await submit(page,'AVIACIÓN'),plain=await submit(page,'aviacion');expect(accented.hrefs.length).toBeGreaterThan(0);expect(plain.hrefs).toEqual(accented.hrefs);return {accented,plain};\n     |             ^\n  22 | });\n  23 | scenario('S03','all terms and repeated terms','tanques aviones; tanques aviones tanques; tanques terminoimposiblexyz','Todos los términos presentes; repetir no cambia el orden; un término ausente da cero',async({page})=>{\n  24 |  await page.goto('/buscar/');const both=await submit(page,'tanques aviones');expect(both.titles.length).toBeGreaterThan(0);\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:21:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:19:53.703Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S02"
+                    },
+                    {
+                      "type": "input",
+                      "description": "AVIACIÓN y aviacion"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Misma lista no vacía y mismo orden"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S02-case-and-accent-equivalence\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 13,
+                    "line": 21
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-9b68f46f8ec95e0352b2",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S03 all terms and repeated terms",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S03"
+                },
+                {
+                  "type": "input",
+                  "description": "tanques aviones; tanques aviones tanques; tanques terminoimposiblexyz"
+                },
+                {
+                  "type": "expected",
+                  "description": "Todos los términos presentes; repetir no cambia el orden; un término ausente da cero"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'goto')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:24:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 13,
+                      "line": 24
+                    },
+                    "snippet": " \u001b[90m 22 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m scenario(\u001b[32m'S03'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'all terms and repeated terms'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'tanques aviones; tanques aviones tanques; tanques terminoimposiblexyz'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Todos los términos presentes; repetir no cambia el orden; un término ausente da cero'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m both\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39m\u001b[32m'tanques aviones'\u001b[39m)\u001b[33m;\u001b[39mexpect(both\u001b[33m.\u001b[39mtitles\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m  \u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m href \u001b[36mof\u001b[39m both\u001b[33m.\u001b[39mhrefs){\u001b[36mconst\u001b[39m item\u001b[33m=\u001b[39mindexes\u001b[33m.\u001b[39mes\u001b[33m.\u001b[39mfind(item\u001b[33m=>\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mURL\u001b[39m(item\u001b[33m.\u001b[39murl\u001b[33m,\u001b[39m\u001b[32m'http://127.0.0.1:4173/public/search-index.json'\u001b[39m)\u001b[33m.\u001b[39mhref\u001b[33m===\u001b[39mhref)\u001b[33m;\u001b[39mexpect(item\u001b[33m.\u001b[39mtext\u001b[33m.\u001b[39mtoLowerCase())\u001b[33m.\u001b[39mtoContain(\u001b[32m'tanques'\u001b[39m)\u001b[33m;\u001b[39mexpect(item\u001b[33m.\u001b[39mtext\u001b[33m.\u001b[39mtoLowerCase())\u001b[33m.\u001b[39mtoContain(\u001b[32m'aviones'\u001b[39m)\u001b[33m;\u001b[39m}\n \u001b[90m 26 |\u001b[39m  \u001b[36mconst\u001b[39m repeated\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39m\u001b[32m'tanques aviones tanques'\u001b[39m)\u001b[33m;\u001b[39mexpect(repeated\u001b[33m.\u001b[39mhrefs)\u001b[33m.\u001b[39mtoEqual(both\u001b[33m.\u001b[39mhrefs)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m missing\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39m\u001b[32m'tanques terminoimposiblexyz'\u001b[39m)\u001b[33m;\u001b[39mexpect(missing\u001b[33m.\u001b[39mtitles)\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m {both\u001b[33m,\u001b[39mrepeated\u001b[33m,\u001b[39mmissing}\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m })\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 13,
+                        "line": 24
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'goto')\n\n  22 | });\n  23 | scenario('S03','all terms and repeated terms','tanques aviones; tanques aviones tanques; tanques terminoimposiblexyz','Todos los términos presentes; repetir no cambia el orden; un término ausente da cero',async({page})=>{\n> 24 |  await page.goto('/buscar/');const both=await submit(page,'tanques aviones');expect(both.titles.length).toBeGreaterThan(0);\n     |             ^\n  25 |  for(const href of both.hrefs){const item=indexes.es.find(item=>new URL(item.url,'http://127.0.0.1:4173/public/search-index.json').href===href);expect(item.text.toLowerCase()).toContain('tanques');expect(item.text.toLowerCase()).toContain('aviones');}\n  26 |  const repeated=await submit(page,'tanques aviones tanques');expect(repeated.hrefs).toEqual(both.hrefs);const missing=await submit(page,'tanques terminoimposiblexyz');expect(missing.titles).toEqual([]);return {both,repeated,missing};\n  27 | });\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:24:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:19:54.431Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S03"
+                    },
+                    {
+                      "type": "input",
+                      "description": "tanques aviones; tanques aviones tanques; tanques terminoimposiblexyz"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Todos los términos presentes; repetir no cambia el orden; un término ausente da cero"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S03-all-terms-and-repeated-terms\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 13,
+                    "line": 24
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-d80545039e8d6a3f19fb",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S04 real title relevance",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S04"
+                },
+                {
+                  "type": "input",
+                  "description": "videojuegos"
+                },
+                {
+                  "type": "expected",
+                  "description": "Videojuegos es el primer resultado aunque otras páginas lo mencionen"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 3,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'goto')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:29:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 13,
+                      "line": 29
+                    },
+                    "snippet": " \u001b[90m 27 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m scenario(\u001b[32m'S04'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'real title relevance'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'videojuegos'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Videojuegos es el primer resultado aunque otras páginas lo mencionen'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 29 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m result\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39m\u001b[32m'videojuegos'\u001b[39m)\u001b[33m;\u001b[39mexpect(result\u001b[33m.\u001b[39mtitles[\u001b[35m0\u001b[39m])\u001b[33m.\u001b[39mtoBe(\u001b[32m'Videojuegos'\u001b[39m)\u001b[33m;\u001b[39mexpect(result\u001b[33m.\u001b[39mtitles\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m result\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 30 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 31 |\u001b[39m scenario(\u001b[32m'S05'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'ranking and deterministic tie break'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Índice sintético de tres documentos; aviacion'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Título AVIACIÓN primero; empate de cuerpo: ayuda antes de videojuegos'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m 32 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/search-index.json'\u001b[39m\u001b[33m,\u001b[39mroute\u001b[33m=>\u001b[39mroute\u001b[33m.\u001b[39mfulfill({json\u001b[33m:\u001b[39m[{title\u001b[33m:\u001b[39m\u001b[32m'Documento Z'\u001b[39m\u001b[33m,\u001b[39mtext\u001b[33m:\u001b[39m\u001b[32m'aviación'\u001b[39m\u001b[33m,\u001b[39murl\u001b[33m:\u001b[39m\u001b[32m'../videojuegos/index.html'\u001b[39m}\u001b[33m,\u001b[39m{title\u001b[33m:\u001b[39m\u001b[32m'AVIACIÓN'\u001b[39m\u001b[33m,\u001b[39mtext\u001b[33m:\u001b[39m\u001b[32m'simulado'\u001b[39m\u001b[33m,\u001b[39murl\u001b[33m:\u001b[39m\u001b[32m'../sobre-mi/index.html'\u001b[39m}\u001b[33m,\u001b[39m{title\u001b[33m:\u001b[39m\u001b[32m'Documento A'\u001b[39m\u001b[33m,\u001b[39mtext\u001b[33m:\u001b[39m\u001b[32m'aviación'\u001b[39m\u001b[33m,\u001b[39murl\u001b[33m:\u001b[39m\u001b[32m'../ayuda/index.html'\u001b[39m}]}))\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 13,
+                        "line": 29
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'goto')\n\n  27 | });\n  28 | scenario('S04','real title relevance','videojuegos','Videojuegos es el primer resultado aunque otras páginas lo mencionen',async({page})=>{\n> 29 |  await page.goto('/buscar/');const result=await submit(page,'videojuegos');expect(result.titles[0]).toBe('Videojuegos');expect(result.titles.length).toBeGreaterThan(1);return result;\n     |             ^\n  30 | });\n  31 | scenario('S05','ranking and deterministic tie break','Índice sintético de tres documentos; aviacion','Título AVIACIÓN primero; empate de cuerpo: ayuda antes de videojuegos',async({page})=>{\n  32 |  await page.route('**/search-index.json',route=>route.fulfill({json:[{title:'Documento Z',text:'aviación',url:'../videojuegos/index.html'},{title:'AVIACIÓN',text:'simulado',url:'../sobre-mi/index.html'},{title:'Documento A',text:'aviación',url:'../ayuda/index.html'}]}));\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:29:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:19:55.134Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S04"
+                    },
+                    {
+                      "type": "input",
+                      "description": "videojuegos"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Videojuegos es el primer resultado aunque otras páginas lo mencionen"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S04-real-title-relevance\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 13,
+                    "line": 29
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-29a5028e733276d6002d",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S05 ranking and deterministic tie break",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S05"
+                },
+                {
+                  "type": "input",
+                  "description": "Índice sintético de tres documentos; aviacion"
+                },
+                {
+                  "type": "expected",
+                  "description": "Título AVIACIÓN primero; empate de cuerpo: ayuda antes de videojuegos"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'route')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'route')\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:32:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 13,
+                      "line": 32
+                    },
+                    "snippet": " \u001b[90m 30 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 31 |\u001b[39m scenario(\u001b[32m'S05'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'ranking and deterministic tie break'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Índice sintético de tres documentos; aviacion'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Título AVIACIÓN primero; empate de cuerpo: ayuda antes de videojuegos'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/search-index.json'\u001b[39m\u001b[33m,\u001b[39mroute\u001b[33m=>\u001b[39mroute\u001b[33m.\u001b[39mfulfill({json\u001b[33m:\u001b[39m[{title\u001b[33m:\u001b[39m\u001b[32m'Documento Z'\u001b[39m\u001b[33m,\u001b[39mtext\u001b[33m:\u001b[39m\u001b[32m'aviación'\u001b[39m\u001b[33m,\u001b[39murl\u001b[33m:\u001b[39m\u001b[32m'../videojuegos/index.html'\u001b[39m}\u001b[33m,\u001b[39m{title\u001b[33m:\u001b[39m\u001b[32m'AVIACIÓN'\u001b[39m\u001b[33m,\u001b[39mtext\u001b[33m:\u001b[39m\u001b[32m'simulado'\u001b[39m\u001b[33m,\u001b[39murl\u001b[33m:\u001b[39m\u001b[32m'../sobre-mi/index.html'\u001b[39m}\u001b[33m,\u001b[39m{title\u001b[33m:\u001b[39m\u001b[32m'Documento A'\u001b[39m\u001b[33m,\u001b[39mtext\u001b[33m:\u001b[39m\u001b[32m'aviación'\u001b[39m\u001b[33m,\u001b[39murl\u001b[33m:\u001b[39m\u001b[32m'../ayuda/index.html'\u001b[39m}]}))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 33 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m result\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39m\u001b[32m'aviacion'\u001b[39m)\u001b[33m;\u001b[39mexpect(result\u001b[33m.\u001b[39mtitles)\u001b[33m.\u001b[39mtoEqual([\u001b[32m'AVIACIÓN'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Documento A'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Documento Z'\u001b[39m])\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m {synthetic\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\u001b[33m...\u001b[39mresult}\u001b[33m;\u001b[39m\n \u001b[90m 34 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 35 |\u001b[39m scenario(\u001b[32m'S06'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'no results and recovery guidance'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'terminoimposiblexyz'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Cero resultados y propuesta de reformulación'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 13,
+                        "line": 32
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'route')\n\n  30 | });\n  31 | scenario('S05','ranking and deterministic tie break','Índice sintético de tres documentos; aviacion','Título AVIACIÓN primero; empate de cuerpo: ayuda antes de videojuegos',async({page})=>{\n> 32 |  await page.route('**/search-index.json',route=>route.fulfill({json:[{title:'Documento Z',text:'aviación',url:'../videojuegos/index.html'},{title:'AVIACIÓN',text:'simulado',url:'../sobre-mi/index.html'},{title:'Documento A',text:'aviación',url:'../ayuda/index.html'}]}));\n     |             ^\n  33 |  await page.goto('/buscar/');const result=await submit(page,'aviacion');expect(result.titles).toEqual(['AVIACIÓN','Documento A','Documento Z']);return {synthetic:true,...result};\n  34 | });\n  35 | scenario('S06','no results and recovery guidance','terminoimposiblexyz','Cero resultados y propuesta de reformulación',async({page})=>{\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:32:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:19:55.969Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S05"
+                    },
+                    {
+                      "type": "input",
+                      "description": "Índice sintético de tres documentos; aviacion"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Título AVIACIÓN primero; empate de cuerpo: ayuda antes de videojuegos"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S05-ranking-and-deterministic-tie-break\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 13,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-62fa125e58c0c0302ba2",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S06 no results and recovery guidance",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S06"
+                },
+                {
+                  "type": "input",
+                  "description": "terminoimposiblexyz"
+                },
+                {
+                  "type": "expected",
+                  "description": "Cero resultados y propuesta de reformulación"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 3,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'goto')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:36:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 13,
+                      "line": 36
+                    },
+                    "snippet": " \u001b[90m 34 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 35 |\u001b[39m scenario(\u001b[32m'S06'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'no results and recovery guidance'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'terminoimposiblexyz'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Cero resultados y propuesta de reformulación'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m result\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39m\u001b[32m'terminoimposiblexyz'\u001b[39m)\u001b[33m;\u001b[39mexpect(result\u001b[33m.\u001b[39mtitles)\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39mexpect(result\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoContain(\u001b[32m'Sin resultados'\u001b[39m)\u001b[33m;\u001b[39mexpect(result\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoContain(\u001b[32m'Prueba'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m result\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 37 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 38 |\u001b[39m scenario(\u001b[32m'S07'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'query length at input and URL boundaries'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'140 letras a, entrada y ?q='\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Campo y parámetro q limitados a 120 unidades UTF-16'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m 39 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/?q='\u001b[39m\u001b[33m+\u001b[39m \u001b[32m'a'\u001b[39m\u001b[33m.\u001b[39mrepeat(\u001b[35m140\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Sin resultados'\u001b[39m)\u001b[33m;\u001b[39mexpect(\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39minput\u001b[33m.\u001b[39minputValue())\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m120\u001b[39m)\u001b[33m;\u001b[39mexpect(\u001b[36mnew\u001b[39m \u001b[33mURL\u001b[39m(page\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39msearchParams\u001b[33m.\u001b[39mget(\u001b[32m'q'\u001b[39m))\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m120\u001b[39m)\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 13,
+                        "line": 36
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'goto')\n\n  34 | });\n  35 | scenario('S06','no results and recovery guidance','terminoimposiblexyz','Cero resultados y propuesta de reformulación',async({page})=>{\n> 36 |  await page.goto('/buscar/');const result=await submit(page,'terminoimposiblexyz');expect(result.titles).toEqual([]);expect(result.status).toContain('Sin resultados');expect(result.status).toContain('Prueba');return result;\n     |             ^\n  37 | });\n  38 | scenario('S07','query length at input and URL boundaries','140 letras a, entrada y ?q=','Campo y parámetro q limitados a 120 unidades UTF-16',async({page})=>{\n  39 |  await page.goto('/buscar/?q='+ 'a'.repeat(140));await expect(fields(page).status).toContainText('Sin resultados');expect(await fields(page).input.inputValue()).toHaveLength(120);expect(new URL(page.url()).searchParams.get('q')).toHaveLength(120);\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:36:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:19:56.625Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S06"
+                    },
+                    {
+                      "type": "input",
+                      "description": "terminoimposiblexyz"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Cero resultados y propuesta de reformulación"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S06-no-results-and-recovery-guidance\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 13,
+                    "line": 36
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-48342f49fea5df6cc718",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S07 query length at input and URL boundaries",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S07"
+                },
+                {
+                  "type": "input",
+                  "description": "140 letras a, entrada y ?q="
+                },
+                {
+                  "type": "expected",
+                  "description": "Campo y parámetro q limitados a 120 unidades UTF-16"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'goto')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:39:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 13,
+                      "line": 39
+                    },
+                    "snippet": " \u001b[90m 37 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 38 |\u001b[39m scenario(\u001b[32m'S07'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'query length at input and URL boundaries'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'140 letras a, entrada y ?q='\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Campo y parámetro q limitados a 120 unidades UTF-16'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 39 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/?q='\u001b[39m\u001b[33m+\u001b[39m \u001b[32m'a'\u001b[39m\u001b[33m.\u001b[39mrepeat(\u001b[35m140\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Sin resultados'\u001b[39m)\u001b[33m;\u001b[39mexpect(\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39minput\u001b[33m.\u001b[39minputValue())\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m120\u001b[39m)\u001b[33m;\u001b[39mexpect(\u001b[36mnew\u001b[39m \u001b[33mURL\u001b[39m(page\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39msearchParams\u001b[33m.\u001b[39mget(\u001b[32m'q'\u001b[39m))\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m120\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 40 |\u001b[39m  \u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39minput\u001b[33m.\u001b[39mfill(\u001b[32m'b'\u001b[39m\u001b[33m.\u001b[39mrepeat(\u001b[35m140\u001b[39m))\u001b[33m;\u001b[39mexpect(\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39minput\u001b[33m.\u001b[39minputValue())\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m120\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39minput\u001b[33m.\u001b[39mpress(\u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Sin resultados'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m {inputLength\u001b[33m:\u001b[39m(\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39minput\u001b[33m.\u001b[39minputValue())\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39murlLength\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mURL\u001b[39m(page\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39msearchParams\u001b[33m.\u001b[39mget(\u001b[32m'q'\u001b[39m)\u001b[33m.\u001b[39mlength}\u001b[33m;\u001b[39m\n \u001b[90m 41 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m scenario(\u001b[32m'S08'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'query HTML is inert'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'<img src=x onerror=alert(1)>'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Sin diálogo JS ni nodos img; entrada tratada como texto'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 13,
+                        "line": 39
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'goto')\n\n  37 | });\n  38 | scenario('S07','query length at input and URL boundaries','140 letras a, entrada y ?q=','Campo y parámetro q limitados a 120 unidades UTF-16',async({page})=>{\n> 39 |  await page.goto('/buscar/?q='+ 'a'.repeat(140));await expect(fields(page).status).toContainText('Sin resultados');expect(await fields(page).input.inputValue()).toHaveLength(120);expect(new URL(page.url()).searchParams.get('q')).toHaveLength(120);\n     |             ^\n  40 |  await fields(page).input.fill('b'.repeat(140));expect(await fields(page).input.inputValue()).toHaveLength(120);await fields(page).input.press('Enter');await expect(fields(page).status).toContainText('Sin resultados');return {inputLength:(await fields(page).input.inputValue()).length,urlLength:new URL(page.url()).searchParams.get('q').length};\n  41 | });\n  42 | scenario('S08','query HTML is inert','<img src=x onerror=alert(1)>','Sin diálogo JS ni nodos img; entrada tratada como texto',async({page})=>{\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:39:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:19:57.452Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S07"
+                    },
+                    {
+                      "type": "input",
+                      "description": "140 letras a, entrada y ?q="
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Campo y parámetro q limitados a 120 unidades UTF-16"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S07-query-length-at-input-and-URL-boundaries\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 13,
+                    "line": 39
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-b865f7c6fa8c507a2ce5",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S08 query HTML is inert",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S08"
+                },
+                {
+                  "type": "input",
+                  "description": "<img src=x onerror=alert(1)>"
+                },
+                {
+                  "type": "expected",
+                  "description": "Sin diálogo JS ni nodos img; entrada tratada como texto"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'on')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'on')\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:43:24)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 24,
+                      "line": 43
+                    },
+                    "snippet": " \u001b[90m 41 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m scenario(\u001b[32m'S08'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'query HTML is inert'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'<img src=x onerror=alert(1)>'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Sin diálogo JS ni nodos img; entrada tratada como texto'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m  \u001b[36mconst\u001b[39m dialogs\u001b[33m=\u001b[39m[]\u001b[33m;\u001b[39mpage\u001b[33m.\u001b[39mon(\u001b[32m'dialog'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m d\u001b[33m=>\u001b[39m{dialogs\u001b[33m.\u001b[39mpush(d\u001b[33m.\u001b[39mmessage())\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m d\u001b[33m.\u001b[39mdismiss()\u001b[33m;\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m result\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39m\u001b[32m'<img src=x onerror=alert(1)>'\u001b[39m)\u001b[33m;\u001b[39mexpect(dialogs)\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-results] img'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m {\u001b[33m...\u001b[39mresult\u001b[33m,\u001b[39mdialogs\u001b[33m,\u001b[39mimages\u001b[33m:\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-results] img'\u001b[39m)\u001b[33m.\u001b[39mcount()}\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m scenario(\u001b[32m'S09'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'HTTP failure retry and memory cache'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Primer índice HTTP 503; reintento; segunda consulta'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Mensaje, mapa y botón; el reintento funciona; siguiente consulta no vuelve a descargar'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m 46 |\u001b[39m  \u001b[36mlet\u001b[39m requests\u001b[33m=\u001b[39m\u001b[35m0\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/search-index.json'\u001b[39m\u001b[33m,\u001b[39mroute\u001b[33m=>\u001b[39m{requests\u001b[33m++\u001b[39m\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m requests\u001b[33m===\u001b[39m\u001b[35m1\u001b[39m\u001b[33m?\u001b[39mroute\u001b[33m.\u001b[39mfulfill({status\u001b[33m:\u001b[39m\u001b[35m503\u001b[39m\u001b[33m,\u001b[39mbody\u001b[33m:\u001b[39m\u001b[32m'temporarily unavailable'\u001b[39m})\u001b[33m:\u001b[39mroute\u001b[33m.\u001b[39mcontinue()\u001b[33m;\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/?q=coleccionismo'\u001b[39m)\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 24,
+                        "line": 43
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'on')\n\n  41 | });\n  42 | scenario('S08','query HTML is inert','<img src=x onerror=alert(1)>','Sin diálogo JS ni nodos img; entrada tratada como texto',async({page})=>{\n> 43 |  const dialogs=[];page.on('dialog',async d=>{dialogs.push(d.message());await d.dismiss();});await page.goto('/buscar/');const result=await submit(page,'<img src=x onerror=alert(1)>');expect(dialogs).toEqual([]);await expect(page.locator('[data-results] img')).toHaveCount(0);return {...result,dialogs,images:await page.locator('[data-results] img').count()};\n     |                        ^\n  44 | });\n  45 | scenario('S09','HTTP failure retry and memory cache','Primer índice HTTP 503; reintento; segunda consulta','Mensaje, mapa y botón; el reintento funciona; siguiente consulta no vuelve a descargar',async({page})=>{\n  46 |  let requests=0;await page.route('**/search-index.json',route=>{requests++;return requests===1?route.fulfill({status:503,body:'temporarily unavailable'}):route.continue();});await page.goto('/buscar/?q=coleccionismo');\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:43:24)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:19:58.271Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S08"
+                    },
+                    {
+                      "type": "input",
+                      "description": "<img src=x onerror=alert(1)>"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Sin diálogo JS ni nodos img; entrada tratada como texto"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S08-query-HTML-is-inert\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 24,
+                    "line": 43
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-acb5e2a1d41bf7cbeb69",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S09 HTTP failure retry and memory cache",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S09"
+                },
+                {
+                  "type": "input",
+                  "description": "Primer índice HTTP 503; reintento; segunda consulta"
+                },
+                {
+                  "type": "expected",
+                  "description": "Mensaje, mapa y botón; el reintento funciona; siguiente consulta no vuelve a descargar"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 3,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'route')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'route')\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:46:28)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 28,
+                      "line": 46
+                    },
+                    "snippet": " \u001b[90m 44 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m scenario(\u001b[32m'S09'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'HTTP failure retry and memory cache'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Primer índice HTTP 503; reintento; segunda consulta'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Mensaje, mapa y botón; el reintento funciona; siguiente consulta no vuelve a descargar'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m  \u001b[36mlet\u001b[39m requests\u001b[33m=\u001b[39m\u001b[35m0\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/search-index.json'\u001b[39m\u001b[33m,\u001b[39mroute\u001b[33m=>\u001b[39m{requests\u001b[33m++\u001b[39m\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m requests\u001b[33m===\u001b[39m\u001b[35m1\u001b[39m\u001b[33m?\u001b[39mroute\u001b[33m.\u001b[39mfulfill({status\u001b[33m:\u001b[39m\u001b[35m503\u001b[39m\u001b[33m,\u001b[39mbody\u001b[33m:\u001b[39m\u001b[32m'temporarily unavailable'\u001b[39m})\u001b[33m:\u001b[39mroute\u001b[33m.\u001b[39mcontinue()\u001b[33m;\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/?q=coleccionismo'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 47 |\u001b[39m  \u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'No se ha podido'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Consultar el mapa del sitio'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m}))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Reintentar búsqueda'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39mlinks)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-search-retry]'\u001b[39m))\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m retryResult\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39mlinks\u001b[33m.\u001b[39mallTextContents()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39m\u001b[32m'T-90M'\u001b[39m)\u001b[33m;\u001b[39mexpect(requests)\u001b[33m.\u001b[39mtoBe(\u001b[35m2\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m {requests\u001b[33m,\u001b[39mretryResult\u001b[33m,\u001b[39mfinal\u001b[33m:\u001b[39m\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39mstatus\u001b[33m.\u001b[39mtextContent()}\u001b[33m;\u001b[39m\n \u001b[90m 48 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 49 |\u001b[39m scenario(\u001b[32m'S10'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'malformed and unsafe indexes fail closed'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'JSON sintético inválido; enlace javascript:'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Recuperación accesible sin renderizar resultados inseguros'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 28,
+                        "line": 46
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'route')\n\n  44 | });\n  45 | scenario('S09','HTTP failure retry and memory cache','Primer índice HTTP 503; reintento; segunda consulta','Mensaje, mapa y botón; el reintento funciona; siguiente consulta no vuelve a descargar',async({page})=>{\n> 46 |  let requests=0;await page.route('**/search-index.json',route=>{requests++;return requests===1?route.fulfill({status:503,body:'temporarily unavailable'}):route.continue();});await page.goto('/buscar/?q=coleccionismo');\n     |                            ^\n  47 |  await expect(fields(page).status).toContainText('No se ha podido');await expect(page.getByRole('link',{name:'Consultar el mapa del sitio',exact:true})).toBeVisible();await page.getByRole('button',{name:'Reintentar búsqueda',exact:true}).click();await expect(fields(page).links).not.toHaveCount(0);await expect(page.locator('[data-search-retry]')).not.toBeVisible();const retryResult=await fields(page).links.allTextContents();await submit(page,'T-90M');expect(requests).toBe(2);return {requests,retryResult,final:await fields(page).status.textContent()};\n  48 | });\n  49 | scenario('S10','malformed and unsafe indexes fail closed','JSON sintético inválido; enlace javascript:','Recuperación accesible sin renderizar resultados inseguros',async({page})=>{\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:46:28)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:19:58.915Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S09"
+                    },
+                    {
+                      "type": "input",
+                      "description": "Primer índice HTTP 503; reintento; segunda consulta"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Mensaje, mapa y botón; el reintento funciona; siguiente consulta no vuelve a descargar"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S09-HTTP-failure-retry-and-memory-cache\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 28,
+                    "line": 46
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-86f5c1eaa8e5b68caf00",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S10 malformed and unsafe indexes fail closed",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S10"
+                },
+                {
+                  "type": "input",
+                  "description": "JSON sintético inválido; enlace javascript:"
+                },
+                {
+                  "type": "expected",
+                  "description": "Recuperación accesible sin renderizar resultados inseguros"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'route')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'route')\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:51:14)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 14,
+                      "line": 51
+                    },
+                    "snippet": " \u001b[90m 49 |\u001b[39m scenario(\u001b[32m'S10'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'malformed and unsafe indexes fail closed'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'JSON sintético inválido; enlace javascript:'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Recuperación accesible sin renderizar resultados inseguros'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m 50 |\u001b[39m  \u001b[36mconst\u001b[39m results\u001b[33m=\u001b[39m[]\u001b[33m;\u001b[39m\u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m json \u001b[36mof\u001b[39m [{bad\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m}\u001b[33m,\u001b[39m[{title\u001b[33m:\u001b[39m\u001b[32m'Inseguro'\u001b[39m\u001b[33m,\u001b[39mtext\u001b[33m:\u001b[39m\u001b[32m'tanque'\u001b[39m\u001b[33m,\u001b[39murl\u001b[33m:\u001b[39m\u001b[32m'javascript:alert(1)'\u001b[39m}]]){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 51 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/search-index.json'\u001b[39m\u001b[33m,\u001b[39mroute\u001b[33m=>\u001b[39mroute\u001b[33m.\u001b[39mfulfill({json}))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/?q=tanque'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'No se ha podido'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39mlinks)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39mresults\u001b[33m.\u001b[39mpush(\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39mstatus\u001b[33m.\u001b[39mtextContent())\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39munroute(\u001b[32m'**/search-index.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 52 |\u001b[39m  }\u001b[36mreturn\u001b[39m {synthetic\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39mresults}\u001b[33m;\u001b[39m\n \u001b[90m 53 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 54 |\u001b[39m scenario(\u001b[32m'S11'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'latest query wins with a shared pending download'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Índice retenido; T-90M seguido de aviacion'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Una descarga; solo se publica la última consulta'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 14,
+                        "line": 51
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'route')\n\n  49 | scenario('S10','malformed and unsafe indexes fail closed','JSON sintético inválido; enlace javascript:','Recuperación accesible sin renderizar resultados inseguros',async({page})=>{\n  50 |  const results=[];for(const json of [{bad:true},[{title:'Inseguro',text:'tanque',url:'javascript:alert(1)'}]]){\n> 51 |   await page.route('**/search-index.json',route=>route.fulfill({json}));await page.goto('/buscar/?q=tanque');await expect(fields(page).status).toContainText('No se ha podido');await expect(fields(page).links).toHaveCount(0);results.push(await fields(page).status.textContent());await page.unroute('**/search-index.json');\n     |              ^\n  52 |  }return {synthetic:true,results};\n  53 | });\n  54 | scenario('S11','latest query wins with a shared pending download','Índice retenido; T-90M seguido de aviacion','Una descarga; solo se publica la última consulta',async({page})=>{\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:51:14)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:19:59.760Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S10"
+                    },
+                    {
+                      "type": "input",
+                      "description": "JSON sintético inválido; enlace javascript:"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Recuperación accesible sin renderizar resultados inseguros"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S10-malformed-and-unsafe-indexes-fail-closed\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 14,
+                    "line": 51
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-71c7b2ee83a63e48a7cb",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S11 latest query wins with a shared pending download",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S11"
+                },
+                {
+                  "type": "input",
+                  "description": "Índice retenido; T-90M seguido de aviacion"
+                },
+                {
+                  "type": "expected",
+                  "description": "Una descarga; solo se publica la última consulta"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'route')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'route')\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:56:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 13,
+                      "line": 56
+                    },
+                    "snippet": " \u001b[90m 54 |\u001b[39m scenario(\u001b[32m'S11'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'latest query wins with a shared pending download'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Índice retenido; T-90M seguido de aviacion'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Una descarga; solo se publica la última consulta'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m 55 |\u001b[39m  \u001b[36mlet\u001b[39m release\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m gate\u001b[33m=\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mPromise\u001b[39m(resolve\u001b[33m=>\u001b[39mrelease\u001b[33m=\u001b[39mresolve)\u001b[33m;\u001b[39m\u001b[36mlet\u001b[39m requests\u001b[33m=\u001b[39m\u001b[35m0\u001b[39m\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 56 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/search-index.json'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m route\u001b[33m=>\u001b[39m{requests\u001b[33m++\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m gate\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m route\u001b[33m.\u001b[39mcontinue()\u001b[33m;\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39minput\u001b[33m.\u001b[39mfill(\u001b[32m'T-90M'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39minput\u001b[33m.\u001b[39mpress(\u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Buscando…'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39minput\u001b[33m.\u001b[39mfill(\u001b[32m'aviacion'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39minput\u001b[33m.\u001b[39mpress(\u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39mrelease()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'«aviacion»'\u001b[39m)\u001b[33m;\u001b[39mexpect(requests)\u001b[33m.\u001b[39mtoBe(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m {requests\u001b[33m,\u001b[39mstatus\u001b[33m:\u001b[39m\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39mstatus\u001b[33m.\u001b[39mtextContent()\u001b[33m,\u001b[39mtitles\u001b[33m:\u001b[39m\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39mlinks\u001b[33m.\u001b[39mallTextContents()}\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 57 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 58 |\u001b[39m scenario(\u001b[32m'S12'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'reload preserves query and unrelated URL parameters'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'?q=coleccionismo&origen=prueba'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Resultados reproducibles tras recarga y origen conservado'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m 59 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/?q=coleccionismo&origen=prueba'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39mlinks)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m before\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39mlinks\u001b[33m.\u001b[39mallTextContents()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mreload()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39mlinks)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39mexpect(\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39mlinks\u001b[33m.\u001b[39mallTextContents())\u001b[33m.\u001b[39mtoEqual(before)\u001b[33m;\u001b[39mexpect(\u001b[36mnew\u001b[39m \u001b[33mURL\u001b[39m(page\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39msearchParams\u001b[33m.\u001b[39mget(\u001b[32m'origen'\u001b[39m))\u001b[33m.\u001b[39mtoBe(\u001b[32m'prueba'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m {before\u001b[33m,\u001b[39mafter\u001b[33m:\u001b[39m\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39mlinks\u001b[33m.\u001b[39mallTextContents()\u001b[33m,\u001b[39murl\u001b[33m:\u001b[39mpage\u001b[33m.\u001b[39murl()}\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 13,
+                        "line": 56
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'route')\n\n  54 | scenario('S11','latest query wins with a shared pending download','Índice retenido; T-90M seguido de aviacion','Una descarga; solo se publica la última consulta',async({page})=>{\n  55 |  let release;const gate=new Promise(resolve=>release=resolve);let requests=0;\n> 56 |  await page.route('**/search-index.json',async route=>{requests++;await gate;await route.continue();});await page.goto('/buscar/');await fields(page).input.fill('T-90M');await fields(page).input.press('Enter');await expect(fields(page).status).toHaveText('Buscando…');await fields(page).input.fill('aviacion');await fields(page).input.press('Enter');release();await expect(fields(page).status).toContainText('«aviacion»');expect(requests).toBe(1);return {requests,status:await fields(page).status.textContent(),titles:await fields(page).links.allTextContents()};\n     |             ^\n  57 | });\n  58 | scenario('S12','reload preserves query and unrelated URL parameters','?q=coleccionismo&origen=prueba','Resultados reproducibles tras recarga y origen conservado',async({page})=>{\n  59 |  await page.goto('/buscar/?q=coleccionismo&origen=prueba');await expect(fields(page).links).not.toHaveCount(0);const before=await fields(page).links.allTextContents();await page.reload();await expect(fields(page).links).not.toHaveCount(0);expect(await fields(page).links.allTextContents()).toEqual(before);expect(new URL(page.url()).searchParams.get('origen')).toBe('prueba');return {before,after:await fields(page).links.allTextContents(),url:page.url()};\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:56:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:00.531Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S11"
+                    },
+                    {
+                      "type": "input",
+                      "description": "Índice retenido; T-90M seguido de aviacion"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Una descarga; solo se publica la última consulta"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S11-latest-query-wins-with-a-shared-pending-download\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 13,
+                    "line": 56
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-9f42e28584b9168a0c94",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S12 reload preserves query and unrelated URL parameters",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S12"
+                },
+                {
+                  "type": "input",
+                  "description": "?q=coleccionismo&origen=prueba"
+                },
+                {
+                  "type": "expected",
+                  "description": "Resultados reproducibles tras recarga y origen conservado"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'goto')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:59:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 13,
+                      "line": 59
+                    },
+                    "snippet": " \u001b[90m 57 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 58 |\u001b[39m scenario(\u001b[32m'S12'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'reload preserves query and unrelated URL parameters'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'?q=coleccionismo&origen=prueba'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Resultados reproducibles tras recarga y origen conservado'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 59 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/?q=coleccionismo&origen=prueba'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39mlinks)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m before\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39mlinks\u001b[33m.\u001b[39mallTextContents()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mreload()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39mlinks)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39mexpect(\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39mlinks\u001b[33m.\u001b[39mallTextContents())\u001b[33m.\u001b[39mtoEqual(before)\u001b[33m;\u001b[39mexpect(\u001b[36mnew\u001b[39m \u001b[33mURL\u001b[39m(page\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39msearchParams\u001b[33m.\u001b[39mget(\u001b[32m'origen'\u001b[39m))\u001b[33m.\u001b[39mtoBe(\u001b[32m'prueba'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m {before\u001b[33m,\u001b[39mafter\u001b[33m:\u001b[39m\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39mlinks\u001b[33m.\u001b[39mallTextContents()\u001b[33m,\u001b[39murl\u001b[33m:\u001b[39mpage\u001b[33m.\u001b[39murl()}\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 60 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m scenario(\u001b[32m'S13'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'English interface and shared English transcript'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'EN aircraft; ES y EN dreadnoughts'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Resultados de idioma correspondiente; la transcripción única aparece en ambos índices'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m 62 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/en/buscar/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m english\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39m\u001b[32m'aircraft'\u001b[39m)\u001b[33m;\u001b[39mexpect(english\u001b[33m.\u001b[39mtitles\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39mexpect(english\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoContain(\u001b[32m'results'\u001b[39m)\u001b[33m;\u001b[39mexpect(english\u001b[33m.\u001b[39mhrefs\u001b[33m.\u001b[39mevery(href\u001b[33m=>\u001b[39mhref\u001b[33m.\u001b[39mincludes(\u001b[32m'/en/'\u001b[39m)))\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 13,
+                        "line": 59
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'goto')\n\n  57 | });\n  58 | scenario('S12','reload preserves query and unrelated URL parameters','?q=coleccionismo&origen=prueba','Resultados reproducibles tras recarga y origen conservado',async({page})=>{\n> 59 |  await page.goto('/buscar/?q=coleccionismo&origen=prueba');await expect(fields(page).links).not.toHaveCount(0);const before=await fields(page).links.allTextContents();await page.reload();await expect(fields(page).links).not.toHaveCount(0);expect(await fields(page).links.allTextContents()).toEqual(before);expect(new URL(page.url()).searchParams.get('origen')).toBe('prueba');return {before,after:await fields(page).links.allTextContents(),url:page.url()};\n     |             ^\n  60 | });\n  61 | scenario('S13','English interface and shared English transcript','EN aircraft; ES y EN dreadnoughts','Resultados de idioma correspondiente; la transcripción única aparece en ambos índices',async({page})=>{\n  62 |  await page.goto('/en/buscar/');const english=await submit(page,'aircraft');expect(english.titles.length).toBeGreaterThan(0);expect(english.status).toContain('results');expect(english.hrefs.every(href=>href.includes('/en/'))).toBe(true);\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:59:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:01.362Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S12"
+                    },
+                    {
+                      "type": "input",
+                      "description": "?q=coleccionismo&origen=prueba"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Resultados reproducibles tras recarga y origen conservado"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S12-reload-preserve-4698e-nd-unrelated-URL-parameters\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 13,
+                    "line": 59
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-ec270d4759353e3f3c5a",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S13 English interface and shared English transcript",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S13"
+                },
+                {
+                  "type": "input",
+                  "description": "EN aircraft; ES y EN dreadnoughts"
+                },
+                {
+                  "type": "expected",
+                  "description": "Resultados de idioma correspondiente; la transcripción única aparece en ambos índices"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'goto')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:62:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 13,
+                      "line": 62
+                    },
+                    "snippet": " \u001b[90m 60 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m scenario(\u001b[32m'S13'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'English interface and shared English transcript'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'EN aircraft; ES y EN dreadnoughts'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Resultados de idioma correspondiente; la transcripción única aparece en ambos índices'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/en/buscar/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m english\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39m\u001b[32m'aircraft'\u001b[39m)\u001b[33m;\u001b[39mexpect(english\u001b[33m.\u001b[39mtitles\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39mexpect(english\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoContain(\u001b[32m'results'\u001b[39m)\u001b[33m;\u001b[39mexpect(english\u001b[33m.\u001b[39mhrefs\u001b[33m.\u001b[39mevery(href\u001b[33m=>\u001b[39mhref\u001b[33m.\u001b[39mincludes(\u001b[32m'/en/'\u001b[39m)))\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m  \u001b[36mconst\u001b[39m shared\u001b[33m=\u001b[39m[]\u001b[33m;\u001b[39m\u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m lang \u001b[36mof\u001b[39m [\u001b[32m''\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'en/'\u001b[39m]){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m\u001b[33m+\u001b[39mlang\u001b[33m+\u001b[39m\u001b[32m'buscar/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m result\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39m\u001b[32m'dreadnoughts'\u001b[39m)\u001b[33m;\u001b[39mexpect(result\u001b[33m.\u001b[39mhrefs\u001b[33m.\u001b[39msome(href\u001b[33m=>\u001b[39mhref\u001b[33m.\u001b[39mincludes(\u001b[32m'transcripciones/war-on-wheels.html'\u001b[39m)))\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m link\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-results] a[href*=\"transcripciones/\"]'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(link)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'lang'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'en'\u001b[39m)\u001b[33m;\u001b[39mshared\u001b[33m.\u001b[39mpush(result)\u001b[33m;\u001b[39m}\u001b[36mreturn\u001b[39m {english\u001b[33m,\u001b[39mshared}\u001b[33m;\u001b[39m\n \u001b[90m 64 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m scenario(\u001b[32m'S14'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'header submit by Enter and button'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'ES sobre-mi Enter; EN intereses botón; 404 y transcripción'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Formulario GET alcanza los resultados y conserva el idioma de la interfaz'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 13,
+                        "line": 62
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'goto')\n\n  60 | });\n  61 | scenario('S13','English interface and shared English transcript','EN aircraft; ES y EN dreadnoughts','Resultados de idioma correspondiente; la transcripción única aparece en ambos índices',async({page})=>{\n> 62 |  await page.goto('/en/buscar/');const english=await submit(page,'aircraft');expect(english.titles.length).toBeGreaterThan(0);expect(english.status).toContain('results');expect(english.hrefs.every(href=>href.includes('/en/'))).toBe(true);\n     |             ^\n  63 |  const shared=[];for(const lang of ['', 'en/']){await page.goto('/'+lang+'buscar/');const result=await submit(page,'dreadnoughts');expect(result.hrefs.some(href=>href.includes('transcripciones/war-on-wheels.html'))).toBe(true);const link=page.locator('[data-results] a[href*=\"transcripciones/\"]');await expect(link).toHaveAttribute('lang','en');shared.push(result);}return {english,shared};\n  64 | });\n  65 | scenario('S14','header submit by Enter and button','ES sobre-mi Enter; EN intereses botón; 404 y transcripción','Formulario GET alcanza los resultados y conserva el idioma de la interfaz',async({page})=>{\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:62:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:02.092Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S13"
+                    },
+                    {
+                      "type": "input",
+                      "description": "EN aircraft; ES y EN dreadnoughts"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Resultados de idioma correspondiente; la transcripción única aparece en ambos índices"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S13-English-interface-and-shared-English-transcript\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 13,
+                    "line": 62
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-a3a60ea2a2490b6d4647",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S14 header submit by Enter and button",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S14"
+                },
+                {
+                  "type": "input",
+                  "description": "ES sobre-mi Enter; EN intereses botón; 404 y transcripción"
+                },
+                {
+                  "type": "expected",
+                  "description": "Formulario GET alcanza los resultados y conserva el idioma de la interfaz"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'goto')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:67:14)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 14,
+                      "line": 67
+                    },
+                    "snippet": " \u001b[90m 65 |\u001b[39m scenario(\u001b[32m'S14'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'header submit by Enter and button'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'ES sobre-mi Enter; EN intereses botón; 404 y transcripción'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Formulario GET alcanza los resultados y conserva el idioma de la interfaz'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m 66 |\u001b[39m  \u001b[36mconst\u001b[39m results\u001b[33m=\u001b[39m[]\u001b[33m;\u001b[39m\u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m [route\u001b[33m,\u001b[39mq\u001b[33m,\u001b[39mbutton] \u001b[36mof\u001b[39m [[\u001b[32m'sobre-mi/'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'tanques'\u001b[39m\u001b[33m,\u001b[39m\u001b[36mfalse\u001b[39m]\u001b[33m,\u001b[39m[\u001b[32m'en/intereses/'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'aircraft'\u001b[39m\u001b[33m,\u001b[39m\u001b[36mtrue\u001b[39m]\u001b[33m,\u001b[39m[\u001b[32m'404.html'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'T-90M'\u001b[39m\u001b[33m,\u001b[39m\u001b[36mtrue\u001b[39m]\u001b[33m,\u001b[39m[\u001b[32m'public/transcripciones/war-on-wheels.html'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'coleccionismo'\u001b[39m\u001b[33m,\u001b[39m\u001b[36mfalse\u001b[39m]]){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 67 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m\u001b[33m+\u001b[39mroute)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m header\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'body > header'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m header\u001b[33m.\u001b[39mgetByRole(\u001b[32m'searchbox'\u001b[39m)\u001b[33m.\u001b[39mfill(q)\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(button)\u001b[36mawait\u001b[39m header\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[35m/^(Buscar|Search)$/\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mawait\u001b[39m header\u001b[33m.\u001b[39mgetByRole(\u001b[32m'searchbox'\u001b[39m)\u001b[33m.\u001b[39mpress(\u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39mlinks)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39mexpect(\u001b[36mnew\u001b[39m \u001b[33mURL\u001b[39m(page\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39msearchParams\u001b[33m.\u001b[39mget(\u001b[32m'q'\u001b[39m))\u001b[33m.\u001b[39mtoBe(q)\u001b[33m;\u001b[39mresults\u001b[33m.\u001b[39mpush({\u001b[36mfrom\u001b[39m\u001b[33m:\u001b[39mroute\u001b[33m,\u001b[39mto\u001b[33m:\u001b[39mpage\u001b[33m.\u001b[39murl()\u001b[33m,\u001b[39mstatus\u001b[33m:\u001b[39m\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39mstatus\u001b[33m.\u001b[39mtextContent()})\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 68 |\u001b[39m  }\u001b[36mreturn\u001b[39m results\u001b[33m;\u001b[39m\n \u001b[90m 69 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m scenario(\u001b[32m'S15'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'keyboard focus and live status'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Tab desde consulta; Enter en Buscar; Tab a resultado'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Foco estable, anuncio polite/atomic y enlaces alcanzables sin ratón'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 14,
+                        "line": 67
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'goto')\n\n  65 | scenario('S14','header submit by Enter and button','ES sobre-mi Enter; EN intereses botón; 404 y transcripción','Formulario GET alcanza los resultados y conserva el idioma de la interfaz',async({page})=>{\n  66 |  const results=[];for(const [route,q,button] of [['sobre-mi/','tanques',false],['en/intereses/','aircraft',true],['404.html','T-90M',true],['public/transcripciones/war-on-wheels.html','coleccionismo',false]]){\n> 67 |   await page.goto('/'+route);const header=page.locator('body > header');await header.getByRole('searchbox').fill(q);if(button)await header.getByRole('button',{name:/^(Buscar|Search)$/}).click();else await header.getByRole('searchbox').press('Enter');await expect(fields(page).links).not.toHaveCount(0);expect(new URL(page.url()).searchParams.get('q')).toBe(q);results.push({from:route,to:page.url(),status:await fields(page).status.textContent()});\n     |              ^\n  68 |  }return results;\n  69 | });\n  70 | scenario('S15','keyboard focus and live status','Tab desde consulta; Enter en Buscar; Tab a resultado','Foco estable, anuncio polite/atomic y enlaces alcanzables sin ratón',async({page})=>{\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:67:14)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:03.002Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S14"
+                    },
+                    {
+                      "type": "input",
+                      "description": "ES sobre-mi Enter; EN intereses botón; 404 y transcripción"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Formulario GET alcanza los resultados y conserva el idioma de la interfaz"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S14-header-submit-by-Enter-and-button\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 14,
+                    "line": 67
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-fcfce1a67e576a0fe121",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S15 keyboard focus and live status",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S15"
+                },
+                {
+                  "type": "input",
+                  "description": "Tab desde consulta; Enter en Buscar; Tab a resultado"
+                },
+                {
+                  "type": "expected",
+                  "description": "Foco estable, anuncio polite/atomic y enlaces alcanzables sin ratón"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'goto')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:71:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 13,
+                      "line": 71
+                    },
+                    "snippet": " \u001b[90m 69 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m scenario(\u001b[32m'S15'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'keyboard focus and live status'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Tab desde consulta; Enter en Buscar; Tab a resultado'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Foco estable, anuncio polite/atomic y enlaces alcanzables sin ratón'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 71 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m ui\u001b[33m=\u001b[39mfields(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m ui\u001b[33m.\u001b[39minput\u001b[33m.\u001b[39mfocus()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mtype(\u001b[32m'T-90M'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Tab'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(ui\u001b[33m.\u001b[39mform\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Buscar'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m}))\u001b[33m.\u001b[39mtoBeFocused()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(ui\u001b[33m.\u001b[39mlinks)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(ui\u001b[33m.\u001b[39mform\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Buscar'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m}))\u001b[33m.\u001b[39mtoBeFocused()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(ui\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-live'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'polite'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(ui\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-atomic'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Tab'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(ui\u001b[33m.\u001b[39mlinks\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeFocused()\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m {status\u001b[33m:\u001b[39m\u001b[36mawait\u001b[39m ui\u001b[33m.\u001b[39mstatus\u001b[33m.\u001b[39mtextContent()\u001b[33m,\u001b[39mfocused\u001b[33m:\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m':focus'\u001b[39m)\u001b[33m.\u001b[39mtextContent()}\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 72 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 73 |\u001b[39m scenario(\u001b[32m'S16'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'mobile and desktop search results'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'320, 375, 768, 1280, 1920 px; AVIACIÓN'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Sin desbordamiento global; controles y resultados accesibles; axe sin infracciones'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m 74 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m result\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39m\u001b[32m'AVIACIÓN'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m widths\u001b[33m=\u001b[39m[]\u001b[33m;\u001b[39m\u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m width \u001b[36mof\u001b[39m [\u001b[35m320\u001b[39m\u001b[33m,\u001b[39m\u001b[35m375\u001b[39m\u001b[33m,\u001b[39m\u001b[35m768\u001b[39m\u001b[33m,\u001b[39m\u001b[35m1280\u001b[39m\u001b[33m,\u001b[39m\u001b[35m1920\u001b[39m]){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39msetViewportSize({width\u001b[33m,\u001b[39mheight\u001b[33m:\u001b[39m\u001b[35m900\u001b[39m})\u001b[33m;\u001b[39mexpect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39mdocument\u001b[33m.\u001b[39mdocumentElement\u001b[33m.\u001b[39mscrollWidth\u001b[33m<=\u001b[39minnerWidth))\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39minput)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39mlinks\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39mwidths\u001b[33m.\u001b[39mpush(width)\u001b[33m;\u001b[39m}"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 13,
+                        "line": 71
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'goto')\n\n  69 | });\n  70 | scenario('S15','keyboard focus and live status','Tab desde consulta; Enter en Buscar; Tab a resultado','Foco estable, anuncio polite/atomic y enlaces alcanzables sin ratón',async({page})=>{\n> 71 |  await page.goto('/buscar/');const ui=fields(page);await ui.input.focus();await page.keyboard.type('T-90M');await page.keyboard.press('Tab');await expect(ui.form.getByRole('button',{name:'Buscar',exact:true})).toBeFocused();await page.keyboard.press('Enter');await expect(ui.links).not.toHaveCount(0);await expect(ui.form.getByRole('button',{name:'Buscar',exact:true})).toBeFocused();await expect(ui.status).toHaveAttribute('aria-live','polite');await expect(ui.status).toHaveAttribute('aria-atomic','true');await page.keyboard.press('Tab');await expect(ui.links.first()).toBeFocused();return {status:await ui.status.textContent(),focused:await page.locator(':focus').textContent()};\n     |             ^\n  72 | });\n  73 | scenario('S16','mobile and desktop search results','320, 375, 768, 1280, 1920 px; AVIACIÓN','Sin desbordamiento global; controles y resultados accesibles; axe sin infracciones',async({page})=>{\n  74 |  await page.goto('/buscar/');const result=await submit(page,'AVIACIÓN');const widths=[];for(const width of [320,375,768,1280,1920]){await page.setViewportSize({width,height:900});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await expect(fields(page).input).toBeVisible();await expect(fields(page).links.first()).toBeVisible();widths.push(width);}\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:71:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:03.922Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S15"
+                    },
+                    {
+                      "type": "input",
+                      "description": "Tab desde consulta; Enter en Buscar; Tab a resultado"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Foco estable, anuncio polite/atomic y enlaces alcanzables sin ratón"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S15-keyboard-focus-and-live-status\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 13,
+                    "line": 71
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-27f14d621c978c4baea4",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S16 mobile and desktop search results",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S16"
+                },
+                {
+                  "type": "input",
+                  "description": "320, 375, 768, 1280, 1920 px; AVIACIÓN"
+                },
+                {
+                  "type": "expected",
+                  "description": "Sin desbordamiento global; controles y resultados accesibles; axe sin infracciones"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 3,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'goto')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:74:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 13,
+                      "line": 74
+                    },
+                    "snippet": " \u001b[90m 72 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 73 |\u001b[39m scenario(\u001b[32m'S16'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'mobile and desktop search results'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'320, 375, 768, 1280, 1920 px; AVIACIÓN'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Sin desbordamiento global; controles y resultados accesibles; axe sin infracciones'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/buscar/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m result\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39m\u001b[32m'AVIACIÓN'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m widths\u001b[33m=\u001b[39m[]\u001b[33m;\u001b[39m\u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m width \u001b[36mof\u001b[39m [\u001b[35m320\u001b[39m\u001b[33m,\u001b[39m\u001b[35m375\u001b[39m\u001b[33m,\u001b[39m\u001b[35m768\u001b[39m\u001b[33m,\u001b[39m\u001b[35m1280\u001b[39m\u001b[33m,\u001b[39m\u001b[35m1920\u001b[39m]){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39msetViewportSize({width\u001b[33m,\u001b[39mheight\u001b[33m:\u001b[39m\u001b[35m900\u001b[39m})\u001b[33m;\u001b[39mexpect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39mdocument\u001b[33m.\u001b[39mdocumentElement\u001b[33m.\u001b[39mscrollWidth\u001b[33m<=\u001b[39minnerWidth))\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39minput)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39mlinks\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39mwidths\u001b[33m.\u001b[39mpush(width)\u001b[33m;\u001b[39m}\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39maddScriptTag({path\u001b[33m:\u001b[39m\u001b[32m'node_modules/axe-core/axe.min.js'\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m violations\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(\u001b[36masync\u001b[39m()\u001b[33m=>\u001b[39m (\u001b[36mawait\u001b[39m axe\u001b[33m.\u001b[39mrun())\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mmap(v\u001b[33m=>\u001b[39mv\u001b[33m.\u001b[39mid))\u001b[33m;\u001b[39mexpect(violations)\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m {widths\u001b[33m,\u001b[39mviolations\u001b[33m,\u001b[39m\u001b[33m...\u001b[39mresult}\u001b[33m;\u001b[39m\n \u001b[90m 76 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 77 |\u001b[39m scenario(\u001b[32m'S17'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'coverage freshness equivalence and result links'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'19 HTML públicos; 15 contenidos; siete pares ES/EN y transcripción compartida'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Cada HTML está indexado o excluido explícitamente; párrafos/alt vigentes; links HTTP 200'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page\u001b[33m,\u001b[39mrequest})\u001b[33m=>\u001b[39m{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 13,
+                        "line": 74
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'goto')\n\n  72 | });\n  73 | scenario('S16','mobile and desktop search results','320, 375, 768, 1280, 1920 px; AVIACIÓN','Sin desbordamiento global; controles y resultados accesibles; axe sin infracciones',async({page})=>{\n> 74 |  await page.goto('/buscar/');const result=await submit(page,'AVIACIÓN');const widths=[];for(const width of [320,375,768,1280,1920]){await page.setViewportSize({width,height:900});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await expect(fields(page).input).toBeVisible();await expect(fields(page).links.first()).toBeVisible();widths.push(width);}\n     |             ^\n  75 |  await page.addScriptTag({path:'node_modules/axe-core/axe.min.js'});const violations=await page.evaluate(async()=> (await axe.run()).violations.map(v=>v.id));expect(violations).toEqual([]);return {widths,violations,...result};\n  76 | });\n  77 | scenario('S17','coverage freshness equivalence and result links','19 HTML públicos; 15 contenidos; siete pares ES/EN y transcripción compartida','Cada HTML está indexado o excluido explícitamente; párrafos/alt vigentes; links HTTP 200',async({page,request})=>{\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:74:13)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:04.728Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S16"
+                    },
+                    {
+                      "type": "input",
+                      "description": "320, 375, 768, 1280, 1920 px; AVIACIÓN"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Sin desbordamiento global; controles y resultados accesibles; axe sin infracciones"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S16-mobile-and-desktop-search-results\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 13,
+                    "line": 74
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-ab8c403f0717a26cf328",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S17 coverage freshness equivalence and result links",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S17"
+                },
+                {
+                  "type": "input",
+                  "description": "19 HTML públicos; 15 contenidos; siete pares ES/EN y transcripción compartida"
+                },
+                {
+                  "type": "expected",
+                  "description": "Cada HTML está indexado o excluido explícitamente; párrafos/alt vigentes; links HTTP 200"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 16,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 12,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'goto')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:80:14)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 14,
+                      "line": 80
+                    },
+                    "snippet": " \u001b[90m 78 |\u001b[39m  test\u001b[33m.\u001b[39msetTimeout(\u001b[35m90000\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m rows\u001b[33m=\u001b[39m[]\u001b[33m;\u001b[39mexpect(coverage\u001b[33m.\u001b[39mpages)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m19\u001b[39m)\u001b[33m;\u001b[39mexpect(coverage\u001b[33m.\u001b[39mpages\u001b[33m.\u001b[39mfilter(p\u001b[33m=>\u001b[39mp\u001b[33m.\u001b[39mstate\u001b[33m===\u001b[39m\u001b[32m'indexed'\u001b[39m))\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m15\u001b[39m)\u001b[33m;\u001b[39mexpect(coverage\u001b[33m.\u001b[39mpairs)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m7\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 79 |\u001b[39m  \u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m entry \u001b[36mof\u001b[39m coverage\u001b[33m.\u001b[39mpages){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 80 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m\u001b[33m+\u001b[39mentry\u001b[33m.\u001b[39mfile)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m records\u001b[33m=\u001b[39m\u001b[33mObject\u001b[39m\u001b[33m.\u001b[39mvalues(indexes)\u001b[33m.\u001b[39mflat()\u001b[33m.\u001b[39mfilter(item\u001b[33m=>\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mURL\u001b[39m(item\u001b[33m.\u001b[39murl\u001b[33m,\u001b[39m\u001b[32m'http://127.0.0.1:4173/public/search-index.json'\u001b[39m)\u001b[33m.\u001b[39mpathname\u001b[33m===\u001b[39m\u001b[32m'/'\u001b[39m\u001b[33m+\u001b[39mentry\u001b[33m.\u001b[39mfile)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 81 |\u001b[39m   \u001b[36mif\u001b[39m(entry\u001b[33m.\u001b[39mstate\u001b[33m===\u001b[39m\u001b[32m'excluded'\u001b[39m){expect(records)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39mexpect(entry\u001b[33m.\u001b[39mreason\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m5\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mcontinue\u001b[39m\u001b[33m;\u001b[39m}\n \u001b[90m 82 |\u001b[39m   expect(records\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m title\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'main h1'\u001b[39m)\u001b[33m.\u001b[39mtextContent()\u001b[33m;\u001b[39mexpect(records[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mtitle)\u001b[33m.\u001b[39mtoBe(title\u001b[33m.\u001b[39mtrim())\u001b[33m;\u001b[39m\n \u001b[90m 83 |\u001b[39m   \u001b[36mconst\u001b[39m texts\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'main p'\u001b[39m)\u001b[33m.\u001b[39mevaluateAll(nodes\u001b[33m=>\u001b[39mnodes\u001b[33m.\u001b[39mfilter(n\u001b[33m=>\u001b[39m\u001b[33m!\u001b[39mn\u001b[33m.\u001b[39mclosest(\u001b[32m'dialog,nav,noscript'\u001b[39m))\u001b[33m.\u001b[39mmap(n\u001b[33m=>\u001b[39mn\u001b[33m.\u001b[39mtextContent\u001b[33m.\u001b[39mreplace(\u001b[35m/\\s+/g\u001b[39m\u001b[33m,\u001b[39m\u001b[32m' '\u001b[39m)\u001b[33m.\u001b[39mtrim()))\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 14,
+                        "line": 80
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'goto')\n\n  78 |  test.setTimeout(90000);const rows=[];expect(coverage.pages).toHaveLength(19);expect(coverage.pages.filter(p=>p.state==='indexed')).toHaveLength(15);expect(coverage.pairs).toHaveLength(7);\n  79 |  for(const entry of coverage.pages){\n> 80 |   await page.goto('/'+entry.file);const records=Object.values(indexes).flat().filter(item=>new URL(item.url,'http://127.0.0.1:4173/public/search-index.json').pathname==='/'+entry.file);\n     |              ^\n  81 |   if(entry.state==='excluded'){expect(records).toHaveLength(0);expect(entry.reason.length).toBeGreaterThan(5);continue;}\n  82 |   expect(records.length).toBeGreaterThan(0);const title=await page.locator('main h1').textContent();expect(records[0].title).toBe(title.trim());\n  83 |   const texts=await page.locator('main p').evaluateAll(nodes=>nodes.filter(n=>!n.closest('dialog,nav,noscript')).map(n=>n.textContent.replace(/\\s+/g,' ').trim()));\n    at exercise (C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:80:14)\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:05.434Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S17"
+                    },
+                    {
+                      "type": "input",
+                      "description": "19 HTML públicos; 15 contenidos; siete pares ES/EN y transcripción compartida"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Cada HTML está indexado o excluido explícitamente; párrafos/alt vigentes; links HTTP 200"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S17-coverage-freshness-equivalence-and-result-links\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 14,
+                    "line": 80
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-943fefc7fef5182e5f95",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S18 deployment under an arbitrary subdirectory",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S18"
+                },
+                {
+                  "type": "input",
+                  "description": "Servidor local montado en /curso/portfolio/"
+                },
+                {
+                  "type": "expected",
+                  "description": "Cabecera, índice y destinos permanecen bajo el prefijo y responden HTTP 200"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 277,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'goto')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:94:66\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:17",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 66,
+                      "line": 94
+                    },
+                    "snippet": " \u001b[90m 92 |\u001b[39m  \u001b[36mtry\u001b[39m {\n \u001b[90m 93 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mPromise\u001b[39m((resolve\u001b[33m,\u001b[39mreject)\u001b[33m=>\u001b[39m{server\u001b[33m.\u001b[39mstdout\u001b[33m.\u001b[39monce(\u001b[32m'data'\u001b[39m\u001b[33m,\u001b[39mresolve)\u001b[33m;\u001b[39mserver\u001b[33m.\u001b[39monce(\u001b[32m'error'\u001b[39m\u001b[33m,\u001b[39mreject)\u001b[33m;\u001b[39mserver\u001b[33m.\u001b[39monce(\u001b[32m'exit'\u001b[39m\u001b[33m,\u001b[39mcode\u001b[33m=>\u001b[39m{\u001b[36mif\u001b[39m(code)reject(\u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Mounted server failed: '\u001b[39m\u001b[33m+\u001b[39mcode))\u001b[33m;\u001b[39m})\u001b[33m;\u001b[39m})\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 94 |\u001b[39m   \u001b[36mconst\u001b[39m base\u001b[33m=\u001b[39m\u001b[32m'http://127.0.0.1:4174/curso/portfolio/'\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(base\u001b[33m+\u001b[39m\u001b[32m'sobre-mi/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'body > header'\u001b[39m)\u001b[33m.\u001b[39mgetByRole(\u001b[32m'searchbox'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'aviacion'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'body > header'\u001b[39m)\u001b[33m.\u001b[39mgetByRole(\u001b[32m'searchbox'\u001b[39m)\u001b[33m.\u001b[39mpress(\u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(fields(page)\u001b[33m.\u001b[39mlinks)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 95 |\u001b[39m   \u001b[36mconst\u001b[39m hrefs\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m fields(page)\u001b[33m.\u001b[39mlinks\u001b[33m.\u001b[39mevaluateAll(nodes\u001b[33m=>\u001b[39mnodes\u001b[33m.\u001b[39mmap(n\u001b[33m=>\u001b[39mn\u001b[33m.\u001b[39mhref))\u001b[33m;\u001b[39m\u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m href \u001b[36mof\u001b[39m hrefs){expect(href\u001b[33m.\u001b[39mstartsWith(base))\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mget(href))\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m}\u001b[36mreturn\u001b[39m {url\u001b[33m:\u001b[39mpage\u001b[33m.\u001b[39murl()\u001b[33m,\u001b[39mhrefs}\u001b[33m;\u001b[39m\n \u001b[90m 96 |\u001b[39m  } \u001b[36mfinally\u001b[39m {server\u001b[33m.\u001b[39mkill()\u001b[33m;\u001b[39m}\n \u001b[90m 97 |\u001b[39m })\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 66,
+                        "line": 94
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'goto')\n\n  92 |  try {\n  93 |   await new Promise((resolve,reject)=>{server.stdout.once('data',resolve);server.once('error',reject);server.once('exit',code=>{if(code)reject(new Error('Mounted server failed: '+code));});});\n> 94 |   const base='http://127.0.0.1:4174/curso/portfolio/';await page.goto(base+'sobre-mi/');await page.locator('body > header').getByRole('searchbox').fill('aviacion');await page.locator('body > header').getByRole('searchbox').press('Enter');await expect(fields(page).links).not.toHaveCount(0);\n     |                                                                  ^\n  95 |   const hrefs=await fields(page).links.evaluateAll(nodes=>nodes.map(n=>n.href));for(const href of hrefs){expect(href.startsWith(base)).toBe(true);expect((await request.get(href)).status()).toBe(200);}return {url:page.url(),hrefs};\n  96 |  } finally {server.kill();}\n  97 | });\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:94:66\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:17"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:06.173Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S18"
+                    },
+                    {
+                      "type": "input",
+                      "description": "Servidor local montado en /curso/portfolio/"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Cabecera, índice y destinos permanecen bajo el prefijo y responden HTTP 200"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S18-deployment-under-an-arbitrary-subdirectory\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 66,
+                    "line": 94
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-ba2dc0d85dc84f7e2aa3",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T16:19:51.612Z",
+    "duration": 15490.437,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 18,
+    "flaky": 0
+  }
+}

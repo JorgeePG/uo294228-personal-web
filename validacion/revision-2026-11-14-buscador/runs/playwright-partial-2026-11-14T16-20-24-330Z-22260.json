@@ -1,0 +1,1355 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/search.spec.mjs"
+    ],
+    "configFile": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\playwright.config.mjs",
+    "rootDir": "C:/Users/jorge/OneDrive/Desktop/Master/UX/uo294228-personal-web/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "evidenceScope": "partial",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/jorge/OneDrive/Desktop/Master/UX/uo294228-personal-web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "evidenceScope": "partial",
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/jorge/OneDrive/Desktop/Master/UX/uo294228-personal-web/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "evidenceScope": "partial",
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests",
+        "snapshotDir": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "channel": "chrome",
+          "headless": true
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "validacion/revision-2026-11-14-buscador/runs/playwright-partial-2026-11-14T16-20-24-330Z-22260.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 2,
+    "webServer": {
+      "command": "node scripts/serve.mjs",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "search.spec.mjs",
+      "file": "search.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S01 empty and whitespace queries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S01"
+                },
+                {
+                  "type": "input",
+                  "description": "q vacío y tres espacios"
+                },
+                {
+                  "type": "expected",
+                  "description": "Mensaje para escribir un término; cero peticiones de índice y q eliminado"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 514,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:26.303Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S01"
+                    },
+                    {
+                      "type": "input",
+                      "description": "q vacío y tres espacios"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Mensaje para escribir un término; cero peticiones de índice y q eliminado"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJzZWVuIjogWwogICAgewogICAgICAic3RhdHVzIjogIkVzY3JpYmUgdW4gdMOpcm1pbm8gZGUgYsO6c3F1ZWRhLiIsCiAgICAgICJ0aXRsZXMiOiBbXSwKICAgICAgImhyZWZzIjogW10KICAgIH0sCiAgICB7CiAgICAgICJzdGF0dXMiOiAiRXNjcmliZSB1biB0w6lybWlubyBkZSBiw7pzcXVlZGEuIiwKICAgICAgInRpdGxlcyI6IFtdLAogICAgICAiaHJlZnMiOiBbXQogICAgfQogIF0sCiAgInJlcXVlc3RzIjogW10KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-67361d1f5549d598686a",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S02 case and accent equivalence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S02"
+                },
+                {
+                  "type": "input",
+                  "description": "AVIACIÓN y aviacion"
+                },
+                {
+                  "type": "expected",
+                  "description": "Misma lista no vacía y mismo orden"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 372,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:27.150Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S02"
+                    },
+                    {
+                      "type": "input",
+                      "description": "AVIACIÓN y aviacion"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Misma lista no vacía y mismo orden"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJhY2NlbnRlZCI6IHsKICAgICJzdGF0dXMiOiAiMyByZXN1bHRhZG9zIHBhcmEgwqtBVklBQ0nDk07Cuy4iLAogICAgInRpdGxlcyI6IFsKICAgICAgIlZlaMOtY3Vsb3MgeSBtdXNlb3MiLAogICAgICAiU2VyaWVzIHkgcGVsw61jdWxhcyIsCiAgICAgICJWaWRlb2p1ZWdvcyIKICAgIF0sCiAgICAiaHJlZnMiOiBbCiAgICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvaW50ZXJlc2VzL2luZGV4Lmh0bWwiLAogICAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL3Nlcmllcy15LXBlbGljdWxhcy9pbmRleC5odG1sIiwKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My92aWRlb2p1ZWdvcy9pbmRleC5odG1sIgogICAgXQogIH0sCiAgInBsYWluIjogewogICAgInN0YXR1cyI6ICIzIHJlc3VsdGFkb3MgcGFyYSDCq2F2aWFjaW9uwrsuIiwKICAgICJ0aXRsZXMiOiBbCiAgICAgICJWZWjDrWN1bG9zIHkgbXVzZW9zIiwKICAgICAgIlNlcmllcyB5IHBlbMOtY3VsYXMiLAogICAgICAiVmlkZW9qdWVnb3MiCiAgICBdLAogICAgImhyZWZzIjogWwogICAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2ludGVyZXNlcy9pbmRleC5odG1sIiwKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9zZXJpZXMteS1wZWxpY3VsYXMvaW5kZXguaHRtbCIsCiAgICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvdmlkZW9qdWVnb3MvaW5kZXguaHRtbCIKICAgIF0KICB9Cn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-9b68f46f8ec95e0352b2",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S03 all terms and repeated terms",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S03"
+                },
+                {
+                  "type": "input",
+                  "description": "tanques aviones; tanques aviones tanques; tanques terminoimposiblexyz"
+                },
+                {
+                  "type": "expected",
+                  "description": "Todos los términos presentes; repetir no cambia el orden; un término ausente da cero"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 392,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:27.539Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S03"
+                    },
+                    {
+                      "type": "input",
+                      "description": "tanques aviones; tanques aviones tanques; tanques terminoimposiblexyz"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Todos los términos presentes; repetir no cambia el orden; un término ausente da cero"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJib3RoIjogewogICAgInN0YXR1cyI6ICI0IHJlc3VsdGFkb3MgcGFyYSDCq3RhbnF1ZXMgYXZpb25lc8K7LiIsCiAgICAidGl0bGVzIjogWwogICAgICAiVGFucXVlcywgYXZpb25lcyB5IG11c2Vvcy4iLAogICAgICAiU2VyaWVzIHkgcGVsw61jdWxhcyIsCiAgICAgICJTb2JyZSBtw60iLAogICAgICAiVmlkZW9qdWVnb3MiCiAgICBdLAogICAgImhyZWZzIjogWwogICAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2luZGV4Lmh0bWwiLAogICAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL3Nlcmllcy15LXBlbGljdWxhcy9pbmRleC5odG1sIiwKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9zb2JyZS1taS9pbmRleC5odG1sIiwKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My92aWRlb2p1ZWdvcy9pbmRleC5odG1sIgogICAgXQogIH0sCiAgInJlcGVhdGVkIjogewogICAgInN0YXR1cyI6ICI0IHJlc3VsdGFkb3MgcGFyYSDCq3RhbnF1ZXMgYXZpb25lcyB0YW5xdWVzwrsuIiwKICAgICJ0aXRsZXMiOiBbCiAgICAgICJUYW5xdWVzLCBhdmlvbmVzIHkgbXVzZW9zLiIsCiAgICAgICJTZXJpZXMgeSBwZWzDrWN1bGFzIiwKICAgICAgIlNvYnJlIG3DrSIsCiAgICAgICJWaWRlb2p1ZWdvcyIKICAgIF0sCiAgICAiaHJlZnMiOiBbCiAgICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvaW5kZXguaHRtbCIsCiAgICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvc2VyaWVzLXktcGVsaWN1bGFzL2luZGV4Lmh0bWwiLAogICAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL3NvYnJlLW1pL2luZGV4Lmh0bWwiLAogICAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL3ZpZGVvanVlZ29zL2luZGV4Lmh0bWwiCiAgICBdCiAgfSwKICAibWlzc2luZyI6IHsKICAgICJzdGF0dXMiOiAiU2luIHJlc3VsdGFkb3MuIFBydWViYSDCq211c2VvwrssIMKrYXZpYWNpw7NuwrsgbyB1biB0w6lybWlubyBtw6FzIGNvcnRvLiIsCiAgICAidGl0bGVzIjogW10sCiAgICAiaHJlZnMiOiBbXQogIH0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-d80545039e8d6a3f19fb",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S04 real title relevance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S04"
+                },
+                {
+                  "type": "input",
+                  "description": "videojuegos"
+                },
+                {
+                  "type": "expected",
+                  "description": "Videojuegos es el primer resultado aunque otras páginas lo mencionen"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 378,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:27.947Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S04"
+                    },
+                    {
+                      "type": "input",
+                      "description": "videojuegos"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Videojuegos es el primer resultado aunque otras páginas lo mencionen"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJzdGF0dXMiOiAiNCByZXN1bHRhZG9zIHBhcmEgwqt2aWRlb2p1ZWdvc8K7LiIsCiAgInRpdGxlcyI6IFsKICAgICJWaWRlb2p1ZWdvcyIsCiAgICAiQXl1ZGEgeSBtYXBhIGRlbCBzaXRpbyIsCiAgICAiVGFucXVlcywgYXZpb25lcyB5IG11c2Vvcy4iLAogICAgIlNvYnJlIG3DrSIKICBdLAogICJocmVmcyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvdmlkZW9qdWVnb3MvaW5kZXguaHRtbCIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2F5dWRhL2luZGV4Lmh0bWwiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9pbmRleC5odG1sIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvc29icmUtbWkvaW5kZXguaHRtbCIKICBdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-29a5028e733276d6002d",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S05 ranking and deterministic tie break",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S05"
+                },
+                {
+                  "type": "input",
+                  "description": "Índice sintético de tres documentos; aviacion"
+                },
+                {
+                  "type": "expected",
+                  "description": "Título AVIACIÓN primero; empate de cuerpo: ayuda antes de videojuegos"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 311,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:28.341Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S05"
+                    },
+                    {
+                      "type": "input",
+                      "description": "Índice sintético de tres documentos; aviacion"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Título AVIACIÓN primero; empate de cuerpo: ayuda antes de videojuegos"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJzeW50aGV0aWMiOiB0cnVlLAogICJzdGF0dXMiOiAiMyByZXN1bHRhZG9zIHBhcmEgwqthdmlhY2lvbsK7LiIsCiAgInRpdGxlcyI6IFsKICAgICJBVklBQ0nDk04iLAogICAgIkRvY3VtZW50byBBIiwKICAgICJEb2N1bWVudG8gWiIKICBdLAogICJocmVmcyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvc29icmUtbWkvaW5kZXguaHRtbCIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2F5dWRhL2luZGV4Lmh0bWwiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My92aWRlb2p1ZWdvcy9pbmRleC5odG1sIgogIF0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-62fa125e58c0c0302ba2",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S06 no results and recovery guidance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S06"
+                },
+                {
+                  "type": "input",
+                  "description": "terminoimposiblexyz"
+                },
+                {
+                  "type": "expected",
+                  "description": "Cero resultados y propuesta de reformulación"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 349,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:28.665Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S06"
+                    },
+                    {
+                      "type": "input",
+                      "description": "terminoimposiblexyz"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Cero resultados y propuesta de reformulación"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJzdGF0dXMiOiAiU2luIHJlc3VsdGFkb3MuIFBydWViYSDCq211c2VvwrssIMKrYXZpYWNpw7NuwrsgbyB1biB0w6lybWlubyBtw6FzIGNvcnRvLiIsCiAgInRpdGxlcyI6IFtdLAogICJocmVmcyI6IFtdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-48342f49fea5df6cc718",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S07 query length at input and URL boundaries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S07"
+                },
+                {
+                  "type": "input",
+                  "description": "140 letras a, entrada y ?q="
+                },
+                {
+                  "type": "expected",
+                  "description": "Campo y parámetro q limitados a 120 unidades UTF-16"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 303,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:29.031Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S07"
+                    },
+                    {
+                      "type": "input",
+                      "description": "140 letras a, entrada y ?q="
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Campo y parámetro q limitados a 120 unidades UTF-16"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJpbnB1dExlbmd0aCI6IDEyMCwKICAidXJsTGVuZ3RoIjogMTIwCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-b865f7c6fa8c507a2ce5",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S08 query HTML is inert",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S08"
+                },
+                {
+                  "type": "input",
+                  "description": "<img src=x onerror=alert(1)>"
+                },
+                {
+                  "type": "expected",
+                  "description": "Sin diálogo JS ni nodos img; entrada tratada como texto"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 347,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:29.348Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S08"
+                    },
+                    {
+                      "type": "input",
+                      "description": "<img src=x onerror=alert(1)>"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Sin diálogo JS ni nodos img; entrada tratada como texto"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJzdGF0dXMiOiAiU2luIHJlc3VsdGFkb3MuIFBydWViYSDCq211c2VvwrssIMKrYXZpYWNpw7NuwrsgbyB1biB0w6lybWlubyBtw6FzIGNvcnRvLiIsCiAgInRpdGxlcyI6IFtdLAogICJocmVmcyI6IFtdLAogICJkaWFsb2dzIjogW10sCiAgImltYWdlcyI6IDAKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-acb5e2a1d41bf7cbeb69",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S09 HTTP failure retry and memory cache",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S09"
+                },
+                {
+                  "type": "input",
+                  "description": "Primer índice HTTP 503; reintento; segunda consulta"
+                },
+                {
+                  "type": "expected",
+                  "description": "Mensaje, mapa y botón; el reintento funciona; siguiente consulta no vuelve a descargar"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 404,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:29.706Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S09"
+                    },
+                    {
+                      "type": "input",
+                      "description": "Primer índice HTTP 503; reintento; segunda consulta"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Mensaje, mapa y botón; el reintento funciona; siguiente consulta no vuelve a descargar"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJyZXF1ZXN0cyI6IDIsCiAgInJldHJ5UmVzdWx0IjogWwogICAgIlRhbnF1ZXMsIGF2aW9uZXMgeSBtdXNlb3MuIiwKICAgICJWaWRlb2p1ZWdvcyIKICBdLAogICJmaW5hbCI6ICIxIHJlc3VsdGFkb3MgcGFyYSDCq1QtOTBNwrsuIgp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-86f5c1eaa8e5b68caf00",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S10 malformed and unsafe indexes fail closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S10"
+                },
+                {
+                  "type": "input",
+                  "description": "JSON sintético inválido; enlace javascript:"
+                },
+                {
+                  "type": "expected",
+                  "description": "Recuperación accesible sin renderizar resultados inseguros"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 391,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:30.120Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S10"
+                    },
+                    {
+                      "type": "input",
+                      "description": "JSON sintético inválido; enlace javascript:"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Recuperación accesible sin renderizar resultados inseguros"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJzeW50aGV0aWMiOiB0cnVlLAogICJyZXN1bHRzIjogWwogICAgIk5vIHNlIGhhIHBvZGlkbyBjYXJnYXIgZWwgYnVzY2Fkb3IuIENvbnN1bHRhIGVsIG1hcGEgZGVsIHNpdGlvIG8gdnVlbHZlIGEgaW50ZW50YXJsby4iLAogICAgIk5vIHNlIGhhIHBvZGlkbyBjYXJnYXIgZWwgYnVzY2Fkb3IuIENvbnN1bHRhIGVsIG1hcGEgZGVsIHNpdGlvIG8gdnVlbHZlIGEgaW50ZW50YXJsby4iCiAgXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-71c7b2ee83a63e48a7cb",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S11 latest query wins with a shared pending download",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S11"
+                },
+                {
+                  "type": "input",
+                  "description": "Índice retenido; T-90M seguido de aviacion"
+                },
+                {
+                  "type": "expected",
+                  "description": "Una descarga; solo se publica la última consulta"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 379,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:30.529Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S11"
+                    },
+                    {
+                      "type": "input",
+                      "description": "Índice retenido; T-90M seguido de aviacion"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Una descarga; solo se publica la última consulta"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJyZXF1ZXN0cyI6IDEsCiAgInN0YXR1cyI6ICIzIHJlc3VsdGFkb3MgcGFyYSDCq2F2aWFjaW9uwrsuIiwKICAidGl0bGVzIjogWwogICAgIlZlaMOtY3Vsb3MgeSBtdXNlb3MiLAogICAgIlNlcmllcyB5IHBlbMOtY3VsYXMiLAogICAgIlZpZGVvanVlZ29zIgogIF0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-9f42e28584b9168a0c94",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S12 reload preserves query and unrelated URL parameters",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S12"
+                },
+                {
+                  "type": "input",
+                  "description": "?q=coleccionismo&origen=prueba"
+                },
+                {
+                  "type": "expected",
+                  "description": "Resultados reproducibles tras recarga y origen conservado"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 401,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:30.919Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S12"
+                    },
+                    {
+                      "type": "input",
+                      "description": "?q=coleccionismo&origen=prueba"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Resultados reproducibles tras recarga y origen conservado"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJiZWZvcmUiOiBbCiAgICAiVGFucXVlcywgYXZpb25lcyB5IG11c2Vvcy4iLAogICAgIlZpZGVvanVlZ29zIgogIF0sCiAgImFmdGVyIjogWwogICAgIlRhbnF1ZXMsIGF2aW9uZXMgeSBtdXNlb3MuIiwKICAgICJWaWRlb2p1ZWdvcyIKICBdLAogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2J1c2Nhci8/cT1jb2xlY2Npb25pc21vJm9yaWdlbj1wcnVlYmEiCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-ec270d4759353e3f3c5a",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S13 English interface and shared English transcript",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S13"
+                },
+                {
+                  "type": "input",
+                  "description": "EN aircraft; ES y EN dreadnoughts"
+                },
+                {
+                  "type": "expected",
+                  "description": "Resultados de idioma correspondiente; la transcripción única aparece en ambos índices"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 417,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:62:227\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:17",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 227,
+                      "line": 62
+                    },
+                    "snippet": " \u001b[90m 60 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m scenario(\u001b[32m'S13'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'English interface and shared English transcript'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'EN aircraft; ES y EN dreadnoughts'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Resultados de idioma correspondiente; la transcripción única aparece en ambos índices'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/en/buscar/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m english\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39m\u001b[32m'aircraft'\u001b[39m)\u001b[33m;\u001b[39mexpect(english\u001b[33m.\u001b[39mtitles\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39mexpect(english\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoContain(\u001b[32m'results'\u001b[39m)\u001b[33m;\u001b[39mexpect(english\u001b[33m.\u001b[39mhrefs\u001b[33m.\u001b[39mevery(href\u001b[33m=>\u001b[39mhref\u001b[33m.\u001b[39mincludes(\u001b[32m'/en/'\u001b[39m)))\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m  \u001b[36mconst\u001b[39m shared\u001b[33m=\u001b[39m[]\u001b[33m;\u001b[39m\u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m lang \u001b[36mof\u001b[39m [\u001b[32m''\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'en/'\u001b[39m]){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m\u001b[33m+\u001b[39mlang\u001b[33m+\u001b[39m\u001b[32m'buscar/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m result\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m submit(page\u001b[33m,\u001b[39m\u001b[32m'dreadnoughts'\u001b[39m)\u001b[33m;\u001b[39mexpect(result\u001b[33m.\u001b[39mhrefs\u001b[33m.\u001b[39msome(href\u001b[33m=>\u001b[39mhref\u001b[33m.\u001b[39mincludes(\u001b[32m'transcripciones/war-on-wheels.html'\u001b[39m)))\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m link\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-results] a[href*=\"transcripciones/\"]'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(link)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'lang'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'en'\u001b[39m)\u001b[33m;\u001b[39mshared\u001b[33m.\u001b[39mpush(result)\u001b[33m;\u001b[39m}\u001b[36mreturn\u001b[39m {english\u001b[33m,\u001b[39mshared}\u001b[33m;\u001b[39m\n \u001b[90m 64 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m scenario(\u001b[32m'S14'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'header submit by Enter and button'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'ES sobre-mi Enter; EN intereses botón; 404 y transcripción'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Formulario GET alcanza los resultados y conserva el idioma de la interfaz'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 227,
+                        "line": 62
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  60 | });\n  61 | scenario('S13','English interface and shared English transcript','EN aircraft; ES y EN dreadnoughts','Resultados de idioma correspondiente; la transcripción única aparece en ambos índices',async({page})=>{\n> 62 |  await page.goto('/en/buscar/');const english=await submit(page,'aircraft');expect(english.titles.length).toBeGreaterThan(0);expect(english.status).toContain('results');expect(english.hrefs.every(href=>href.includes('/en/'))).toBe(true);\n     |                                                                                                                                                                                                                                   ^\n  63 |  const shared=[];for(const lang of ['', 'en/']){await page.goto('/'+lang+'buscar/');const result=await submit(page,'dreadnoughts');expect(result.hrefs.some(href=>href.includes('transcripciones/war-on-wheels.html'))).toBe(true);const link=page.locator('[data-results] a[href*=\"transcripciones/\"]');await expect(link).toHaveAttribute('lang','en');shared.push(result);}return {english,shared};\n  64 | });\n  65 | scenario('S14','header submit by Enter and button','ES sobre-mi Enter; EN intereses botón; 404 y transcripción','Formulario GET alcanza los resultados y conserva el idioma de la interfaz',async({page})=>{\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:62:227\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:17"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:31.331Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S13"
+                    },
+                    {
+                      "type": "input",
+                      "description": "EN aircraft; ES y EN dreadnoughts"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Resultados de idioma correspondiente; la transcripción única aparece en ambos índices"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S13-English-interface-and-shared-English-transcript\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 227,
+                    "line": 62
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-a3a60ea2a2490b6d4647",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S14 header submit by Enter and button",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S14"
+                },
+                {
+                  "type": "input",
+                  "description": "ES sobre-mi Enter; EN intereses botón; 404 y transcripción"
+                },
+                {
+                  "type": "expected",
+                  "description": "Formulario GET alcanza los resultados y conserva el idioma de la interfaz"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1473,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:32.522Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S14"
+                    },
+                    {
+                      "type": "input",
+                      "description": "ES sobre-mi Enter; EN intereses botón; 404 y transcripción"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Formulario GET alcanza los resultados y conserva el idioma de la interfaz"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJmcm9tIjogInNvYnJlLW1pLyIsCiAgICAidG8iOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2J1c2Nhci9pbmRleC5odG1sP3E9dGFucXVlcyIsCiAgICAic3RhdHVzIjogIjUgcmVzdWx0YWRvcyBwYXJhIMKrdGFucXVlc8K7LiIKICB9LAogIHsKICAgICJmcm9tIjogImVuL2ludGVyZXNlcy8iLAogICAgInRvIjogImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9lbi9idXNjYXIvaW5kZXguaHRtbD9xPWFpcmNyYWZ0IiwKICAgICJzdGF0dXMiOiAiNiByZXN1bHRzIGZvciDigJxhaXJjcmFmdOKAnS4iCiAgfSwKICB7CiAgICAiZnJvbSI6ICI0MDQuaHRtbCIsCiAgICAidG8iOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2J1c2Nhci9pbmRleC5odG1sP3E9VC05ME0iLAogICAgInN0YXR1cyI6ICIxIHJlc3VsdGFkb3MgcGFyYSDCq1QtOTBNwrsuIgogIH0sCiAgewogICAgImZyb20iOiAicHVibGljL3RyYW5zY3JpcGNpb25lcy93YXItb24td2hlZWxzLmh0bWwiLAogICAgInRvIjogImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9idXNjYXIvaW5kZXguaHRtbD9xPWNvbGVjY2lvbmlzbW8iLAogICAgInN0YXR1cyI6ICIyIHJlc3VsdGFkb3MgcGFyYSDCq2NvbGVjY2lvbmlzbW/Cuy4iCiAgfQpd"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-fcfce1a67e576a0fe121",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S15 keyboard focus and live status",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S15"
+                },
+                {
+                  "type": "input",
+                  "description": "Tab desde consulta; Enter en Buscar; Tab a resultado"
+                },
+                {
+                  "type": "expected",
+                  "description": "Foco estable, anuncio polite/atomic y enlaces alcanzables sin ratón"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 415,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:34.351Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S15"
+                    },
+                    {
+                      "type": "input",
+                      "description": "Tab desde consulta; Enter en Buscar; Tab a resultado"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Foco estable, anuncio polite/atomic y enlaces alcanzables sin ratón"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJzdGF0dXMiOiAiMSByZXN1bHRhZG9zIHBhcmEgwqtULTkwTcK7LiIsCiAgImZvY3VzZWQiOiAiVmVow61jdWxvcyB5IG11c2VvcyIKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-27f14d621c978c4baea4",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S16 mobile and desktop search results",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S16"
+                },
+                {
+                  "type": "input",
+                  "description": "320, 375, 768, 1280, 1920 px; AVIACIÓN"
+                },
+                {
+                  "type": "expected",
+                  "description": "Sin desbordamiento global; controles y resultados accesibles; axe sin infracciones"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 660,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:34.783Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S16"
+                    },
+                    {
+                      "type": "input",
+                      "description": "320, 375, 768, 1280, 1920 px; AVIACIÓN"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Sin desbordamiento global; controles y resultados accesibles; axe sin infracciones"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJ3aWR0aHMiOiBbCiAgICAzMjAsCiAgICAzNzUsCiAgICA3NjgsCiAgICAxMjgwLAogICAgMTkyMAogIF0sCiAgInZpb2xhdGlvbnMiOiBbXSwKICAic3RhdHVzIjogIjMgcmVzdWx0YWRvcyBwYXJhIMKrQVZJQUNJw5NOwrsuIiwKICAidGl0bGVzIjogWwogICAgIlZlaMOtY3Vsb3MgeSBtdXNlb3MiLAogICAgIlNlcmllcyB5IHBlbMOtY3VsYXMiLAogICAgIlZpZGVvanVlZ29zIgogIF0sCiAgImhyZWZzIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9pbnRlcmVzZXMvaW5kZXguaHRtbCIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL3Nlcmllcy15LXBlbGljdWxhcy9pbmRleC5odG1sIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvdmlkZW9qdWVnb3MvaW5kZXguaHRtbCIKICBdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-ab8c403f0717a26cf328",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S17 coverage freshness equivalence and result links",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S17"
+                },
+                {
+                  "type": "input",
+                  "description": "19 HTML públicos; 15 contenidos; siete pares ES/EN y transcripción compartida"
+                },
+                {
+                  "type": "expected",
+                  "description": "Cada HTML está indexado o excluido explícitamente; párrafos/alt vigentes; links HTTP 200"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 876,
+                  "error": {
+                    "message": "Error: en/index.html\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"Explore vehiclesVideo and podcast\"\u001b[39m\nReceived string:    \u001b[31m\"Personal website · Jorge Puente García Tanks, aircraft and museums. I like tanks and combat aircraft. I have visited few museums, but I follow their collections and enjoy discovering vehicles in films and video games. In War Thunder, I take a collecting approach: I am drawn to the detail with which it represents and explains tanks and aircraft. Explore vehicles Video and podcast T-72 tank on display at The Tank Museum in Bovington Explore my interests About me and my education · Vehicles and museums · Video and podcast · Films and TV series · Video games\"\u001b[39m",
+                    "stack": "Error: en/index.html\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"Explore vehiclesVideo and podcast\"\u001b[39m\nReceived string:    \u001b[31m\"Personal website · Jorge Puente García Tanks, aircraft and museums. I like tanks and combat aircraft. I have visited few museums, but I follow their collections and enjoy discovering vehicles in films and video games. In War Thunder, I take a collecting approach: I am drawn to the detail with which it represents and explains tanks and aircraft. Explore vehicles Video and podcast T-72 tank on display at The Tank Museum in Bovington Explore my interests About me and my education · Vehicles and museums · Video and podcast · Films and TV series · Video games\"\u001b[39m\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:84:62\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:17",
+                    "location": {
+                      "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                      "column": 62,
+                      "line": 84
+                    },
+                    "snippet": " \u001b[90m 82 |\u001b[39m   expect(records\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m title\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'main h1'\u001b[39m)\u001b[33m.\u001b[39mtextContent()\u001b[33m;\u001b[39mexpect(records[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mtitle)\u001b[33m.\u001b[39mtoBe(title\u001b[33m.\u001b[39mtrim())\u001b[33m;\u001b[39m\n \u001b[90m 83 |\u001b[39m   \u001b[36mconst\u001b[39m texts\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'main p'\u001b[39m)\u001b[33m.\u001b[39mevaluateAll(nodes\u001b[33m=>\u001b[39mnodes\u001b[33m.\u001b[39mfilter(n\u001b[33m=>\u001b[39m\u001b[33m!\u001b[39mn\u001b[33m.\u001b[39mclosest(\u001b[32m'dialog,nav,noscript'\u001b[39m))\u001b[33m.\u001b[39mmap(n\u001b[33m=>\u001b[39mn\u001b[33m.\u001b[39mtextContent\u001b[33m.\u001b[39mreplace(\u001b[35m/\\s+/g\u001b[39m\u001b[33m,\u001b[39m\u001b[32m' '\u001b[39m)\u001b[33m.\u001b[39mtrim()))\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 84 |\u001b[39m   \u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m text \u001b[36mof\u001b[39m texts)expect(records[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mtext\u001b[33m,\u001b[39mentry\u001b[33m.\u001b[39mfile)\u001b[33m.\u001b[39mtoContain(text)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 85 |\u001b[39m   \u001b[36mconst\u001b[39m alts\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'main img[alt]'\u001b[39m)\u001b[33m.\u001b[39mevaluateAll(nodes\u001b[33m=>\u001b[39mnodes\u001b[33m.\u001b[39mfilter(n\u001b[33m=>\u001b[39m\u001b[33m!\u001b[39mn\u001b[33m.\u001b[39mclosest(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mmap(n\u001b[33m=>\u001b[39mn\u001b[33m.\u001b[39malt))\u001b[33m;\u001b[39m\u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m alt \u001b[36mof\u001b[39m alts)expect(records[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mtext)\u001b[33m.\u001b[39mtoContain(alt)\u001b[33m;\u001b[39m\n \u001b[90m 86 |\u001b[39m   expect((\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mget(\u001b[32m'/'\u001b[39m\u001b[33m+\u001b[39mentry\u001b[33m.\u001b[39mfile))\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39mrows\u001b[33m.\u001b[39mpush({file\u001b[33m:\u001b[39mentry\u001b[33m.\u001b[39mfile\u001b[33m,\u001b[39mrecords\u001b[33m:\u001b[39mrecords\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39mparagraphs\u001b[33m:\u001b[39mtexts\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39malts\u001b[33m:\u001b[39malts\u001b[33m.\u001b[39mlength})\u001b[33m;\u001b[39m\n \u001b[90m 87 |\u001b[39m  }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                        "column": 62,
+                        "line": 84
+                      },
+                      "message": "Error: en/index.html\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"Explore vehiclesVideo and podcast\"\u001b[39m\nReceived string:    \u001b[31m\"Personal website · Jorge Puente García Tanks, aircraft and museums. I like tanks and combat aircraft. I have visited few museums, but I follow their collections and enjoy discovering vehicles in films and video games. In War Thunder, I take a collecting approach: I am drawn to the detail with which it represents and explains tanks and aircraft. Explore vehicles Video and podcast T-72 tank on display at The Tank Museum in Bovington Explore my interests About me and my education · Vehicles and museums · Video and podcast · Films and TV series · Video games\"\u001b[39m\n\n  82 |   expect(records.length).toBeGreaterThan(0);const title=await page.locator('main h1').textContent();expect(records[0].title).toBe(title.trim());\n  83 |   const texts=await page.locator('main p').evaluateAll(nodes=>nodes.filter(n=>!n.closest('dialog,nav,noscript')).map(n=>n.textContent.replace(/\\s+/g,' ').trim()));\n> 84 |   for(const text of texts)expect(records[0].text,entry.file).toContain(text);\n     |                                                              ^\n  85 |   const alts=await page.locator('main img[alt]').evaluateAll(nodes=>nodes.filter(n=>!n.closest('dialog')).map(n=>n.alt));for(const alt of alts)expect(records[0].text).toContain(alt);\n  86 |   expect((await request.get('/'+entry.file)).status()).toBe(200);rows.push({file:entry.file,records:records.length,paragraphs:texts.length,alts:alts.length});\n  87 |  }\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:84:62\n    at C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs:12:17"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:35.453Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S17"
+                    },
+                    {
+                      "type": "input",
+                      "description": "19 HTML públicos; 15 contenidos; siete pares ES/EN y transcripción compartida"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Cada HTML está indexado o excluido explícitamente; párrafos/alt vigentes; links HTTP 200"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results\\search-S17-coverage-freshness-equivalence-and-result-links\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests\\search.spec.mjs",
+                    "column": 62,
+                    "line": 84
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-943fefc7fef5182e5f95",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S18 deployment under an arbitrary subdirectory",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S18"
+                },
+                {
+                  "type": "input",
+                  "description": "Servidor local montado en /curso/portfolio/"
+                },
+                {
+                  "type": "expected",
+                  "description": "Cabecera, índice y destinos permanecen bajo el prefijo y responden HTTP 200"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 964,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:20:37.110Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S18"
+                    },
+                    {
+                      "type": "input",
+                      "description": "Servidor local montado en /curso/portfolio/"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Cabecera, índice y destinos permanecen bajo el prefijo y responden HTTP 200"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTc0L2N1cnNvL3BvcnRmb2xpby9idXNjYXIvaW5kZXguaHRtbD9xPWF2aWFjaW9uIiwKICAiaHJlZnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTc0L2N1cnNvL3BvcnRmb2xpby9pbnRlcmVzZXMvaW5kZXguaHRtbCIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTc0L2N1cnNvL3BvcnRmb2xpby9zZXJpZXMteS1wZWxpY3VsYXMvaW5kZXguaHRtbCIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTc0L2N1cnNvL3BvcnRmb2xpby92aWRlb2p1ZWdvcy9pbmRleC5odG1sIgogIF0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-ba2dc0d85dc84f7e2aa3",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T16:20:25.092Z",
+    "duration": 14033.534,
+    "expected": 16,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

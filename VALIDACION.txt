@@ -42,7 +42,11 @@ La fotografía conjunta de prensa ya no se muestra. No se inventan imágenes,
 recomendaciones, testimonios o consentimiento de las personas mencionadas.
 
 PRUEBAS REPRODUCIBLES
-33 pruebas Playwright correctas; 0 fallidas; 0 omitidas.
+51 pruebas Playwright correctas; 0 fallidas; 0 omitidas.
+Suite completa: validacion/revision-2026-11-14-buscador/runs/playwright-full-2026-11-14T16-22-26-360Z-27732.json
+Comando: pnpm test. Fin: 2026-11-14T16:23:09.540Z. SHA256: f2cad80d921315a8a36c75fb97c66b2d87d7fc13ab6fec5f4fa3a9a6fed1b7e6.
+Cada ejecución completa o parcial conserva un JSON distinto en runs/; los punteros
+latest-full.json y latest-partial.json no se confunden ni suman sus recuentos.
 19 rutas: seis secciones ES/EN, búsqueda y ayuda ES/EN, 404 ES/EN y transcripción.
 Anchos 320, 375, 768, 1280 y 1920: sin desbordamiento horizontal global.
 Axe-core 4.14.0: cero infracciones detectadas en las rutas comprobadas.
@@ -50,6 +54,12 @@ Teclado real: salto a main, galería, Escape, retorno del foco y desplegables.
 Carrusel: avance circular, estabilidad de altura, redimensionado y botones.
 Búsqueda: tildes, varios términos, ausencia de resultados, entrada HTML,
 fallo de red y resultados en inglés. Cambio de idioma conserva la sección.
+18 casos adicionales documentan vacío/espacios, ranking y desempate, longitud,
+reintento, caché, errores de índice/URL, concurrencia, anuncios, cobertura vigente
+y despliegue bajo un prefijo arbitrario. Hay observaciones JSON por caso.
+Índice: 15 páginas de contenido (siete pares ES/EN y transcripción inglesa
+compartida); cuatro exclusiones explícitas: 404 y resultados en ambos idiomas.
+public/search-coverage.json registra inventario, enlaces y hashes de los índices.
 Navegación sin JavaScript y con imágenes bloqueadas comprobada en galería.
 Preferencias: teclado, persistencia, cambio de idioma, recarga, reset y
 almacenamiento bloqueado. Las 19 rutas también se comprueban con todos los
@@ -97,8 +107,10 @@ fuera del alcance por decisión del autor. Sigue identificada como automática.
 
 EVIDENCIAS
 validacion/revision-2026-11-12/: html.json, css.json, validation-summary.json,
-playwright.json, performance-summary.json, informes Lighthouse HTML/JSON,
+playwright.json histórico, performance-summary.json, informes Lighthouse HTML/JSON,
 images.json y capturas de escritorio/móvil.
+La suite vigente está en validacion/revision-2026-11-14-buscador; las selecciones parciales ya no
+sobrescriben el informe completo. Los nombres/fechas internos identifican cada ejecución.
 Los informes de octubre y del 11/11 se conservan como históricos. Algunos
 JSON de pruebas del directorio del 11/11 se actualizaron durante la primera
 pasada del 12/11: sus fechas internas prevalecen; el directorio vigente es este.

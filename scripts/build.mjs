@@ -3,6 +3,8 @@ import path from 'node:path';
 import {parse,generate} from 'css-tree';
 import {createHash} from 'node:crypto';
 import {readingSettings} from './reading-settings.mjs';
+import {searchPage} from './search-page.mjs';
+import {buildSearchIndexes} from './search-index.mjs';
 const pages=['index.html','404.html',...['sobre-mi','intereses','multimedia','series-y-peliculas','videojuegos','buscar','ayuda'].map(p=>p+'/index.html')];
 const translations=JSON.parse(await fs.readFile('scripts/translations.json','utf8'));
 Object.assign(translations,JSON.parse(await fs.readFile('scripts/translation-details.json','utf8')));
@@ -25,7 +27,6 @@ let css='';for(const file of ['styles.css','styles-media-01.css','styles-media-0
 const compiledCSS=generate(parse(css));
 const cssVersion=createHash('sha256').update(compiledCSS).digest('hex').slice(0,12);
 await fs.writeFile('public/css/site.min.css',compiledCSS);
-const index={es:[],en:[]};
 let fonts='';for(const n of [5,6,7,8,13,14])fonts+=await fs.readFile(`public/fonts/font-face-${String(n).padStart(2,'0')}.css`,'utf8');
 fonts+=await fs.readFile('public/fonts/opendyslexic.css','utf8');
 await fs.writeFile('public/fonts/fonts.css',fonts.replaceAll('font-display: optional','font-display: swap'));
@@ -51,7 +52,8 @@ for(const file of [...pages,'public/transcripciones/war-on-wheels.html']) {
  text=text.replace(/<!-- reading-widget -->[\s\S]*?<!-- \/reading-widget -->/,'');
  text=text.replace('</body>',`<!-- reading-widget -->${readingPanel}<!-- /reading-widget --></body>`);
  text=text.replace(/datetime="2026-11-\d{2}">\d{1,2} de noviembre de 2026/g,'datetime="2026-11-14">14 de noviembre de 2026');
- if(file==='buscar/index.html')text=text.replace('<form role="search">','<form role="search" aria-label="Resultados de búsqueda">');
+ // Única plantilla comentada para los controles ES/EN; no mantener copias a mano.
+ if(file==='buscar/index.html')text=text.replace(/<form role="search"[\s\S]*?<\/script>/,searchPage(label));
  if(file==='ayuda/index.html'){
   text=text.replace(/<!-- reading-help -->[\s\S]*?<!-- \/reading-help -->/,'');
   const heading=label({es:'Ajusta la lectura a tu gusto',en:'Adjust reading to your preferences'});
@@ -101,10 +103,6 @@ for(const file of [...pages,'public/transcripciones/war-on-wheels.html']) {
  english=english.replace('aria-label="Ruta de navegación"','aria-label="Breadcrumb"');
  english=english.replace('en/en/','en/');
  const dest='en/'+file;await fs.mkdir(path.dirname(dest),{recursive:true});await fs.writeFile(dest,english);
- for(const [lang,html] of [['es',text],['en',english]]) {
-  if(file==='404.html'||file.startsWith('buscar'))continue;
-  const main=html.match(/<main[\s\S]*?<\/main>/)?.[0]||'';
-  index[lang].push({title:html.match(/<h1[^>]*>(.*?)<\/h1>/)?.[1],url:path.posix.relative('public',(lang==='en'?'en/':'')+file),text:main.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim()});
- }
 }
-for(const lang of ['es','en'])await fs.writeFile(`public/search-index${lang==='en'?'-en':''}.json`,JSON.stringify(index[lang],null,2));
+// Después de generar traducciones y enlaces, indexar el HTML que realmente se sirve.
+await buildSearchIndexes();

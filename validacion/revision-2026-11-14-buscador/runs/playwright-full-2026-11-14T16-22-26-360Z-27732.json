@@ -1,0 +1,2444 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\playwright.config.mjs",
+    "rootDir": "C:/Users/jorge/OneDrive/Desktop/Master/UX/uo294228-personal-web/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "evidenceScope": "full",
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/jorge/OneDrive/Desktop/Master/UX/uo294228-personal-web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "evidenceScope": "full",
+          "actualWorkers": 2
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/jorge/OneDrive/Desktop/Master/UX/uo294228-personal-web/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "evidenceScope": "full",
+          "actualWorkers": 2
+        },
+        "name": "",
+        "testDir": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests",
+        "snapshotDir": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "channel": "chrome",
+          "headless": true
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "validacion/revision-2026-11-14-buscador/runs/playwright-full-2026-11-14T16-22-26-360Z-27732.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 2,
+    "webServer": {
+      "command": "node scripts/serve.mjs",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "reading-settings.spec.mjs",
+      "file": "reading-settings.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "reading settings: keyboard, persistence across languages, reset and system motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1473,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:28.481Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8ec89973054c87726eb9-814cee0b0da81eba816e",
+          "file": "reading-settings.spec.mjs",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "maximum reading settings keep content, controls and open cards usable on all routes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 19484,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:30.366Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8ec89973054c87726eb9-e00ca1a90eabcd80170a",
+          "file": "reading-settings.spec.mjs",
+          "line": 42,
+          "column": 1
+        },
+        {
+          "title": "preferences work when storage is blocked; no dead controls without JavaScript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1522,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:49.870Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8ec89973054c87726eb9-cedbf15e3183f122354f",
+          "file": "reading-settings.spec.mjs",
+          "line": 70,
+          "column": 1
+        },
+        {
+          "title": "floating launcher follows scroll, modal does not shift content, backdrop closes and fonts load on demand",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1349,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:51.405Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8ec89973054c87726eb9-b0248ddf6a5a7f1b7ed2",
+          "file": "reading-settings.spec.mjs",
+          "line": 84,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "search.spec.mjs",
+      "file": "search.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S01 empty and whitespace queries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S01"
+                },
+                {
+                  "type": "input",
+                  "description": "q vacío y tres espacios"
+                },
+                {
+                  "type": "expected",
+                  "description": "Mensaje para escribir un término; cero peticiones de índice y q eliminado"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 688,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:28.525Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S01"
+                    },
+                    {
+                      "type": "input",
+                      "description": "q vacío y tres espacios"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Mensaje para escribir un término; cero peticiones de índice y q eliminado"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJzZWVuIjogWwogICAgewogICAgICAic3RhdHVzIjogIkVzY3JpYmUgdW4gdMOpcm1pbm8gZGUgYsO6c3F1ZWRhLiIsCiAgICAgICJ0aXRsZXMiOiBbXSwKICAgICAgImhyZWZzIjogW10KICAgIH0sCiAgICB7CiAgICAgICJzdGF0dXMiOiAiRXNjcmliZSB1biB0w6lybWlubyBkZSBiw7pzcXVlZGEuIiwKICAgICAgInRpdGxlcyI6IFtdLAogICAgICAiaHJlZnMiOiBbXQogICAgfQogIF0sCiAgInJlcXVlc3RzIjogW10KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-67361d1f5549d598686a",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S02 case and accent equivalence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S02"
+                },
+                {
+                  "type": "input",
+                  "description": "AVIACIÓN y aviacion"
+                },
+                {
+                  "type": "expected",
+                  "description": "Misma lista no vacía y mismo orden"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 511,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:30.150Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S02"
+                    },
+                    {
+                      "type": "input",
+                      "description": "AVIACIÓN y aviacion"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Misma lista no vacía y mismo orden"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJhY2NlbnRlZCI6IHsKICAgICJzdGF0dXMiOiAiMyByZXN1bHRhZG9zIHBhcmEgwqtBVklBQ0nDk07Cuy4iLAogICAgInRpdGxlcyI6IFsKICAgICAgIlZlaMOtY3Vsb3MgeSBtdXNlb3MiLAogICAgICAiU2VyaWVzIHkgcGVsw61jdWxhcyIsCiAgICAgICJWaWRlb2p1ZWdvcyIKICAgIF0sCiAgICAiaHJlZnMiOiBbCiAgICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvaW50ZXJlc2VzL2luZGV4Lmh0bWwiLAogICAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL3Nlcmllcy15LXBlbGljdWxhcy9pbmRleC5odG1sIiwKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My92aWRlb2p1ZWdvcy9pbmRleC5odG1sIgogICAgXQogIH0sCiAgInBsYWluIjogewogICAgInN0YXR1cyI6ICIzIHJlc3VsdGFkb3MgcGFyYSDCq2F2aWFjaW9uwrsuIiwKICAgICJ0aXRsZXMiOiBbCiAgICAgICJWZWjDrWN1bG9zIHkgbXVzZW9zIiwKICAgICAgIlNlcmllcyB5IHBlbMOtY3VsYXMiLAogICAgICAiVmlkZW9qdWVnb3MiCiAgICBdLAogICAgImhyZWZzIjogWwogICAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2ludGVyZXNlcy9pbmRleC5odG1sIiwKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9zZXJpZXMteS1wZWxpY3VsYXMvaW5kZXguaHRtbCIsCiAgICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvdmlkZW9qdWVnb3MvaW5kZXguaHRtbCIKICAgIF0KICB9Cn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-9b68f46f8ec95e0352b2",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S03 all terms and repeated terms",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S03"
+                },
+                {
+                  "type": "input",
+                  "description": "tanques aviones; tanques aviones tanques; tanques terminoimposiblexyz"
+                },
+                {
+                  "type": "expected",
+                  "description": "Todos los términos presentes; repetir no cambia el orden; un término ausente da cero"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 494,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:30.682Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S03"
+                    },
+                    {
+                      "type": "input",
+                      "description": "tanques aviones; tanques aviones tanques; tanques terminoimposiblexyz"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Todos los términos presentes; repetir no cambia el orden; un término ausente da cero"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJib3RoIjogewogICAgInN0YXR1cyI6ICI0IHJlc3VsdGFkb3MgcGFyYSDCq3RhbnF1ZXMgYXZpb25lc8K7LiIsCiAgICAidGl0bGVzIjogWwogICAgICAiVGFucXVlcywgYXZpb25lcyB5IG11c2Vvcy4iLAogICAgICAiU2VyaWVzIHkgcGVsw61jdWxhcyIsCiAgICAgICJTb2JyZSBtw60iLAogICAgICAiVmlkZW9qdWVnb3MiCiAgICBdLAogICAgImhyZWZzIjogWwogICAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2luZGV4Lmh0bWwiLAogICAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL3Nlcmllcy15LXBlbGljdWxhcy9pbmRleC5odG1sIiwKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9zb2JyZS1taS9pbmRleC5odG1sIiwKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My92aWRlb2p1ZWdvcy9pbmRleC5odG1sIgogICAgXQogIH0sCiAgInJlcGVhdGVkIjogewogICAgInN0YXR1cyI6ICI0IHJlc3VsdGFkb3MgcGFyYSDCq3RhbnF1ZXMgYXZpb25lcyB0YW5xdWVzwrsuIiwKICAgICJ0aXRsZXMiOiBbCiAgICAgICJUYW5xdWVzLCBhdmlvbmVzIHkgbXVzZW9zLiIsCiAgICAgICJTZXJpZXMgeSBwZWzDrWN1bGFzIiwKICAgICAgIlNvYnJlIG3DrSIsCiAgICAgICJWaWRlb2p1ZWdvcyIKICAgIF0sCiAgICAiaHJlZnMiOiBbCiAgICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvaW5kZXguaHRtbCIsCiAgICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvc2VyaWVzLXktcGVsaWN1bGFzL2luZGV4Lmh0bWwiLAogICAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL3NvYnJlLW1pL2luZGV4Lmh0bWwiLAogICAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL3ZpZGVvanVlZ29zL2luZGV4Lmh0bWwiCiAgICBdCiAgfSwKICAibWlzc2luZyI6IHsKICAgICJzdGF0dXMiOiAiU2luIHJlc3VsdGFkb3MuIFBydWViYSDCq211c2VvwrssIMKrYXZpYWNpw7NuwrsgbyB1biB0w6lybWlubyBtw6FzIGNvcnRvLiIsCiAgICAidGl0bGVzIjogW10sCiAgICAiaHJlZnMiOiBbXQogIH0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-d80545039e8d6a3f19fb",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S04 real title relevance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S04"
+                },
+                {
+                  "type": "input",
+                  "description": "videojuegos"
+                },
+                {
+                  "type": "expected",
+                  "description": "Videojuegos es el primer resultado aunque otras páginas lo mencionen"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 371,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:31.187Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S04"
+                    },
+                    {
+                      "type": "input",
+                      "description": "videojuegos"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Videojuegos es el primer resultado aunque otras páginas lo mencionen"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJzdGF0dXMiOiAiNCByZXN1bHRhZG9zIHBhcmEgwqt2aWRlb2p1ZWdvc8K7LiIsCiAgInRpdGxlcyI6IFsKICAgICJWaWRlb2p1ZWdvcyIsCiAgICAiQXl1ZGEgeSBtYXBhIGRlbCBzaXRpbyIsCiAgICAiVGFucXVlcywgYXZpb25lcyB5IG11c2Vvcy4iLAogICAgIlNvYnJlIG3DrSIKICBdLAogICJocmVmcyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvdmlkZW9qdWVnb3MvaW5kZXguaHRtbCIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2F5dWRhL2luZGV4Lmh0bWwiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9pbmRleC5odG1sIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvc29icmUtbWkvaW5kZXguaHRtbCIKICBdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-29a5028e733276d6002d",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S05 ranking and deterministic tie break",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S05"
+                },
+                {
+                  "type": "input",
+                  "description": "Índice sintético de tres documentos; aviacion"
+                },
+                {
+                  "type": "expected",
+                  "description": "Título AVIACIÓN primero; empate de cuerpo: ayuda antes de videojuegos"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 400,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:31.570Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S05"
+                    },
+                    {
+                      "type": "input",
+                      "description": "Índice sintético de tres documentos; aviacion"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Título AVIACIÓN primero; empate de cuerpo: ayuda antes de videojuegos"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJzeW50aGV0aWMiOiB0cnVlLAogICJzdGF0dXMiOiAiMyByZXN1bHRhZG9zIHBhcmEgwqthdmlhY2lvbsK7LiIsCiAgInRpdGxlcyI6IFsKICAgICJBVklBQ0nDk04iLAogICAgIkRvY3VtZW50byBBIiwKICAgICJEb2N1bWVudG8gWiIKICBdLAogICJocmVmcyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvc29icmUtbWkvaW5kZXguaHRtbCIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2F5dWRhL2luZGV4Lmh0bWwiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My92aWRlb2p1ZWdvcy9pbmRleC5odG1sIgogIF0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-62fa125e58c0c0302ba2",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S06 no results and recovery guidance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S06"
+                },
+                {
+                  "type": "input",
+                  "description": "terminoimposiblexyz"
+                },
+                {
+                  "type": "expected",
+                  "description": "Cero resultados y propuesta de reformulación"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 428,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:31.987Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S06"
+                    },
+                    {
+                      "type": "input",
+                      "description": "terminoimposiblexyz"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Cero resultados y propuesta de reformulación"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJzdGF0dXMiOiAiU2luIHJlc3VsdGFkb3MuIFBydWViYSDCq211c2VvwrssIMKrYXZpYWNpw7NuwrsgbyB1biB0w6lybWlubyBtw6FzIGNvcnRvLiIsCiAgInRpdGxlcyI6IFtdLAogICJocmVmcyI6IFtdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-48342f49fea5df6cc718",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S07 query length at input and URL boundaries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S07"
+                },
+                {
+                  "type": "input",
+                  "description": "140 letras a, entrada y ?q="
+                },
+                {
+                  "type": "expected",
+                  "description": "Campo y parámetro q limitados a 120 unidades UTF-16"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 466,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:32.429Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S07"
+                    },
+                    {
+                      "type": "input",
+                      "description": "140 letras a, entrada y ?q="
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Campo y parámetro q limitados a 120 unidades UTF-16"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJpbnB1dExlbmd0aCI6IDEyMCwKICAidXJsTGVuZ3RoIjogMTIwCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-b865f7c6fa8c507a2ce5",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S08 query HTML is inert",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S08"
+                },
+                {
+                  "type": "input",
+                  "description": "<img src=x onerror=alert(1)>"
+                },
+                {
+                  "type": "expected",
+                  "description": "Sin diálogo JS ni nodos img; entrada tratada como texto"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 425,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:32.914Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S08"
+                    },
+                    {
+                      "type": "input",
+                      "description": "<img src=x onerror=alert(1)>"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Sin diálogo JS ni nodos img; entrada tratada como texto"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJzdGF0dXMiOiAiU2luIHJlc3VsdGFkb3MuIFBydWViYSDCq211c2VvwrssIMKrYXZpYWNpw7NuwrsgbyB1biB0w6lybWlubyBtw6FzIGNvcnRvLiIsCiAgInRpdGxlcyI6IFtdLAogICJocmVmcyI6IFtdLAogICJkaWFsb2dzIjogW10sCiAgImltYWdlcyI6IDAKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-acb5e2a1d41bf7cbeb69",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S09 HTTP failure retry and memory cache",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S09"
+                },
+                {
+                  "type": "input",
+                  "description": "Primer índice HTTP 503; reintento; segunda consulta"
+                },
+                {
+                  "type": "expected",
+                  "description": "Mensaje, mapa y botón; el reintento funciona; siguiente consulta no vuelve a descargar"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 473,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:33.359Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S09"
+                    },
+                    {
+                      "type": "input",
+                      "description": "Primer índice HTTP 503; reintento; segunda consulta"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Mensaje, mapa y botón; el reintento funciona; siguiente consulta no vuelve a descargar"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJyZXF1ZXN0cyI6IDIsCiAgInJldHJ5UmVzdWx0IjogWwogICAgIlRhbnF1ZXMsIGF2aW9uZXMgeSBtdXNlb3MuIiwKICAgICJWaWRlb2p1ZWdvcyIKICBdLAogICJmaW5hbCI6ICIxIHJlc3VsdGFkb3MgcGFyYSDCq1QtOTBNwrsuIgp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-86f5c1eaa8e5b68caf00",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S10 malformed and unsafe indexes fail closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S10"
+                },
+                {
+                  "type": "input",
+                  "description": "JSON sintético inválido; enlace javascript:"
+                },
+                {
+                  "type": "expected",
+                  "description": "Recuperación accesible sin renderizar resultados inseguros"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 536,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:33.847Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S10"
+                    },
+                    {
+                      "type": "input",
+                      "description": "JSON sintético inválido; enlace javascript:"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Recuperación accesible sin renderizar resultados inseguros"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJzeW50aGV0aWMiOiB0cnVlLAogICJyZXN1bHRzIjogWwogICAgIk5vIHNlIGhhIHBvZGlkbyBjYXJnYXIgZWwgYnVzY2Fkb3IuIENvbnN1bHRhIGVsIG1hcGEgZGVsIHNpdGlvIG8gdnVlbHZlIGEgaW50ZW50YXJsby4iLAogICAgIk5vIHNlIGhhIHBvZGlkbyBjYXJnYXIgZWwgYnVzY2Fkb3IuIENvbnN1bHRhIGVsIG1hcGEgZGVsIHNpdGlvIG8gdnVlbHZlIGEgaW50ZW50YXJsby4iCiAgXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-71c7b2ee83a63e48a7cb",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S11 latest query wins with a shared pending download",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S11"
+                },
+                {
+                  "type": "input",
+                  "description": "Índice retenido; T-90M seguido de aviacion"
+                },
+                {
+                  "type": "expected",
+                  "description": "Una descarga; solo se publica la última consulta"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 437,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:34.404Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S11"
+                    },
+                    {
+                      "type": "input",
+                      "description": "Índice retenido; T-90M seguido de aviacion"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Una descarga; solo se publica la última consulta"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJyZXF1ZXN0cyI6IDEsCiAgInN0YXR1cyI6ICIzIHJlc3VsdGFkb3MgcGFyYSDCq2F2aWFjaW9uwrsuIiwKICAidGl0bGVzIjogWwogICAgIlZlaMOtY3Vsb3MgeSBtdXNlb3MiLAogICAgIlNlcmllcyB5IHBlbMOtY3VsYXMiLAogICAgIlZpZGVvanVlZ29zIgogIF0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-9f42e28584b9168a0c94",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S12 reload preserves query and unrelated URL parameters",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S12"
+                },
+                {
+                  "type": "input",
+                  "description": "?q=coleccionismo&origen=prueba"
+                },
+                {
+                  "type": "expected",
+                  "description": "Resultados reproducibles tras recarga y origen conservado"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 557,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:34.851Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S12"
+                    },
+                    {
+                      "type": "input",
+                      "description": "?q=coleccionismo&origen=prueba"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Resultados reproducibles tras recarga y origen conservado"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJiZWZvcmUiOiBbCiAgICAiVGFucXVlcywgYXZpb25lcyB5IG11c2Vvcy4iLAogICAgIlZpZGVvanVlZ29zIgogIF0sCiAgImFmdGVyIjogWwogICAgIlRhbnF1ZXMsIGF2aW9uZXMgeSBtdXNlb3MuIiwKICAgICJWaWRlb2p1ZWdvcyIKICBdLAogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2J1c2Nhci8/cT1jb2xlY2Npb25pc21vJm9yaWdlbj1wcnVlYmEiCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-ec270d4759353e3f3c5a",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S13 English interface and shared English transcript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S13"
+                },
+                {
+                  "type": "input",
+                  "description": "EN aircraft; ES y EN dreadnoughts"
+                },
+                {
+                  "type": "expected",
+                  "description": "Resultados de idioma correspondiente; la transcripción única aparece en ambos índices"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 926,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:35.418Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S13"
+                    },
+                    {
+                      "type": "input",
+                      "description": "EN aircraft; ES y EN dreadnoughts"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Resultados de idioma correspondiente; la transcripción única aparece en ambos índices"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJlbmdsaXNoIjogewogICAgInN0YXR1cyI6ICI2IHJlc3VsdHMgZm9yIOKAnGFpcmNyYWZ04oCdLiIsCiAgICAidGl0bGVzIjogWwogICAgICAiVGFua3MsIGFpcmNyYWZ0IGFuZCBtdXNldW1zLiIsCiAgICAgICJWZWhpY2xlcyBhbmQgbXVzZXVtcyIsCiAgICAgICJGaWxtcyBhbmQgVFYgc2VyaWVzIiwKICAgICAgIkFib3V0IG1lIiwKICAgICAgIlZpZGVvIGdhbWVzIiwKICAgICAgIldhciBvbiBXaGVlbHMg4oCUIHRyYW5zY3JpcHQiCiAgICBdLAogICAgImhyZWZzIjogWwogICAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2VuL2luZGV4Lmh0bWwiLAogICAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2VuL2ludGVyZXNlcy9pbmRleC5odG1sIiwKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9lbi9zZXJpZXMteS1wZWxpY3VsYXMvaW5kZXguaHRtbCIsCiAgICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvZW4vc29icmUtbWkvaW5kZXguaHRtbCIsCiAgICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvZW4vdmlkZW9qdWVnb3MvaW5kZXguaHRtbCIsCiAgICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvcHVibGljL3RyYW5zY3JpcGNpb25lcy93YXItb24td2hlZWxzLmh0bWwiCiAgICBdCiAgfSwKICAic2hhcmVkIjogWwogICAgewogICAgICAic3RhdHVzIjogIjEgcmVzdWx0YWRvcyBwYXJhIMKrZHJlYWRub3VnaHRzwrsuIiwKICAgICAgInRpdGxlcyI6IFsKICAgICAgICAiV2FyIG9uIFdoZWVscyDigJQgdHJhbnNjcmlwdCIKICAgICAgXSwKICAgICAgImhyZWZzIjogWwogICAgICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvcHVibGljL3RyYW5zY3JpcGNpb25lcy93YXItb24td2hlZWxzLmh0bWwiCiAgICAgIF0KICAgIH0sCiAgICB7CiAgICAgICJzdGF0dXMiOiAiMSByZXN1bHRzIGZvciDigJxkcmVhZG5vdWdodHPigJ0uIiwKICAgICAgInRpdGxlcyI6IFsKICAgICAgICAiV2FyIG9uIFdoZWVscyDigJQgdHJhbnNjcmlwdCIKICAgICAgXSwKICAgICAgImhyZWZzIjogWwogICAgICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvcHVibGljL3RyYW5zY3JpcGNpb25lcy93YXItb24td2hlZWxzLmh0bWwiCiAgICAgIF0KICAgIH0KICBdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-a3a60ea2a2490b6d4647",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S14 header submit by Enter and button",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S14"
+                },
+                {
+                  "type": "input",
+                  "description": "ES sobre-mi Enter; EN intereses botón; 404 y transcripción"
+                },
+                {
+                  "type": "expected",
+                  "description": "Formulario GET alcanza los resultados y conserva el idioma de la interfaz"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1505,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:36.355Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S14"
+                    },
+                    {
+                      "type": "input",
+                      "description": "ES sobre-mi Enter; EN intereses botón; 404 y transcripción"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Formulario GET alcanza los resultados y conserva el idioma de la interfaz"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJmcm9tIjogInNvYnJlLW1pLyIsCiAgICAidG8iOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2J1c2Nhci9pbmRleC5odG1sP3E9dGFucXVlcyIsCiAgICAic3RhdHVzIjogIjUgcmVzdWx0YWRvcyBwYXJhIMKrdGFucXVlc8K7LiIKICB9LAogIHsKICAgICJmcm9tIjogImVuL2ludGVyZXNlcy8iLAogICAgInRvIjogImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9lbi9idXNjYXIvaW5kZXguaHRtbD9xPWFpcmNyYWZ0IiwKICAgICJzdGF0dXMiOiAiNiByZXN1bHRzIGZvciDigJxhaXJjcmFmdOKAnS4iCiAgfSwKICB7CiAgICAiZnJvbSI6ICI0MDQuaHRtbCIsCiAgICAidG8iOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2J1c2Nhci9pbmRleC5odG1sP3E9VC05ME0iLAogICAgInN0YXR1cyI6ICIxIHJlc3VsdGFkb3MgcGFyYSDCq1QtOTBNwrsuIgogIH0sCiAgewogICAgImZyb20iOiAicHVibGljL3RyYW5zY3JpcGNpb25lcy93YXItb24td2hlZWxzLmh0bWwiLAogICAgInRvIjogImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9idXNjYXIvaW5kZXguaHRtbD9xPWNvbGVjY2lvbmlzbW8iLAogICAgInN0YXR1cyI6ICIyIHJlc3VsdGFkb3MgcGFyYSDCq2NvbGVjY2lvbmlzbW/Cuy4iCiAgfQpd"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-fcfce1a67e576a0fe121",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S15 keyboard focus and live status",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S15"
+                },
+                {
+                  "type": "input",
+                  "description": "Tab desde consulta; Enter en Buscar; Tab a resultado"
+                },
+                {
+                  "type": "expected",
+                  "description": "Foco estable, anuncio polite/atomic y enlaces alcanzables sin ratón"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 545,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:37.873Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S15"
+                    },
+                    {
+                      "type": "input",
+                      "description": "Tab desde consulta; Enter en Buscar; Tab a resultado"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Foco estable, anuncio polite/atomic y enlaces alcanzables sin ratón"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJzdGF0dXMiOiAiMSByZXN1bHRhZG9zIHBhcmEgwqtULTkwTcK7LiIsCiAgImZvY3VzZWQiOiAiVmVow61jdWxvcyB5IG11c2VvcyIKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-27f14d621c978c4baea4",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S16 mobile and desktop search results",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S16"
+                },
+                {
+                  "type": "input",
+                  "description": "320, 375, 768, 1280, 1920 px; AVIACIÓN"
+                },
+                {
+                  "type": "expected",
+                  "description": "Sin desbordamiento global; controles y resultados accesibles; axe sin infracciones"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 723,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:38.430Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S16"
+                    },
+                    {
+                      "type": "input",
+                      "description": "320, 375, 768, 1280, 1920 px; AVIACIÓN"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Sin desbordamiento global; controles y resultados accesibles; axe sin infracciones"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJ3aWR0aHMiOiBbCiAgICAzMjAsCiAgICAzNzUsCiAgICA3NjgsCiAgICAxMjgwLAogICAgMTkyMAogIF0sCiAgInZpb2xhdGlvbnMiOiBbXSwKICAic3RhdHVzIjogIjMgcmVzdWx0YWRvcyBwYXJhIMKrQVZJQUNJw5NOwrsuIiwKICAidGl0bGVzIjogWwogICAgIlZlaMOtY3Vsb3MgeSBtdXNlb3MiLAogICAgIlNlcmllcyB5IHBlbMOtY3VsYXMiLAogICAgIlZpZGVvanVlZ29zIgogIF0sCiAgImhyZWZzIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9pbnRlcmVzZXMvaW5kZXguaHRtbCIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL3Nlcmllcy15LXBlbGljdWxhcy9pbmRleC5odG1sIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvdmlkZW9qdWVnb3MvaW5kZXguaHRtbCIKICBdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-ab8c403f0717a26cf328",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S17 coverage freshness equivalence and result links",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S17"
+                },
+                {
+                  "type": "input",
+                  "description": "19 HTML públicos; 15 contenidos; siete pares ES/EN y transcripción compartida"
+                },
+                {
+                  "type": "expected",
+                  "description": "Cada HTML está indexado o excluido explícitamente; párrafos/alt vigentes; links HTTP 200"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3473,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:39.164Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S17"
+                    },
+                    {
+                      "type": "input",
+                      "description": "19 HTML públicos; 15 contenidos; siete pares ES/EN y transcripción compartida"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Cada HTML está indexado o excluido explícitamente; párrafos/alt vigentes; links HTTP 200"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJyb3dzIjogWwogICAgewogICAgICAiZmlsZSI6ICJheXVkYS9pbmRleC5odG1sIiwKICAgICAgInJlY29yZHMiOiAxLAogICAgICAicGFyYWdyYXBocyI6IDgsCiAgICAgICJhbHRzIjogMAogICAgfSwKICAgIHsKICAgICAgImZpbGUiOiAiZW4vYXl1ZGEvaW5kZXguaHRtbCIsCiAgICAgICJyZWNvcmRzIjogMSwKICAgICAgInBhcmFncmFwaHMiOiA4LAogICAgICAiYWx0cyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJmaWxlIjogImVuL2luZGV4Lmh0bWwiLAogICAgICAicmVjb3JkcyI6IDEsCiAgICAgICJwYXJhZ3JhcGhzIjogMTMsCiAgICAgICJhbHRzIjogMQogICAgfSwKICAgIHsKICAgICAgImZpbGUiOiAiZW4vaW50ZXJlc2VzL2luZGV4Lmh0bWwiLAogICAgICAicmVjb3JkcyI6IDEsCiAgICAgICJwYXJhZ3JhcGhzIjogMTAsCiAgICAgICJhbHRzIjogNAogICAgfSwKICAgIHsKICAgICAgImZpbGUiOiAiZW4vbXVsdGltZWRpYS9pbmRleC5odG1sIiwKICAgICAgInJlY29yZHMiOiAxLAogICAgICAicGFyYWdyYXBocyI6IDcsCiAgICAgICJhbHRzIjogMAogICAgfSwKICAgIHsKICAgICAgImZpbGUiOiAiZW4vc2VyaWVzLXktcGVsaWN1bGFzL2luZGV4Lmh0bWwiLAogICAgICAicmVjb3JkcyI6IDEsCiAgICAgICJwYXJhZ3JhcGhzIjogOSwKICAgICAgImFsdHMiOiAzCiAgICB9LAogICAgewogICAgICAiZmlsZSI6ICJlbi9zb2JyZS1taS9pbmRleC5odG1sIiwKICAgICAgInJlY29yZHMiOiAxLAogICAgICAicGFyYWdyYXBocyI6IDEzLAogICAgICAiYWx0cyI6IDMKICAgIH0sCiAgICB7CiAgICAgICJmaWxlIjogImVuL3ZpZGVvanVlZ29zL2luZGV4Lmh0bWwiLAogICAgICAicmVjb3JkcyI6IDEsCiAgICAgICJwYXJhZ3JhcGhzIjogOSwKICAgICAgImFsdHMiOiAzCiAgICB9LAogICAgewogICAgICAiZmlsZSI6ICJpbmRleC5odG1sIiwKICAgICAgInJlY29yZHMiOiAxLAogICAgICAicGFyYWdyYXBocyI6IDEzLAogICAgICAiYWx0cyI6IDEKICAgIH0sCiAgICB7CiAgICAgICJmaWxlIjogImludGVyZXNlcy9pbmRleC5odG1sIiwKICAgICAgInJlY29yZHMiOiAxLAogICAgICAicGFyYWdyYXBocyI6IDEwLAogICAgICAiYWx0cyI6IDQKICAgIH0sCiAgICB7CiAgICAgICJmaWxlIjogIm11bHRpbWVkaWEvaW5kZXguaHRtbCIsCiAgICAgICJyZWNvcmRzIjogMSwKICAgICAgInBhcmFncmFwaHMiOiA3LAogICAgICAiYWx0cyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJmaWxlIjogInB1YmxpYy90cmFuc2NyaXBjaW9uZXMvd2FyLW9uLXdoZWVscy5odG1sIiwKICAgICAgInJlY29yZHMiOiAyLAogICAgICAicGFyYWdyYXBocyI6IDExMywKICAgICAgImFsdHMiOiAwCiAgICB9LAogICAgewogICAgICAiZmlsZSI6ICJzZXJpZXMteS1wZWxpY3VsYXMvaW5kZXguaHRtbCIsCiAgICAgICJyZWNvcmRzIjogMSwKICAgICAgInBhcmFncmFwaHMiOiA5LAogICAgICAiYWx0cyI6IDMKICAgIH0sCiAgICB7CiAgICAgICJmaWxlIjogInNvYnJlLW1pL2luZGV4Lmh0bWwiLAogICAgICAicmVjb3JkcyI6IDEsCiAgICAgICJwYXJhZ3JhcGhzIjogMTMsCiAgICAgICJhbHRzIjogMwogICAgfSwKICAgIHsKICAgICAgImZpbGUiOiAidmlkZW9qdWVnb3MvaW5kZXguaHRtbCIsCiAgICAgICJyZWNvcmRzIjogMSwKICAgICAgInBhcmFncmFwaHMiOiA5LAogICAgICAiYWx0cyI6IDMKICAgIH0KICBdLAogICJleGNsdXNpb25zIjogWwogICAgewogICAgICAiZmlsZSI6ICI0MDQuaHRtbCIsCiAgICAgICJzdGF0ZSI6ICJleGNsdWRlZCIsCiAgICAgICJyZWFzb24iOiAiUMOhZ2luYSBkZSBlcnJvcjsgbm8gYXBvcnRhIGNvbnRlbmlkbyByZWN1cGVyYWJsZS4iLAogICAgICAibGFuZ3VhZ2UiOiAiZXMiCiAgICB9LAogICAgewogICAgICAiZmlsZSI6ICJidXNjYXIvaW5kZXguaHRtbCIsCiAgICAgICJzdGF0ZSI6ICJleGNsdWRlZCIsCiAgICAgICJyZWFzb24iOiAiSW50ZXJmYXogZGUgcmVzdWx0YWRvczsgZXZpdGEgcmVzdWx0YWRvcyBhdXRvcnJlZmVyZW50ZXMuIiwKICAgICAgImxhbmd1YWdlIjogImVzIgogICAgfSwKICAgIHsKICAgICAgImZpbGUiOiAiZW4vNDA0Lmh0bWwiLAogICAgICAic3RhdGUiOiAiZXhjbHVkZWQiLAogICAgICAicmVhc29uIjogIkVycm9yIHBhZ2U7IG5vIHNlYXJjaGFibGUgY29udGVudC4iLAogICAgICAibGFuZ3VhZ2UiOiAiZW4iCiAgICB9LAogICAgewogICAgICAiZmlsZSI6ICJlbi9idXNjYXIvaW5kZXguaHRtbCIsCiAgICAgICJzdGF0ZSI6ICJleGNsdWRlZCIsCiAgICAgICJyZWFzb24iOiAiUmVzdWx0cyBpbnRlcmZhY2U7IGF2b2lkcyBzZWxmLXJlZmVyZW50aWFsIHJlc3VsdHMuIiwKICAgICAgImxhbmd1YWdlIjogImVuIgogICAgfQogIF0sCiAgImluZGV4RW50cmllcyI6IHsKICAgICJlcyI6IDgsCiAgICAiZW4iOiA4CiAgfQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-943fefc7fef5182e5f95",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        },
+        {
+          "title": "S18 deployment under an arbitrary subdirectory",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "case-id",
+                  "description": "S18"
+                },
+                {
+                  "type": "input",
+                  "description": "Servidor local montado en /curso/portfolio/"
+                },
+                {
+                  "type": "expected",
+                  "description": "Cabecera, índice y destinos permanecen bajo el prefijo y responden HTTP 200"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 929,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:42.648Z",
+                  "annotations": [
+                    {
+                      "type": "case-id",
+                      "description": "S18"
+                    },
+                    {
+                      "type": "input",
+                      "description": "Servidor local montado en /curso/portfolio/"
+                    },
+                    {
+                      "type": "expected",
+                      "description": "Cabecera, índice y destinos permanecen bajo el prefijo y responden HTTP 200"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTc0L2N1cnNvL3BvcnRmb2xpby9idXNjYXIvaW5kZXguaHRtbD9xPWF2aWFjaW9uIiwKICAiaHJlZnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTc0L2N1cnNvL3BvcnRmb2xpby9pbnRlcmVzZXMvaW5kZXguaHRtbCIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTc0L2N1cnNvL3BvcnRmb2xpby9zZXJpZXMteS1wZWxpY3VsYXMvaW5kZXguaHRtbCIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTc0L2N1cnNvL3BvcnRmb2xpby92aWRlb2p1ZWdvcy9pbmRleC5odG1sIgogIF0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dce2ef4fa511bff9955f-ba2dc0d85dc84f7e2aa3",
+          "file": "search.spec.mjs",
+          "line": 10,
+          "column": 53
+        }
+      ]
+    },
+    {
+      "title": "site.spec.mjs",
+      "file": "site.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "responsive, links and axe: /",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 806,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:43.611Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-181af486ece5f3432f61",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "responsive, links and axe: /sobre-mi/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 833,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:44.431Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-2f20fa44d95204744475",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "responsive, links and axe: /intereses/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 964,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:45.289Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-5e93fc1f1d5c254edc21",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "responsive, links and axe: /multimedia/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1411,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:46.273Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-78e32f029ab16eb4e5a9",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "responsive, links and axe: /series-y-peliculas/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 986,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:47.697Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-7a014874ebb31e71311c",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "responsive, links and axe: /videojuegos/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 854,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:48.694Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-f171ed3cdac33bd996b2",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "responsive, links and axe: /buscar/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1032,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:49.565Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-dec326fa00545ba9d3a7",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "responsive, links and axe: /ayuda/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 885,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:50.624Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-8b190c67b58bd68c9002",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "responsive, links and axe: /en/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1063,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:51.523Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-d62164a2959070498c7f",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "responsive, links and axe: /en/sobre-mi/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 824,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:52.602Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-bb9d257a1f256d8d1a77",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "responsive, links and axe: /en/intereses/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 834,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:53.438Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-403eeee8ec47d125fb4d",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "responsive, links and axe: /en/multimedia/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1083,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:54.286Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-3ca7e1181a92e75378f9",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "responsive, links and axe: /en/series-y-peliculas/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 710,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:55.380Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-e043e17491bf4f2556bb",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "responsive, links and axe: /en/videojuegos/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 720,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:56.104Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-fd9802683c0f6b2337cf",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "responsive, links and axe: /en/buscar/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 702,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:56.842Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-d0683d5a06c6c67a9dea",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "responsive, links and axe: /en/ayuda/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 780,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:57.560Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-51f3c65782769425dfc0",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "responsive, links and axe: /404.html",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 603,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:58.352Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-c3d550c43d1b3999b1bc",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "responsive, links and axe: /en/404.html",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 602,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:58.967Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-8649a4239fa8ac20bd62",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "responsive, links and axe: /public/transcripciones/war-on-wheels.html",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 716,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:22:59.579Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-11e8676a3a6a572a4709",
+          "file": "site.spec.mjs",
+          "line": 5,
+          "column": 26
+        },
+        {
+          "title": "keyboard skip, gallery, focus restoration and disclosure",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 469,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:23:00.310Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-d39a5d6efdf00360df0c",
+          "file": "site.spec.mjs",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "only expanded vehicle cards share height; closed cards stay compact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2487,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:23:00.794Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-aae637e45439612785a9",
+          "file": "site.spec.mjs",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "carousel keyboard, circular navigation and stable height",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 799,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:23:03.296Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-3e0d241716a3568e0299",
+          "file": "site.spec.mjs",
+          "line": 45,
+          "column": 1
+        },
+        {
+          "title": "search accents, multi-term, no results, injection and English",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 738,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:23:04.113Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-3f249ab7eb6d5bbcdb57",
+          "file": "site.spec.mjs",
+          "line": 53,
+          "column": 1
+        },
+        {
+          "title": "search failure offers recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 289,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:23:04.869Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-dd2bb0131522fdbfaf6b",
+          "file": "site.spec.mjs",
+          "line": 59,
+          "column": 1
+        },
+        {
+          "title": "without JavaScript and images",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 369,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:23:05.171Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-40f0e28b97363ad62ea2",
+          "file": "site.spec.mjs",
+          "line": 60,
+          "column": 1
+        },
+        {
+          "title": "language switch retains current page",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 599,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:23:05.554Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-4a13081da48d3dc9a55e",
+          "file": "site.spec.mjs",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "CV, references and both profile portraits are published in both languages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 717,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:23:06.168Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-13c49951185d003a9c2b",
+          "file": "site.spec.mjs",
+          "line": 64,
+          "column": 1
+        },
+        {
+          "title": "collecting interest is searchable in Spanish and English",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 396,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:23:06.901Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-b1832774a834c0149c5e",
+          "file": "site.spec.mjs",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "header search works by button and Enter in both languages and on transcript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1249,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T16:23:07.310Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "892f01ebe3c3cd11efb8-c9bc15ccb46f70dffa7a",
+          "file": "site.spec.mjs",
+          "line": 81,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T16:22:27.166Z",
+    "duration": 42335.612,
+    "expected": 51,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

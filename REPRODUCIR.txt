@@ -1,0 +1,36 @@
+WEB PERSONAL CON BUSCADOR — UO294228
+
+Requisitos: Node.js 24 o posterior, pnpm 12.10.1 (packageManager fija versión),
+Google Chrome instalado para Playwright y Java 17+ para Nu Html Checker.
+La instalación de dependencias necesita red. La web de producción es estática.
+
+Desde esta carpeta:
+  pnpm install --frozen-lockfile --ignore-scripts
+  pnpm build
+  pnpm test:search
+  pnpm test
+  pnpm validate
+  pnpm dev
+Abrir http://127.0.0.1:4173/ y buscar desde la cabecera o /buscar/.
+Ctrl+C detiene el servidor. Para ver el sitio no se necesita Node en producción;
+para buscar no sirve abrir con file://: usar HTTP como indica pnpm dev.
+
+pnpm test ejecuta toda la suite; pnpm test:search solo selecciona el buscador.
+Cada ejecución escribe un JSON nuevo (full/partial + fecha + PID) en
+validacion/revision-2026-11-14-buscador/runs. latest-full.json y
+latest-partial.json son punteros que declaran alcance, comando, resultado y hash.
+El JSON antiguo de revision-2026-11-12 se conserva como histórico.
+
+Editar fuente ES, public/js/search.js, scripts/search-index.mjs y
+scripts/search-page.mjs. No editar en/ ni los índices JSON a mano; pnpm build
+regenera traducciones, controles, índices y cobertura. Los JS se sirven sin
+minificar y conservan comentarios. CSS minificado se regenera desde sus fuentes.
+Las consultas son AND por subcadenas, insensibles a tildes/mayúsculas, hasta 120
+unidades UTF-16. No hay sinónimos ni corrección ortográfica ni búsqueda en PDF,
+audio, vídeo o webs externas; sí se incluye la transcripción HTML inglesa.
+La consulta de cabecera aparece en una URL GET: puede quedar en historial y
+registros del alojamiento. El cálculo de relevancia se hace en el navegador.
+
+Cobertura verificable en public/search-coverage.json. Fallan las construcciones
+con HTML públicos huérfanos, HTML enlazados ausentes o contrapartidas EN omitidas.
+Las versiones de entrega y sus manifiestos acompañan al código empaquetado.

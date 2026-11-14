@@ -3,7 +3,10 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 const dir='validacion/revision-2026-11-12';
 const validation=JSON.parse(await fs.readFile(dir+'/validation-summary.json','utf8'));
-const tests=JSON.parse(await fs.readFile(dir+'/playwright.json','utf8'));
+const testDirectory='validacion/revision-2026-11-14-buscador';
+const latestTests=JSON.parse(await fs.readFile(testDirectory+'/latest-full.json','utf8'));
+if(latestTests.scope!=='full'||latestTests.exitCode!==0)throw new Error('A passing full test run is required for the report');
+const tests=JSON.parse(await fs.readFile(testDirectory+'/'+latestTests.report,'utf8'));
 const performance=JSON.parse(await fs.readFile(dir+'/performance-summary.json','utf8'));
 const report=`REVISIÓN LOCAL — 14/11/2026
 Proyecto: uo294228-personal-web. Esta revisión sustituye las conclusiones
@@ -50,6 +53,10 @@ recomendaciones, testimonios o consentimiento de las personas mencionadas.
 
 PRUEBAS REPRODUCIBLES
 ${tests.stats.expected} pruebas Playwright correctas; ${tests.stats.unexpected} fallidas; ${tests.stats.skipped} omitidas.
+Suite completa: ${testDirectory}/${latestTests.report}
+Comando: ${latestTests.command}. Fin: ${latestTests.finished}. SHA256: ${latestTests.sha256}.
+Cada ejecución completa o parcial conserva un JSON distinto en runs/; los punteros
+latest-full.json y latest-partial.json no se confunden ni suman sus recuentos.
 19 rutas: seis secciones ES/EN, búsqueda y ayuda ES/EN, 404 ES/EN y transcripción.
 Anchos 320, 375, 768, 1280 y 1920: sin desbordamiento horizontal global.
 Axe-core 4.14.0: cero infracciones detectadas en las rutas comprobadas.
@@ -57,6 +64,12 @@ Teclado real: salto a main, galería, Escape, retorno del foco y desplegables.
 Carrusel: avance circular, estabilidad de altura, redimensionado y botones.
 Búsqueda: tildes, varios términos, ausencia de resultados, entrada HTML,
 fallo de red y resultados en inglés. Cambio de idioma conserva la sección.
+18 casos adicionales documentan vacío/espacios, ranking y desempate, longitud,
+reintento, caché, errores de índice/URL, concurrencia, anuncios, cobertura vigente
+y despliegue bajo un prefijo arbitrario. Hay observaciones JSON por caso.
+Índice: 15 páginas de contenido (siete pares ES/EN y transcripción inglesa
+compartida); cuatro exclusiones explícitas: 404 y resultados en ambos idiomas.
+public/search-coverage.json registra inventario, enlaces y hashes de los índices.
 Navegación sin JavaScript y con imágenes bloqueadas comprobada en galería.
 Preferencias: teclado, persistencia, cambio de idioma, recarga, reset y
 almacenamiento bloqueado. Las 19 rutas también se comprueban con todos los
@@ -98,8 +111,10 @@ fuera del alcance por decisión del autor. Sigue identificada como automática.
 
 EVIDENCIAS
 ${dir}/: html.json, css.json, validation-summary.json,
-playwright.json, performance-summary.json, informes Lighthouse HTML/JSON,
+playwright.json histórico, performance-summary.json, informes Lighthouse HTML/JSON,
 images.json y capturas de escritorio/móvil.
+La suite vigente está en ${testDirectory}; las selecciones parciales ya no
+sobrescriben el informe completo. Los nombres/fechas internos identifican cada ejecución.
 Los informes de octubre y del 11/11 se conservan como históricos. Algunos
 JSON de pruebas del directorio del 11/11 se actualizaron durante la primera
 pasada del 12/11: sus fechas internas prevalecen; el directorio vigente es este.
