@@ -1,3 +1,4 @@
 * text=auto eol=lf
 # Keep generated third-party reports verbatim, including their formatting.
 validacion/** -whitespace
+public/fonts/opendyslexic-OFL.txt -whitespace

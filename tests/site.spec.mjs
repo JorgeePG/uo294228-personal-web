@@ -19,7 +19,7 @@ for(const route of pages)test(`responsive, links and axe: /${route}`,async({page
 });
 test('keyboard skip, gallery, focus restoration and disclosure',async({page})=>{
  await page.goto('/intereses/');await page.keyboard.press('Tab');await expect(page.getByRole('link',{name:'Saltar al contenido'})).toBeFocused();await page.keyboard.press('Enter');await expect(page.locator('main')).toBeFocused();
-  await page.keyboard.press('Tab');await page.keyboard.press('Enter');await expect(page.locator('dialog')).toBeVisible();await expect(page.getByRole('button',{name:'Cerrar imagen'})).toBeFocused();await page.keyboard.press('Escape');await expect(page.locator('dialog')).not.toBeVisible();await expect(page.locator('[data-enlarge]').first()).toBeFocused();await page.keyboard.press('Tab');await page.keyboard.press('Enter');await expect(page.locator('main details').first()).toHaveAttribute('open','');
+  await page.keyboard.press('Tab');await page.keyboard.press('Enter');await expect(page.locator('#photo-dialog')).toBeVisible();await expect(page.getByRole('button',{name:'Cerrar imagen'})).toBeFocused();await page.keyboard.press('Escape');await expect(page.locator('#photo-dialog')).not.toBeVisible();await expect(page.locator('[data-enlarge]').first()).toBeFocused();await page.keyboard.press('Tab');await page.keyboard.press('Enter');await expect(page.locator('main details').first()).toHaveAttribute('open','');
 });
 
 test('only expanded vehicle cards share height; closed cards stay compact',async({page})=>{
@@ -48,7 +48,7 @@ test('carousel keyboard, circular navigation and stable height',async({page})=>{
  for(const count of ['2 de 3','3 de 3','1 de 3']){await page.keyboard.press('ArrowRight');await expect(page.locator('[aria-live]')).toHaveText(count);await expect.poll(()=>track.evaluate(e=>e.getBoundingClientRect().height)).toBe(height);}
  await page.getByRole('button',{name:'Siguiente',exact:true}).click();await expect(page.locator('[aria-live]')).toHaveText('2 de 3');
  await page.setViewportSize({width:375,height:812});await expect(page.locator('[aria-live]')).toHaveText('2 de 3');
- for(const width of [320,375,768]){await page.setViewportSize({width,height:812});for(let i=0;i<3;i++){await page.keyboard.press('ArrowRight');await page.getByRole('button').last().click();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();}}
+ for(const width of [320,375,768]){await page.setViewportSize({width,height:812});for(let i=0;i<3;i++){await page.keyboard.press('ArrowRight');await page.locator('[data-next]').click();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();}}
 });
 test('search accents, multi-term, no results, injection and English',async({page})=>{
  await page.goto('/buscar/');const input=page.locator('main').getByRole('searchbox');

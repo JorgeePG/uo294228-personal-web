@@ -5,7 +5,7 @@ const dir='validacion/revision-2026-11-12';
 const validation=JSON.parse(await fs.readFile(dir+'/validation-summary.json','utf8'));
 const tests=JSON.parse(await fs.readFile(dir+'/playwright.json','utf8'));
 const performance=JSON.parse(await fs.readFile(dir+'/performance-summary.json','utf8'));
-const report=`REVISIÓN LOCAL — 13/11/2026
+const report=`REVISIÓN LOCAL — 14/11/2026
 Proyecto: uo294228-personal-web. Esta revisión sustituye las conclusiones
 de los informes históricos; no modifica ni certifica el despliegue público.
 
@@ -20,11 +20,17 @@ Menú móvil compacto, enlaces de descarga multimedia permanentes, navegación
 común en la transcripción. CSS agrupado/minificado y fuentes precargadas.
 Buscador GET visible con campo, lupa y botón en todas las cabeceras (también
 404 y transcripción). Resultados en el idioma activo y envío por Enter o botón.
-Fecha visible 13/11/2026. Grado terminado y máster en curso confirmados por Jorge.
+Fecha visible 14/11/2026. Grado terminado y máster en curso confirmados por Jorge.
 Panel propio Accesibilidad/Accessibility en las 19 rutas: texto 100/125/150/200 %,
-espaciado, títulos con Arial, enlaces destacados, movimiento reducido y reset.
+espaciado, OpenDyslexic, títulos con Arial, enlaces destacados, movimiento reducido y reset.
 Guardado local entre páginas/idiomas, sin peticiones a servicios externos.
-Panel integrado en el flujo, cierre con Escape y retorno de foco; oculto sin JS.
+Botón flotante fijo y diálogo modal nativo: no ocupa la cabecera. Cierre visible,
+Escape, clic exterior, ciclo de Tab/Mayús+Tab y retorno de foco; oculto sin JS.
+Contenido del panel con desplazamiento interno; cierre visible al recorrerlo.
+OpenDyslexic local, normal/negrita/cursiva/negrita cursiva originales bajo SIL OFL;
+licencia, procedencia, revisión y SHA256 en public/fonts/opendyslexic-*.
+Se carga al activarla y se aplica también a controles y títulos. Es opcional;
+se propone probarla según comodidad personal, sin promesas de eficacia universal.
 Resiste almacenamiento bloqueado. Restablecer elimina la clave de preferencias
 y mantiene el respeto a prefers-reduced-motion del sistema. Ayuda bilingüe.
 Galería: únicamente las fichas abiertas igualan su altura con la abierta más larga.
@@ -57,6 +63,11 @@ almacenamiento bloqueado. Las 19 rutas también se comprueban con todos los
 ajustes activados, texto al 200 %, axe y anchos 320/375/768/1280; sin
 desbordamiento horizontal global ni controles de preferencias fuera de pantalla.
 Se verifica que solo las fichas abiertas comparten altura con estos ajustes.
+Panel flotante: seguimiento del scroll, diálogo sin alterar el alto del contenido,
+foco contenido, cierre exterior, fuentes cargadas bajo demanda y reset.
+Pantallas 568x320 y 320x480 con texto al 200 % y todos los ajustes activos:
+panel dentro del viewport, acceso al reset y cierre completamente visible.
+Al recibir foco, los enlaces bajo el acceso flotante se desplazan a la vista.
 Enlaces internos comprobados por HTTP. Recursos locales referenciados:
 ${validation.resources.missing.length} ausentes. No se certifican todos los enlaces externos.
 
@@ -94,7 +105,7 @@ JSON de pruebas del directorio del 11/11 se actualizaron durante la primera
 pasada del 12/11: sus fechas internas prevalecen; el directorio vigente es este.
 `;
 await fs.writeFile('VALIDACION.txt',report);
-await fs.writeFile('leeme.txt',`WEB PERSONAL — REVISIÓN 13/11/2026
+await fs.writeFile('leeme.txt',`WEB PERSONAL — REVISIÓN 14/11/2026
 
 GitHub Pages publica esta web desde feat/mejoras-ux-accesibilidad, carpeta /.
 URL: https://jorgeepg.github.io/uo294228-personal-web/
@@ -128,6 +139,10 @@ de terceros. Las interfaces y los textos alternativos sí están traducidos.
 Editar public/css/styles*.css o refinements.css, después pnpm build.
 No editar site.min.css: es generado. Se mantienen las familias tipográficas
 Barlow Condensed e IBM Plex Sans, sus licencias y la paleta original.
+OpenDyslexic es opcional y local. Sus cuatro WOFF2 originales y licencia SIL OFL
+se conservan en public/fonts; opendyslexic-ORIGEN.json fija procedencia y hashes.
+El botón Accesibilidad abre un diálogo flotante en las 19 rutas. Preferencias
+guardadas solo en el navegador; no se contacta con ningún servicio de widgets.
 
 DATOS DEL PERFIL
 profile.pending.json contiene los datos confirmados por el autor y su CV:

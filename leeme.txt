@@ -1,4 +1,4 @@
-WEB PERSONAL — REVISIÓN 13/11/2026
+WEB PERSONAL — REVISIÓN 14/11/2026
 
 GitHub Pages publica esta web desde feat/mejoras-ux-accesibilidad, carpeta /.
 URL: https://jorgeepg.github.io/uo294228-personal-web/
@@ -32,6 +32,10 @@ de terceros. Las interfaces y los textos alternativos sí están traducidos.
 Editar public/css/styles*.css o refinements.css, después pnpm build.
 No editar site.min.css: es generado. Se mantienen las familias tipográficas
 Barlow Condensed e IBM Plex Sans, sus licencias y la paleta original.
+OpenDyslexic es opcional y local. Sus cuatro WOFF2 originales y licencia SIL OFL
+se conservan en public/fonts; opendyslexic-ORIGEN.json fija procedencia y hashes.
+El botón Accesibilidad abre un diálogo flotante en las 19 rutas. Preferencias
+guardadas solo en el navegador; no se contacta con ningún servicio de widgets.
 
 DATOS DEL PERFIL
 profile.pending.json contiene los datos confirmados por el autor y su CV:

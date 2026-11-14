@@ -6,7 +6,7 @@ import {readingSettings} from './reading-settings.mjs';
 const pages=['index.html','404.html',...['sobre-mi','intereses','multimedia','series-y-peliculas','videojuegos','buscar','ayuda'].map(p=>p+'/index.html')];
 const translations=JSON.parse(await fs.readFile('scripts/translations.json','utf8'));
 Object.assign(translations,JSON.parse(await fs.readFile('scripts/translation-details.json','utf8')));
-Object.assign(translations,{'Buscar en el sitio':'Search this site','Buscar en la web':'Search the website','Resultados de búsqueda':'Search results','13 de noviembre de 2026':'13 November 2026'});
+Object.assign(translations,{'Buscar en el sitio':'Search this site','Buscar en la web':'Search the website','Resultados de búsqueda':'Search results','13 de noviembre de 2026':'13 November 2026','14 de noviembre de 2026':'14 November 2026'});
 const profile=JSON.parse(await fs.readFile('profile.pending.json','utf8'));
 const escape=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const label=value=>{if(typeof value==='string')return escape(value);if(value?.es&&value?.en){translations[escape(value.es)]=escape(value.en);return escape(value.es);}return '';};
@@ -27,7 +27,9 @@ const cssVersion=createHash('sha256').update(compiledCSS).digest('hex').slice(0,
 await fs.writeFile('public/css/site.min.css',compiledCSS);
 const index={es:[],en:[]};
 let fonts='';for(const n of [5,6,7,8,13,14])fonts+=await fs.readFile(`public/fonts/font-face-${String(n).padStart(2,'0')}.css`,'utf8');
+fonts+=await fs.readFile('public/fonts/opendyslexic.css','utf8');
 await fs.writeFile('public/fonts/fonts.css',fonts.replaceAll('font-display: optional','font-display: swap'));
+const fontsVersion=createHash('sha256').update(fonts.replaceAll('font-display: optional','font-display: swap')).digest('hex').slice(0,12);
 for(const file of [...pages,'public/transcripciones/war-on-wheels.html']) {
  let text=await fs.readFile(file,'utf8');
  if(file==='404.html'&&!text.includes('Navegación principal')){
@@ -44,19 +46,22 @@ for(const file of [...pages,'public/transcripciones/war-on-wheels.html']) {
   const language=old.match(/<a data-language[\s\S]*?<\/a>/)[0];
   const action=file.startsWith('public/')?'../../buscar/index.html':file.includes('/')?'../buscar/index.html':'buscar/index.html';
   const form=`<form data-header-search role="search" aria-label="Buscar en el sitio" action="${action}" method="get"><label for="busqueda-cabecera">Buscar en el sitio</label><input id="busqueda-cabecera" type="search" name="q" placeholder="Buscar en la web" maxlength="120" required><button type="submit"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="7" cy="7" r="5"></circle><path d="M11 11l5 5"></path></svg><span>Buscar</span></button></form>`;
-  text=text.slice(0,headerStart)+old.match(/^<header[^>]*>/)[0]+brand+form+language+nav+readingPanel+'</header>'+text.slice(headerEnd);
+  text=text.slice(0,headerStart)+old.match(/^<header[^>]*>/)[0]+brand+form+language+nav+'</header>'+text.slice(headerEnd);
  }
- text=text.replace(/datetime="2026-11-\d{2}">\d{1,2} de noviembre de 2026/g,'datetime="2026-11-13">13 de noviembre de 2026');
+ text=text.replace(/<!-- reading-widget -->[\s\S]*?<!-- \/reading-widget -->/,'');
+ text=text.replace('</body>',`<!-- reading-widget -->${readingPanel}<!-- /reading-widget --></body>`);
+ text=text.replace(/datetime="2026-11-\d{2}">\d{1,2} de noviembre de 2026/g,'datetime="2026-11-14">14 de noviembre de 2026');
  if(file==='buscar/index.html')text=text.replace('<form role="search">','<form role="search" aria-label="Resultados de búsqueda">');
  if(file==='ayuda/index.html'){
   text=text.replace(/<!-- reading-help -->[\s\S]*?<!-- \/reading-help -->/,'');
   const heading=label({es:'Ajusta la lectura a tu gusto',en:'Adjust reading to your preferences'});
-  const description=label({es:'Abre Accesibilidad en la cabecera de cualquier página para aumentar el texto hasta el 200 %, ampliar el espaciado, simplificar la tipografía de los títulos, destacar los enlaces o reducir el movimiento. Cerrar ajustes o Escape cierra el panel y devuelve el foco a su botón. Restablecer ajustes recupera el diseño original y elimina las preferencias guardadas.',en:'Open Accessibility in any page header to increase text up to 200%, expand spacing, simplify heading fonts, highlight links or reduce motion. Close settings or Escape closes the panel and returns focus to its button. Reset settings restores the original design and removes saved preferences.'});
+  const description=label({es:'Pulsa el botón flotante Accesibilidad, disponible en la esquina inferior de cualquier página. Se abre un panel con texto hasta el 200 %, fuente OpenDyslexic para dislexia, espaciado, títulos sencillos, enlaces destacados y movimiento reducido. Prueba los ajustes y elige los que te resulten cómodos. OpenDyslexic es opcional y se aplica a toda la web; tiene prioridad sobre la tipografía sencilla. Cerrar ajustes o Escape cierra el panel y devuelve el foco al botón. Restablecer ajustes recupera el diseño original y elimina las preferencias guardadas.',en:'Press the floating Accessibility button in the bottom corner of any page. A panel opens with text up to 200%, the OpenDyslexic font for dyslexia, spacing, simple headings, highlighted links and reduced motion. Try the settings and choose what feels comfortable. OpenDyslexic is optional and applies across the website; it takes priority over the simple heading font. Close settings or Escape closes the panel and returns focus to the button. Reset settings restores the original design and removes saved preferences.'});
   const storage=label({es:'Los ajustes son opcionales, se guardan localmente y se comparten entre las páginas y los dos idiomas en este navegador. No se envían a ningún servicio. Si el navegador impide guardarlos, funcionan durante la visita a esa página. Sin JavaScript, puedes seguir navegando y usar el zoom y las ayudas de tu navegador.',en:'Settings are optional, saved locally and shared across pages and both languages in this browser. They are not sent to any service. If storage is blocked, they work for the current page visit. Without JavaScript, you can still navigate and use browser zoom and accessibility features.'});
   text=text.replace('</main>',`<!-- reading-help --><section><h2>${heading}</h2><p>${description}</p><p>${storage}</p></section><!-- /reading-help --></main>`);
  }
  text=text.replace(/([\w/-]+)-480.webp 480w, ([\w/-]+)-960.webp 960w/g,'$1-480.webp 480w, $1-768.webp 768w, $2-960.webp 960w');
  const prefix=file.startsWith('public/')?'../':file.includes('/')?'../public/':'public/';
+ text=text.replace(/href="([^"?]*fonts\/fonts\.css)(?:\?[^"]*)?"/g,`href="$1?v=${fontsVersion}"`);
  text=text.replace(/\s*<script\b[^>]*src="[^"]*reading-settings\.js[^\"]*"[^>]*><\/script>/g,'');
  text=text.replace('</head>',`<script src="${prefix}js/reading-settings.js"></script>\n</head>`);
  text=text.replace(/\s*<link rel="stylesheet" href="[^"]*\/css\/[^\"]+">/g,'');

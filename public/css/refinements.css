@@ -94,12 +94,21 @@ body > header > form[data-header-search] { display: flex; gap: .4rem; grid-colum
 [data-header-search] input { flex: 1; width: 0; min-width: 0; min-height: 44px; padding: .5rem .65rem; border-radius: 4px; }
 [data-header-search] button { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; min-height: 44px; margin: 0; padding: .5rem .75rem; white-space: nowrap; }
 [data-header-search] svg { flex-shrink: 0; }
-/* Preferencias propias, integradas en la cabecera y sin capas flotantes. */
-[data-reading-settings] { display: none; grid-column: 1 / -1; grid-row: 3; min-width: 0; border-top: 1px solid var(--line); }
-html[data-reading-ready] [data-reading-settings] { display: block; }
-[data-reading-settings] > summary { width: fit-content; min-height: 44px; margin-left: auto; padding: .6rem .2rem; font-size: .9rem; font-weight: 700; cursor: pointer; }
-[data-reading-panel] { padding-block: .6rem 1rem; }
-[data-reading-panel] fieldset { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem 1.5rem; margin: 0 0 1rem; padding: .8rem; border: 1px solid var(--line); min-width: 0; }
+/* Acceso flotante y diálogo nativo: opciones con scroll y cierre siempre visible. */
+[data-reading-trigger] { display: none; position: fixed; right: max(12px, env(safe-area-inset-right)); bottom: max(12px, env(safe-area-inset-bottom)); z-index: 20; align-items: center; justify-content: center; gap: .5rem; max-width: calc(100% - 24px); min-height: 48px; padding: .7rem 1rem; font: 700 .9rem 'IBM Plex Sans', Arial, sans-serif; color: #fff; background: #111; border: 2px solid #fff; border-radius: 999px; box-shadow: 0 3px 16px #0005; cursor: pointer; }
+[data-reading-trigger] svg { flex: 0 0 24px; }
+html[data-reading-dialog-ready] [data-reading-trigger] { display: inline-flex; }
+html[data-reading-dialog-ready] body { padding-bottom: 6rem; }
+html[data-reading-open] { overflow: hidden; }
+[data-reading-settings] { position: fixed; inset: auto max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) auto; margin: 0; padding: 0; width: min(440px, calc(100% - 24px)); max-width: none; max-height: calc(100dvh - 24px); border: 2px solid #111; border-radius: 18px; color: #111; background: #fff; box-shadow: 0 8px 40px #0005; overflow: clip; }
+[data-reading-settings][open] { display: flex; flex-direction: column; }
+[data-reading-settings]::backdrop { background: #0006; }
+[data-reading-heading] { display: flex; align-items: flex-start; justify-content: space-between; gap: .6rem; flex: 0 0 auto; padding: .9rem 1rem; border-bottom: 1px solid var(--line); }
+[data-reading-heading] h2 { min-width: 0; margin: 0; font: 700 1.1rem/1.4 'IBM Plex Sans', Arial, sans-serif; overflow-wrap: anywhere; }
+[data-reading-close] { display: grid; place-items: center; flex: 0 0 44px; width: 44px; height: 44px; padding: 0; border: 2px solid #111; border-radius: 50%; background: #fff; color: #111; cursor: pointer; }
+[data-reading-panel] { min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 1rem; scroll-padding: 1rem; }
+[data-reading-panel]:focus-visible { outline: 3px solid #111; outline-offset: -4px; }
+[data-reading-panel] fieldset { display: grid; grid-template-columns: minmax(0, 1fr); gap: .5rem; margin: 0 0 1rem; padding: .7rem; border: 1px solid var(--line); min-width: 0; }
 [data-reading-panel] legend { padding-inline: .3rem; font-weight: 700; }
 [data-reading-size-field] { display: flex; align-items: center; gap: .7rem; flex-wrap: wrap; }
 [data-reading-panel] label { display: flex; align-items: center; gap: .7rem; min-height: 44px; cursor: pointer; }
@@ -111,11 +120,13 @@ html[data-reading-ready] [data-reading-settings] { display: block; }
 html[data-reading-size="125"] { font-size: 125%; }
 html[data-reading-size="150"] { font-size: 150%; }
 html[data-reading-size="200"] { font-size: 200%; }
-html[data-reading-size], html[data-reading-spacing] { overflow-wrap: anywhere; }
+html[data-reading-size], html[data-reading-spacing], html[data-reading-dyslexia] { overflow-wrap: anywhere; }
 html[data-reading-spacing] body { letter-spacing: .12em; word-spacing: .16em; }
 html[data-reading-spacing] body * { line-height: 1.8; }
 html[data-reading-spacing] p { margin-bottom: 2em; }
 html[data-reading-font] :is(h1, h2, h3, body > header > a) { font-family: Arial, sans-serif; }
+/* Fuente opcional alojada localmente, sin prometer un efecto universal. */
+html[data-reading-dyslexia] body, html[data-reading-dyslexia] body * { font-family: 'OpenDyslexic', Arial, sans-serif !important; }
 html[data-reading-links] a { text-decoration: underline; text-decoration-thickness: .15em; text-underline-offset: .2em; outline: 1px solid currentColor; outline-offset: 2px; }
 html[data-reading-links] a:focus-visible { outline-width: 3px; }
 html[data-reading-motion], html[data-reading-motion] *, html[data-reading-motion] *::before, html[data-reading-motion] *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
@@ -124,7 +135,6 @@ html[data-reading-size] body > header, html[data-reading-spacing] body > header 
 html[data-reading-size] body > header > [data-language], html[data-reading-spacing] body > header > [data-language] { grid-column: 2; }
 html[data-reading-size] body > header > form[data-header-search], html[data-reading-spacing] body > header > form[data-header-search] { grid-column: 1 / -1; grid-row: 2; }
 html[data-reading-size] body > header > nav, html[data-reading-spacing] body > header > nav { grid-row: 3; }
-html[data-reading-size] [data-reading-settings], html[data-reading-spacing] [data-reading-settings] { grid-row: 4; }
 html[data-reading-size] body > header nav ul, html[data-reading-spacing] body > header nav ul { flex-wrap: wrap; }
 html[data-reading-size] body > header nav a, html[data-reading-spacing] body > header nav a { white-space: normal; }
 @media (max-width: 650px) {
@@ -132,7 +142,11 @@ html[data-reading-size] body > header nav a, html[data-reading-spacing] body > h
  body > header > [data-language] { grid-column: 2; }
  body > header > form[data-header-search] { grid-column: 1 / -1; grid-row: 2; }
  body > header > nav { grid-row: 3; }
- [data-reading-settings] { grid-row: 4; }
  [data-reading-panel] fieldset { grid-template-columns: minmax(0, 1fr); }
  [data-reading-panel] label { flex-wrap: wrap; }
+ [data-reading-heading], [data-reading-panel] { padding: .65rem; }
+ [data-reading-panel] fieldset { padding: .5rem; }
+ html[data-reading-size] [data-header-search] { flex-wrap: wrap; }
+ html[data-reading-size] [data-header-search] input { flex: 1 1 100%; width: 100%; }
+ html[data-reading-size] [data-header-search] button { width: 100%; padding-inline: .5rem; white-space: normal; }
 }

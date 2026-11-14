@@ -1,10 +1,13 @@
-PREFERENCIAS DE LECTURA — 13/11/2026
+PREFERENCIAS DE LECTURA — 14/11/2026
 
 Interfaz y lógica implementadas desde cero para esta web. Sin código, activos,
 servicios ni dependencias de Viewser. Sin suscripción ni peticiones externas.
 
 Opciones: tamaño 100/125/150/200 %, espaciado, títulos Arial, destacar enlaces,
-reducir movimiento y restablecer. Cabecera común ES/EN, 404 y transcripción.
+reducir movimiento, OpenDyslexic y restablecer. Acceso flotante ES/EN, 404
+y transcripción. Diálogo modal nativo con fondo inerte y ciclo de foco.
+Cierre visible, Escape, clic exterior y retorno del foco al botón flotante.
+Las opciones tienen desplazamiento independiente del título y del cierre.
 Se respeta prefers-reduced-motion incluso después de restablecer las opciones.
 Persistencia en localStorage (clave jorge-reading-v1). Solo preferencias de
 presentación, sin datos personales, sin cookies y sin envío a ningún servicio.
@@ -12,11 +15,28 @@ Si no hay almacenamiento, funciona durante la visita a la página; sin JS,
 el panel queda oculto y la navegación principal conserva sus controles nativos.
 
 Pruebas: tests/reading-settings.spec.mjs y tests/site.spec.mjs.
-Capturas: reading-desktop/mobile/english.png, reading-maximum-mobile.png y
-reading-maximum-home-mobile.png. Texto al 200 % con las otras opciones activas,
+Capturas vigentes: reading-floating-*.png y reading-opendyslexic-*.png.
+Las otras capturas reading-*.png corresponden a la iteración anterior.
+Texto al 200 % con las otras opciones y OpenDyslexic activas,
 19 rutas, anchos 320/375/768/1280, comprobaciones de desbordamiento y axe.
 También se prueban teclado, Escape, retorno del foco, recarga, cambio de idioma,
 reset, almacenamiento bloqueado y alturas de fichas abiertas de vehículos.
+Pantallas bajas 568x320 y 320x480: cierre completamente visible, panel dentro
+del viewport y acceso al reset. Fuente cargada bajo demanda; estilos normal
+y negrita comprobados como cargados realmente. Enlaces con foco visibles
+respecto al botón flotante. Las preferencias antiguas siguen siendo compatibles.
+
+OPENDYSLEXIC
+Cuatro WOFF2 originales sin modificar (normal, negrita y sus cursivas), de la
+revisión oficial 1824da5c0e41dc3e13ffc7f3a636dcaf695d61b7, bajo SIL OFL 1.1.
+Licencia completa y copyright: public/fonts/opendyslexic-OFL.txt.
+Procedencia y SHA256: public/fonts/opendyslexic-ORIGEN.json.
+Sitio del autor: https://opendyslexic.org/
+Fuente: https://github.com/antijingoist/opendyslexic
+Se aloja localmente y se descarga solo al activar la opción. Se aplica a toda
+la web, incluidos controles y títulos, y tiene prioridad sobre la fuente Arial
+opcional de títulos. Se presenta como preferencia personal que se puede probar,
+sin afirmar que beneficie a todas las personas con dislexia.
 
 El panel proporciona preferencias opcionales. No corrige automáticamente
 errores semánticos ni certifica conformidad WCAG. Las validaciones generales
