@@ -379,11 +379,11 @@
     },
     {
       "from": "multimedia/index.html",
-      "to": "public/transcripciones/war-on-wheels.html"
+      "to": "index.html"
     },
     {
       "from": "multimedia/index.html",
-      "to": "index.html"
+      "to": "public/transcripciones/war-on-wheels.html"
     },
     {
       "from": "multimedia/index.html",
@@ -519,6 +519,10 @@
     },
     {
       "from": "ayuda/index.html",
+      "to": "index.html"
+    },
+    {
+      "from": "ayuda/index.html",
       "to": "sobre-mi/index.html"
     },
     {
@@ -528,6 +532,10 @@
     {
       "from": "ayuda/index.html",
       "to": "multimedia/index.html"
+    },
+    {
+      "from": "ayuda/index.html",
+      "to": "public/transcripciones/war-on-wheels.html"
     },
     {
       "from": "ayuda/index.html",
@@ -671,11 +679,11 @@
     },
     {
       "from": "en/multimedia/index.html",
-      "to": "public/transcripciones/war-on-wheels.html"
+      "to": "en/index.html"
     },
     {
       "from": "en/multimedia/index.html",
-      "to": "en/index.html"
+      "to": "public/transcripciones/war-on-wheels.html"
     },
     {
       "from": "en/multimedia/index.html",
@@ -811,6 +819,10 @@
     },
     {
       "from": "en/ayuda/index.html",
+      "to": "en/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
       "to": "en/sobre-mi/index.html"
     },
     {
@@ -820,6 +832,10 @@
     {
       "from": "en/ayuda/index.html",
       "to": "en/multimedia/index.html"
+    },
+    {
+      "from": "en/ayuda/index.html",
+      "to": "public/transcripciones/war-on-wheels.html"
     },
     {
       "from": "en/ayuda/index.html",
@@ -875,6 +891,14 @@
     },
     {
       "from": "public/transcripciones/war-on-wheels.html",
+      "to": "index.html"
+    },
+    {
+      "from": "public/transcripciones/war-on-wheels.html",
+      "to": "multimedia/index.html"
+    },
+    {
+      "from": "public/transcripciones/war-on-wheels.html",
       "to": "multimedia/index.html"
     },
     {
@@ -894,14 +918,14 @@
     "es": {
       "file": "public/search-index.json",
       "entries": 8,
-      "bytes": 33785,
-      "sha256": "19256baf7d44ff9b8d5c987bae5168f85593b76b072cc5163ef8e27aca70c43f"
+      "bytes": 34262,
+      "sha256": "ca80c95a3b90ff22e10a87cb76cd5bfe0d20638bffc93832c2809edbc24ae87e"
     },
     "en": {
       "file": "public/search-index-en.json",
       "entries": 8,
-      "bytes": 33418,
-      "sha256": "2f98cc6fd834771e138fd954b8d41aa53e91229db0eda4c58ff87ec96a784bc4"
+      "bytes": 33858,
+      "sha256": "d8e4848fb4742162fc6963ec15931803d05271e3bff74e225a49121b18c29d1f"
     }
   },
   "pairs": [

@@ -121,7 +121,9 @@
           "en": "José Ramón Blanco’s LinkedIn profile photograph"
         },
         "source": "https://www.linkedin.com/in/jose-r-blanco-2580a920/"
-      }
+      },
+      "authorConfirmedCanVouch": true,
+      "authorConfirmationDate": "2026-11-16"
     },
     {
       "name": "Juan Menéndez Blanco",
@@ -143,7 +145,9 @@
           "en": "Juan Menéndez Blanco’s profile photograph"
         },
         "source": "https://www.linkedin.com/in/juan-men%C3%A9ndez-blanco-b8589313/"
-      }
+      },
+      "authorConfirmedCanVouch": true,
+      "authorConfirmationDate": "2026-11-16"
     }
   ],
   "skills": [
@@ -167,11 +171,12 @@
   },
   "provenance": {
     "cv": "CV proporcionado por Jorge el 12/11/2026",
-    "references": "Personas designadas por el autor. Los perfiles públicos identifican sus cargos; no se atribuyen testimonios ni se afirma consentimiento de los terceros.",
+    "references": "Jorge confirma el 16/11/2026 que José Ramón Blanco y Juan Menéndez pueden avalar su trabajo y solicita mantener sus perfiles como referencias profesionales. No se atribuyen testimonios literales ni se declara consentimiento documental de los terceros.",
     "sources": [
       "https://www.lavozdeasturias.es/noticia/inasturias/2020/12/26/twave-supervisor-maquinaria-industrial/00031608997863980440274.htm",
       "https://twave.es/es/blog/fade-asturias-crece-es",
       "https://twave.es/en/blog/asturex-en"
-    ]
+    ],
+    "interests": "Jorge confirma el 16/11/2026 que se mantienen todos los gustos y aficiones publicados, incluidos World of Tanks, IL-2 Sturmovik, Fury, Top Gun: Maverick y Masters of the Air, además de War Thunder y vehículos."
   }
 }

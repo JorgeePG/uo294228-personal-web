@@ -8,6 +8,8 @@ body > header [data-utility], body > header [data-language] { font: 700 .9rem 'I
 main { min-width: 0; }
 main[tabindex]:focus { outline: none; }
 main > nav { margin-block: 1rem; font-size: .9rem; }
+body > nav { width: min(1180px, calc(100% - 3rem)); margin: 1rem auto; font-size: .9rem; }
+@media (max-width: 650px) { body > nav { width: calc(100% - 2rem); } }
 [data-updated] { width: min(1180px, calc(100% - 2rem)); margin: 0 auto; padding-bottom: 1rem; font-size: .85rem; }
 #inicio main > [data-overview] { display: block; min-height: 0; padding-block: 1.5rem; background: var(--paper); color: var(--ink); }
 [data-overview] h2 { margin-bottom: .5rem; }

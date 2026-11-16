@@ -77,6 +77,8 @@ async function search() {
       output.append(li);
     }
     status.textContent = results.length ? (english ? `${results.length} results for “${query}”.` : `${results.length} resultados para «${query}».`) : (english ? 'No results. Try “museum”, “aviation” or a shorter term.' : 'Sin resultados. Prueba «museo», «aviación» o un término más corto.');
+    // Una consulta válida sin coincidencias también ofrece una salida navegable.
+    recovery.hidden = results.length > 0;
   } catch {
     if (current !== revision) return;
     status.textContent = english ? 'Search is unavailable. Use the site map or try again.' : 'No se ha podido cargar el buscador. Consulta el mapa del sitio o vuelve a intentarlo.';

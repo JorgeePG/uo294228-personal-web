@@ -5,10 +5,12 @@ import {createHash} from 'node:crypto';
 import {readingSettings} from './reading-settings.mjs';
 import {searchPage} from './search-page.mjs';
 import {buildSearchIndexes} from './search-index.mjs';
+import {applySiteOrientation} from './site-orientation.mjs';
+import {applyHelpFeedback} from './help-feedback.mjs';
 const pages=['index.html','404.html',...['sobre-mi','intereses','multimedia','series-y-peliculas','videojuegos','buscar','ayuda'].map(p=>p+'/index.html')];
 const translations=JSON.parse(await fs.readFile('scripts/translations.json','utf8'));
 Object.assign(translations,JSON.parse(await fs.readFile('scripts/translation-details.json','utf8')));
-Object.assign(translations,{'Buscar en el sitio':'Search this site','Buscar en la web':'Search the website','Resultados de búsqueda':'Search results','13 de noviembre de 2026':'13 November 2026','14 de noviembre de 2026':'14 November 2026'});
+Object.assign(translations,{'Buscar en el sitio':'Search this site','Buscar en la web':'Search the website','Resultados de búsqueda':'Search results','13 de noviembre de 2026':'13 November 2026','14 de noviembre de 2026':'14 November 2026','16 de noviembre de 2026':'16 November 2026'});
 const profile=JSON.parse(await fs.readFile('profile.pending.json','utf8'));
 const escape=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const label=value=>{if(typeof value==='string')return escape(value);if(value?.es&&value?.en){translations[escape(value.es)]=escape(value.en);return escape(value.es);}return '';};
@@ -51,7 +53,7 @@ for(const file of [...pages,'public/transcripciones/war-on-wheels.html']) {
  }
  text=text.replace(/<!-- reading-widget -->[\s\S]*?<!-- \/reading-widget -->/,'');
  text=text.replace('</body>',`<!-- reading-widget -->${readingPanel}<!-- /reading-widget --></body>`);
- text=text.replace(/datetime="2026-11-\d{2}">\d{1,2} de noviembre de 2026/g,'datetime="2026-11-14">14 de noviembre de 2026');
+ text=text.replace(/datetime="2026-11-\d{2}">\d{1,2} de noviembre de 2026/g,'datetime="2026-11-16">16 de noviembre de 2026');
  // Única plantilla comentada para los controles ES/EN; no mantener copias a mano.
  if(file==='buscar/index.html')text=text.replace(/<form role="search"[\s\S]*?<\/script>/,searchPage(label));
  if(file==='ayuda/index.html'){
@@ -61,7 +63,8 @@ for(const file of [...pages,'public/transcripciones/war-on-wheels.html']) {
   const storage=label({es:'Los ajustes son opcionales, se guardan localmente y se comparten entre las páginas y los dos idiomas en este navegador. No se envían a ningún servicio. Si el navegador impide guardarlos, funcionan durante la visita a esa página. Sin JavaScript, puedes seguir navegando y usar el zoom y las ayudas de tu navegador.',en:'Settings are optional, saved locally and shared across pages and both languages in this browser. They are not sent to any service. If storage is blocked, they work for the current page visit. Without JavaScript, you can still navigate and use browser zoom and accessibility features.'});
   text=text.replace('</main>',`<!-- reading-help --><section><h2>${heading}</h2><p>${description}</p><p>${storage}</p></section><!-- /reading-help --></main>`);
  }
- text=text.replace(/([\w/-]+)-480.webp 480w, ([\w/-]+)-960.webp 960w/g,'$1-480.webp 480w, $1-768.webp 768w, $2-960.webp 960w');
+ // Incluir rutas ../: antes se omitía la variante intermedia en páginas interiores.
+ text=text.replace(/([\w./-]+)-480\.webp 480w, ([\w./-]+)-960\.webp 960w/g,'$1-480.webp 480w, $1-768.webp 768w, $2-960.webp 960w');
  const prefix=file.startsWith('public/')?'../':file.includes('/')?'../public/':'public/';
  text=text.replace(/href="([^"?]*fonts\/fonts\.css)(?:\?[^"]*)?"/g,`href="$1?v=${fontsVersion}"`);
  text=text.replace(/\s*<script\b[^>]*src="[^"]*reading-settings\.js[^\"]*"[^>]*><\/script>/g,'');
@@ -84,8 +87,8 @@ for(const file of [...pages,'public/transcripciones/war-on-wheels.html']) {
   text=text.replace(/<nav aria-label="Ruta de navegación">[\s\S]*?<\/nav>/,'');
   if(!text.includes('data-overview'))text=text.replace('</main>',`<section data-overview aria-labelledby="explora"><h2 id="explora">Explora mis intereses</h2><p><a href="sobre-mi/index.html">Sobre mí y mi formación</a> · <a href="intereses/index.html">Vehículos y museos</a> · <a href="multimedia/index.html">Vídeo y podcast</a> · <a href="series-y-peliculas/index.html">Series y películas</a> · <a href="videojuegos/index.html">Videojuegos</a></p></section></main>`);
  }
- const labels={'index.html':'Inicio','sobre-mi/index.html':'Sobre mí','intereses/index.html':'Vehículos y museos','multimedia/index.html':'Vídeo y podcast','series-y-peliculas/index.html':'Series y películas','videojuegos/index.html':'Videojuegos'};
- if(labels[file])text=text.replace(/(<nav aria-label="Ruta de navegación">[\s\S]*?<span>).*?(<\/span>)/,`$1${labels[file]}$2`);
+ text=applyHelpFeedback(text,file,label);
+ text=applySiteOrientation(text,file,label);
  await fs.writeFile(file,text);
  if(file.startsWith('public/')) continue;
  // Translate text and accessible labels, never URLs or source attribution names.

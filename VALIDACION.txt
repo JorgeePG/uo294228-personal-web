@@ -1,116 +1,41 @@
-REVISIÓN LOCAL — 14/11/2026
-Proyecto: uo294228-personal-web. Esta revisión sustituye las conclusiones
-de los informes históricos; no modifica ni certifica el despliegue público.
+CIERRE TÉCNICO V2 — 16/11/2026
+Fuente: rama feat/mejoras-ux-accesibilidad. No es una V3 posterior a usuarios.
+
+PRUEBAS Y ALCANCE
+58 pruebas completas, 0 fallidas, 0 omitidas.
+Incluyen 18 escenarios específicos del buscador; no sumar ambos recuentos.
+Informe completo: validacion/revision-2026-11-14-buscador/runs/playwright-full-2026-11-16T17-18-44-218Z-3112.json
+SHA256 13a61d341059fe18a4bc7ea3049c75dc1f9208d13a89ecd5efbc4155c8920f40
+HTML/CSS: 19 html, 0 mensajes; 23 css, 0 mensajes.
+Recursos locales ausentes: 0.
+Los archivos íntegros, parciales e intentos de desarrollo tienen nombres propios.
+
+COMPROBACIONES
+19 rutas ES/EN y transcripción; anchos 320,375,768,1280,1920; preferencias hasta
+200%; teclado, diálogo, carruseles, retorno del foco, buscador y recuperación.
+Navegación de las 19 rutas sin gráficos, estilos ni JavaScript; no se presenta
+como una sesión con lector de pantalla. Axe sin infracciones detectadas en las
+comprobaciones ejecutadas. Nu no es un comprobador de accesibilidad.
+La conformidad AAA se estudia separadamente para V3: no se certifica aquí.
+
+RENDIMIENTO DE LABORATORIO
+home: rendimiento 100/100, LCP 1.09 s, CLS 0; carga observada 141 ms
+about: rendimiento 100/100, LCP 1.17 s, CLS 0; carga observada 213 ms
+media: rendimiento 100/100, LCP 1.11 s, CLS 0; carga observada 219 ms
+search: rendimiento 100/100, LCP 1.10 s, CLS 0; carga observada 169 ms
+vehicles: rendimiento 96/100, LCP 2.77 s, CLS 0; carga observada 130 ms
+films: rendimiento 100/100, LCP 1.27 s, CLS 0.01925920843245973; carga observada 359 ms
+games: rendimiento 98/100, LCP 2.22 s, CLS 0; carga observada 185 ms
+Fuente validacion/revision-2026-11-16-v2/performance-summary.json. Emulación móvil localhost; no son
+mediciones de producción ni tiempos de personas.
 
 CAMBIOS
-Imágenes JPG y WebP normalizadas: fotos 960x640; carteles 640x960 con bandas
-para conservar todo el cartel; retrato 400x400. Variantes WebP 480/768/960.
-Carruseles con altura estable, teclado, foco, estado anunciado, etiquetas
-visibles, contenido fuera de vista inerte y conservación del elemento al redimensionar.
-Ayuda, mapa, buscador local con acentos y varios términos, recuperación de
-errores, versiones estáticas en español/inglés y fecha de revisión real.
-Menú móvil compacto, enlaces de descarga multimedia permanentes, navegación
-común en la transcripción. CSS agrupado/minificado y fuentes precargadas.
-Buscador GET visible con campo, lupa y botón en todas las cabeceras (también
-404 y transcripción). Resultados en el idioma activo y envío por Enter o botón.
-Fecha visible 14/11/2026. Grado terminado y máster en curso confirmados por Jorge.
-Panel propio Accesibilidad/Accessibility en las 19 rutas: texto 100/125/150/200 %,
-espaciado, OpenDyslexic, títulos con Arial, enlaces destacados, movimiento reducido y reset.
-Guardado local entre páginas/idiomas, sin peticiones a servicios externos.
-Botón flotante fijo y diálogo modal nativo: no ocupa la cabecera. Cierre visible,
-Escape, clic exterior, ciclo de Tab/Mayús+Tab y retorno de foco; oculto sin JS.
-Contenido del panel con desplazamiento interno; cierre visible al recorrerlo.
-OpenDyslexic local, normal/negrita/cursiva/negrita cursiva originales bajo SIL OFL;
-licencia, procedencia, revisión y SHA256 en public/fonts/opendyslexic-*.
-Se carga al activarla y se aplica también a controles y títulos. Es opcional;
-se propone probarla según comodidad personal, sin promesas de eficacia universal.
-Resiste almacenamiento bloqueado. Restablecer elimina la clave de preferencias
-y mantiene el respeto a prefers-reduced-motion del sistema. Ayuda bilingüe.
-Galería: únicamente las fichas abiertas igualan su altura con la abierta más larga.
-Las fichas cerradas conservan su altura natural y compacta. Al cerrar, cambiar
-el ancho o cargar las fuentes, la altura del grupo abierto se recalcula.
-No se desplazan verticalmente al recibir foco o pasar el ratón.
-Comprobación de regresión geométrica y capturas en escritorio/móvil incluidas.
-Actualización del 12/11: LinkedIn y GitHub del autor, formación, experiencia
-en TWave/SERVEO, competencias e idiomas del CV proporcionado. Interés por
-War Thunder como coleccionismo descrito por el autor, sin visitas inventadas.
-Referencias profesionales designadas por Jorge: José Ramón Blanco y Juan
-Menéndez Blanco. Perfiles públicos enlazados y fichas individuales. La foto
-de José Ramón procede de la imagen publicada en su perfil de LinkedIn; la
-de Juan ha sido facilitada por Jorge. Ambas se conservan a 200x200, sin deformación.
-La fotografía conjunta de prensa ya no se muestra. No se inventan imágenes,
-recomendaciones, testimonios o consentimiento de las personas mencionadas.
+Mapa jerárquico completo y migas antes del main; ayuda ES/EN; mapa ante cero
+resultados y 404; correo/LinkedIn visibles; variantes intermedias WebP también
+en rutas ../; referencias y aficiones confirmadas por Jorge el 16/11.
+Se conserva el estilo, la geometría de imágenes, las tarjetas abiertas igualadas
+y las cerradas compactas. OpenDyslexic y panel flotante siguen siendo opcionales.
 
-PRUEBAS REPRODUCIBLES
-51 pruebas Playwright correctas; 0 fallidas; 0 omitidas.
-Suite completa: validacion/revision-2026-11-14-buscador/runs/playwright-full-2026-11-14T16-22-26-360Z-27732.json
-Comando: pnpm test. Fin: 2026-11-14T16:23:09.540Z. SHA256: f2cad80d921315a8a36c75fb97c66b2d87d7fc13ab6fec5f4fa3a9a6fed1b7e6.
-Cada ejecución completa o parcial conserva un JSON distinto en runs/; los punteros
-latest-full.json y latest-partial.json no se confunden ni suman sus recuentos.
-19 rutas: seis secciones ES/EN, búsqueda y ayuda ES/EN, 404 ES/EN y transcripción.
-Anchos 320, 375, 768, 1280 y 1920: sin desbordamiento horizontal global.
-Axe-core 4.14.0: cero infracciones detectadas en las rutas comprobadas.
-Teclado real: salto a main, galería, Escape, retorno del foco y desplegables.
-Carrusel: avance circular, estabilidad de altura, redimensionado y botones.
-Búsqueda: tildes, varios términos, ausencia de resultados, entrada HTML,
-fallo de red y resultados en inglés. Cambio de idioma conserva la sección.
-18 casos adicionales documentan vacío/espacios, ranking y desempate, longitud,
-reintento, caché, errores de índice/URL, concurrencia, anuncios, cobertura vigente
-y despliegue bajo un prefijo arbitrario. Hay observaciones JSON por caso.
-Índice: 15 páginas de contenido (siete pares ES/EN y transcripción inglesa
-compartida); cuatro exclusiones explícitas: 404 y resultados en ambos idiomas.
-public/search-coverage.json registra inventario, enlaces y hashes de los índices.
-Navegación sin JavaScript y con imágenes bloqueadas comprobada en galería.
-Preferencias: teclado, persistencia, cambio de idioma, recarga, reset y
-almacenamiento bloqueado. Las 19 rutas también se comprueban con todos los
-ajustes activados, texto al 200 %, axe y anchos 320/375/768/1280; sin
-desbordamiento horizontal global ni controles de preferencias fuera de pantalla.
-Se verifica que solo las fichas abiertas comparten altura con estos ajustes.
-Panel flotante: seguimiento del scroll, diálogo sin alterar el alto del contenido,
-foco contenido, cierre exterior, fuentes cargadas bajo demanda y reset.
-Pantallas 568x320 y 320x480 con texto al 200 % y todos los ajustes activos:
-panel dentro del viewport, acceso al reset y cierre completamente visible.
-Al recibir foco, los enlaces bajo el acceso flotante se desplazan a la vista.
-Enlaces internos comprobados por HTTP. Recursos locales referenciados:
-0 ausentes. No se certifican todos los enlaces externos.
-
-VALIDADORES
-Nu Html Checker 26.11.9 con advertencias tratadas como fallo, sin filtros:
-html: 19 archivos, salida 0, 0 mensajes.
-css: 23 archivos, salida 0, 0 mensajes.
-CSS incluye fuentes, hojas originales y hoja minificada generada.
-Jigsaw W3C remoto: el envío del CSS el 11/11 devolvió HTTP 500. No se presenta como
-validación superada; la evidencia vigente de CSS es el comprobador Nu local.
-
-LIGHTHOUSE 13.6.0 — MÓVIL, SIMULACIÓN DE RED/CPU
-home: rendimiento 100; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 1.08 s; CLS 0.
-about: rendimiento 100; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 1.23 s; CLS 0.
-vehicles: rendimiento 98; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 2.43 s; CLS 0.
-media: rendimiento 100; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 1.22 s; CLS 0.
-films: rendimiento 100; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 1.22 s; CLS 0.
-games: rendimiento 98; accesibilidad 100; buenas prácticas 100; SEO 100; LCP 2.43 s; CLS 0.
-Una ejecución final por sección. Son mediciones locales de laboratorio;
-no equivalen a tiempo de descarga en GitHub Pages o en la red universitaria.
-No se ocultan recomendaciones de Lighthouse: conservar los HTML/JSON íntegros.
-Las pruebas automáticas no son una certificación WCAG ni garantizan una nota.
-
-CONTENIDO Y PROCEDENCIA
-profile.pending.json contiene los datos facilitados por Jorge y su CV el
-12/11/2026. Los cargos de los contactos se contrastaron con las publicaciones
-de TWave y sus perfiles públicos. public/img/referencias/ORIGEN.json registra
-la procedencia de ambas fotografías de perfil; no quedan fotos pendientes.
-Las referencias designadas por el autor se publican con publishPublicProfile;
-esto no equivale a afirmar que hayan dado un testimonio o un aval.
-El autor confirmó el 13/11/2026 que finalizó el grado y está cursando el máster.
-La revisión palabra por palabra de la transcripción no se ha realizado y queda
-fuera del alcance por decisión del autor. Sigue identificada como automática.
-
-EVIDENCIAS
-validacion/revision-2026-11-12/: html.json, css.json, validation-summary.json,
-playwright.json histórico, performance-summary.json, informes Lighthouse HTML/JSON,
-images.json y capturas de escritorio/móvil.
-La suite vigente está en validacion/revision-2026-11-14-buscador; las selecciones parciales ya no
-sobrescriben el informe completo. Los nombres/fechas internos identifican cada ejecución.
-Los informes de octubre y del 11/11 se conservan como históricos. Algunos
-JSON de pruebas del directorio del 11/11 se actualizaron durante la primera
-pasada del 12/11: sus fechas internas prevalecen; el directorio vigente es este.
+DEPENDENCIAS
+Las tres sesiones reales, su análisis y una V3 derivada de usuarios siguen pendientes.
+La valoración experta de la métrica no garantiza la nota académica.

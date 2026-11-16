@@ -21,6 +21,15 @@ validacion/revision-2026-11-14-buscador/runs. latest-full.json y
 latest-partial.json son punteros que declaran alcance, comando, resultado y hash.
 El JSON antiguo de revision-2026-11-12 se conserva como histórico.
 
+Cierre V2 16/11: 58 pruebas completas (18 del buscador incluidas). La prueba de
+navegación sin gráficos también bloquea CSS/JavaScript en las 19 rutas.
+Para medir rendimiento sin sustituir los informes anteriores, en PowerShell:
+  $env:UX_PERF_OUTPUT='validacion/revision-2026-11-16-v2'; pnpm performance
+Después: node scripts/report.mjs
+Las fechas reales de cada ejecución figuran dentro de los JSON. El nombre del
+directorio revision-2026-11-14-buscador es histórico; los runs tienen fecha propia.
+AAA y las pruebas de usuarios se documentan aparte: esta web es V2, no V3.
+
 Editar fuente ES, public/js/search.js, scripts/search-index.mjs y
 scripts/search-page.mjs. No editar en/ ni los índices JSON a mano; pnpm build
 regenera traducciones, controles, índices y cobertura. Los JS se sirven sin

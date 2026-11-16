@@ -3,11 +3,12 @@ import {launch} from 'chrome-launcher';
 import fs from 'node:fs/promises';
 const chrome=await launch({chromeFlags:['--headless','--disable-gpu']});
 const summary=[];
-const output='validacion/revision-2026-11-12';await fs.mkdir(output,{recursive:true});
+// Permitir una carpeta fechada evita sustituir mediciones históricas al cerrar V2.
+const output=process.env.UX_PERF_OUTPUT||'validacion/revision-2026-11-12';await fs.mkdir(output,{recursive:true});
 const requested=process.argv.slice(2);
 if(requested.length){const existing=JSON.parse(await fs.readFile(`${output}/performance-summary.json`,'utf8'));summary.push(...existing.pages.filter(p=>!requested.includes(p.name)));}
 try{
- for(const [route,name] of [['','home'],['sobre-mi/','about'],['intereses/','vehicles'],['multimedia/','media'],['series-y-peliculas/','films'],['videojuegos/','games']]){
+ for(const [route,name] of [['','home'],['sobre-mi/','about'],['intereses/','vehicles'],['multimedia/','media'],['series-y-peliculas/','films'],['videojuegos/','games'],['buscar/','search']]){
   if(requested.length&&!requested.includes(name))continue;
   const r=await lighthouse('http://127.0.0.1:4173/'+route,{port:chrome.port,output:['json','html'],onlyCategories:['performance','accessibility','best-practices','seo'],logLevel:'error'});
   await fs.writeFile(`${output}/lighthouse-${name}-mobile.json`,r.report[0]);
