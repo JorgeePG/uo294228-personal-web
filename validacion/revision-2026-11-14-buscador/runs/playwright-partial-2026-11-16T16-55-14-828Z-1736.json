@@ -1,0 +1,227 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/orientation.spec.mjs"
+    ],
+    "configFile": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\playwright.config.mjs",
+    "rootDir": "C:/Users/jorge/OneDrive/Desktop/Master/UX/uo294228-personal-web/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "evidenceScope": "partial",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/jorge/OneDrive/Desktop/Master/UX/uo294228-personal-web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "evidenceScope": "partial",
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/jorge/OneDrive/Desktop/Master/UX/uo294228-personal-web/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "evidenceScope": "partial",
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests",
+        "snapshotDir": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "channel": "chrome",
+          "headless": true
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "validacion/revision-2026-11-14-buscador/runs/playwright-partial-2026-11-16T16-55-14-828Z-1736.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 2,
+    "webServer": {
+      "command": "node scripts/serve.mjs",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "orientation.spec.mjs",
+      "file": "orientation.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "all pages show their position and working ancestor links",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2530,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T16:55:16.235Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "orientation-observed.json",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJmaWxlIjogIjQwNC5odG1sIiwKICAgICJwb3NpdGlvbiI6ICJJbmljaW8gLyBQw6FnaW5hIG5vIGVuY29udHJhZGEiLAogICAgImFuY2VzdG9ycyI6IFsKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9pbmRleC5odG1sIgogICAgXQogIH0sCiAgewogICAgImZpbGUiOiAiYXl1ZGEvaW5kZXguaHRtbCIsCiAgICAicG9zaXRpb24iOiAiSW5pY2lvIC8gQXl1ZGEgeSBtYXBhIGRlbCBzaXRpbyIsCiAgICAiYW5jZXN0b3JzIjogWwogICAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2luZGV4Lmh0bWwiCiAgICBdCiAgfSwKICB7CiAgICAiZmlsZSI6ICJidXNjYXIvaW5kZXguaHRtbCIsCiAgICAicG9zaXRpb24iOiAiSW5pY2lvIC8gQnVzY2FyIiwKICAgICJhbmNlc3RvcnMiOiBbCiAgICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvaW5kZXguaHRtbCIKICAgIF0KICB9LAogIHsKICAgICJmaWxlIjogImVuLzQwNC5odG1sIiwKICAgICJwb3NpdGlvbiI6ICJIb21lIC8gUGFnZSBub3QgZm91bmQiLAogICAgImFuY2VzdG9ycyI6IFsKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9lbi9pbmRleC5odG1sIgogICAgXQogIH0sCiAgewogICAgImZpbGUiOiAiZW4vYXl1ZGEvaW5kZXguaHRtbCIsCiAgICAicG9zaXRpb24iOiAiSG9tZSAvIEhlbHAgYW5kIHNpdGUgbWFwIiwKICAgICJhbmNlc3RvcnMiOiBbCiAgICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvZW4vaW5kZXguaHRtbCIKICAgIF0KICB9LAogIHsKICAgICJmaWxlIjogImVuL2J1c2Nhci9pbmRleC5odG1sIiwKICAgICJwb3NpdGlvbiI6ICJIb21lIC8gU2VhcmNoIiwKICAgICJhbmNlc3RvcnMiOiBbCiAgICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvZW4vaW5kZXguaHRtbCIKICAgIF0KICB9LAogIHsKICAgICJmaWxlIjogImVuL2ludGVyZXNlcy9pbmRleC5odG1sIiwKICAgICJwb3NpdGlvbiI6ICJIb21lIC8gVmVoaWNsZXMgYW5kIG11c2V1bXMiLAogICAgImFuY2VzdG9ycyI6IFsKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9lbi9pbmRleC5odG1sIgogICAgXQogIH0sCiAgewogICAgImZpbGUiOiAiZW4vbXVsdGltZWRpYS9pbmRleC5odG1sIiwKICAgICJwb3NpdGlvbiI6ICJIb21lIC8gVmlkZW8gYW5kIHBvZGNhc3QiLAogICAgImFuY2VzdG9ycyI6IFsKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9lbi9pbmRleC5odG1sIgogICAgXQogIH0sCiAgewogICAgImZpbGUiOiAiZW4vc2VyaWVzLXktcGVsaWN1bGFzL2luZGV4Lmh0bWwiLAogICAgInBvc2l0aW9uIjogIkhvbWUgLyBGaWxtcyBhbmQgVFYgc2VyaWVzIiwKICAgICJhbmNlc3RvcnMiOiBbCiAgICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvZW4vaW5kZXguaHRtbCIKICAgIF0KICB9LAogIHsKICAgICJmaWxlIjogImVuL3NvYnJlLW1pL2luZGV4Lmh0bWwiLAogICAgInBvc2l0aW9uIjogIkhvbWUgLyBBYm91dCBtZSIsCiAgICAiYW5jZXN0b3JzIjogWwogICAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2VuL2luZGV4Lmh0bWwiCiAgICBdCiAgfSwKICB7CiAgICAiZmlsZSI6ICJlbi92aWRlb2p1ZWdvcy9pbmRleC5odG1sIiwKICAgICJwb3NpdGlvbiI6ICJIb21lIC8gVmlkZW8gZ2FtZXMiLAogICAgImFuY2VzdG9ycyI6IFsKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9lbi9pbmRleC5odG1sIgogICAgXQogIH0sCiAgewogICAgImZpbGUiOiAiaW50ZXJlc2VzL2luZGV4Lmh0bWwiLAogICAgInBvc2l0aW9uIjogIkluaWNpbyAvIFZlaMOtY3Vsb3MgeSBtdXNlb3MiLAogICAgImFuY2VzdG9ycyI6IFsKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9pbmRleC5odG1sIgogICAgXQogIH0sCiAgewogICAgImZpbGUiOiAibXVsdGltZWRpYS9pbmRleC5odG1sIiwKICAgICJwb3NpdGlvbiI6ICJJbmljaW8gLyBWw61kZW8geSBwb2RjYXN0IiwKICAgICJhbmNlc3RvcnMiOiBbCiAgICAgICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvaW5kZXguaHRtbCIKICAgIF0KICB9LAogIHsKICAgICJmaWxlIjogInB1YmxpYy90cmFuc2NyaXBjaW9uZXMvd2FyLW9uLXdoZWVscy5odG1sIiwKICAgICJwb3NpdGlvbiI6ICJJbmljaW8gLyBWw61kZW8geSBwb2RjYXN0IC8gVHJhbnNjcmlwY2nDs24gZGUgV2FyIG9uIFdoZWVscyAoaW5nbMOpcykiLAogICAgImFuY2VzdG9ycyI6IFsKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9pbmRleC5odG1sIiwKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9tdWx0aW1lZGlhL2luZGV4Lmh0bWwiCiAgICBdCiAgfSwKICB7CiAgICAiZmlsZSI6ICJzZXJpZXMteS1wZWxpY3VsYXMvaW5kZXguaHRtbCIsCiAgICAicG9zaXRpb24iOiAiSW5pY2lvIC8gU2VyaWVzIHkgcGVsw61jdWxhcyIsCiAgICAiYW5jZXN0b3JzIjogWwogICAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2luZGV4Lmh0bWwiCiAgICBdCiAgfSwKICB7CiAgICAiZmlsZSI6ICJzb2JyZS1taS9pbmRleC5odG1sIiwKICAgICJwb3NpdGlvbiI6ICJJbmljaW8gLyBTb2JyZSBtw60iLAogICAgImFuY2VzdG9ycyI6IFsKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9pbmRleC5odG1sIgogICAgXQogIH0sCiAgewogICAgImZpbGUiOiAidmlkZW9qdWVnb3MvaW5kZXguaHRtbCIsCiAgICAicG9zaXRpb24iOiAiSW5pY2lvIC8gVmlkZW9qdWVnb3MiLAogICAgImFuY2VzdG9ycyI6IFsKICAgICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9pbmRleC5odG1sIgogICAgXQogIH0KXQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "15701b1ece319b9e9e7e-b73bd64816c97a9627d1",
+          "file": "orientation.spec.mjs",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "both site maps cover all public content and search without error pages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 866,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T16:55:19.156Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "15701b1ece319b9e9e7e-4b8ccd3c1dad205088a6",
+          "file": "orientation.spec.mjs",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "orientation stays usable on narrow screens and without JavaScript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 633,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T16:55:20.036Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "15701b1ece319b9e9e7e-0e974ae6bd3588271901",
+          "file": "orientation.spec.mjs",
+          "line": 38,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-16T16:55:15.361Z",
+    "duration": 5685.215,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

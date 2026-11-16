@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-16T17:18:19.439Z",
+  "environment": "localhost; mobile simulated throttling; Lighthouse 13.6.0; not production/network field measurements",
+  "pages": [
+    {
+      "name": "home",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 1088.314,
+      "cls": 0,
+      "load": 141
+    },
+    {
+      "name": "about",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 1167.1761,
+      "cls": 0,
+      "load": 213
+    },
+    {
+      "name": "vehicles",
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 2740.9946,
+      "cls": 0,
+      "load": 136
+    },
+    {
+      "name": "media",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 1105.6075,
+      "cls": 0,
+      "load": 219
+    },
+    {
+      "name": "films",
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 2811.608,
+      "cls": 0,
+      "load": 257
+    },
+    {
+      "name": "games",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 2502.15135,
+      "cls": 0,
+      "load": 169
+    },
+    {
+      "name": "search",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 1103.8035,
+      "cls": 0,
+      "load": 169
+    }
+  ]
+}

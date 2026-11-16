@@ -1,0 +1,233 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/help-feedback.spec.mjs"
+    ],
+    "configFile": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\playwright.config.mjs",
+    "rootDir": "C:/Users/jorge/OneDrive/Desktop/Master/UX/uo294228-personal-web/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "evidenceScope": "partial",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/jorge/OneDrive/Desktop/Master/UX/uo294228-personal-web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "evidenceScope": "partial",
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/jorge/OneDrive/Desktop/Master/UX/uo294228-personal-web/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "evidenceScope": "partial",
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests",
+        "snapshotDir": "C:\\Users\\jorge\\OneDrive\\Desktop\\Master\\UX\\uo294228-personal-web\\tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "channel": "chrome",
+          "headless": true
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "validacion/revision-2026-11-14-buscador/runs/playwright-partial-2026-11-16T17-02-47-842Z-21768.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 2,
+    "webServer": {
+      "command": "node scripts/serve.mjs",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "help-feedback.spec.mjs",
+      "file": "help-feedback.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "zero results offers a keyboard route to the site map in both languages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 662,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T17:02:49.078Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "observed.json",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJsb2NhbGUiOiAiZXMiLAogICAgIm1lc3NhZ2UiOiAiU2luIHJlc3VsdGFkb3MuIFBydWViYSDCq211c2VvwrssIMKrYXZpYWNpw7NuwrsgbyB1biB0w6lybWlubyBtw6FzIGNvcnRvLiIsCiAgICAicmVjb3ZlcnlVUkwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2F5dWRhL2luZGV4Lmh0bWwiCiAgfSwKICB7CiAgICAibG9jYWxlIjogImVuLyIsCiAgICAibWVzc2FnZSI6ICJObyByZXN1bHRzLiBUcnkg4oCcbXVzZXVt4oCdLCDigJxhdmlhdGlvbuKAnSBvciBhIHNob3J0ZXIgdGVybS4iLAogICAgInJlY292ZXJ5VVJMIjogImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9lbi9heXVkYS9pbmRleC5odG1sIgogIH0KXQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "011fa7fa68e6d0a1bfc7-9625422cb62f4b7f13ca",
+          "file": "help-feedback.spec.mjs",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "404 offers working home and help recovery links",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 759,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T17:02:50.003Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "011fa7fa68e6d0a1bfc7-59893b1c0f359a7b3288",
+          "file": "help-feedback.spec.mjs",
+          "line": 23,
+          "column": 1
+        },
+        {
+          "title": "help and contact remain readable without JavaScript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 529,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T17:02:50.773Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "observed-contact.json",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJsb2NhbGUiOiAiZXMiLAogICAgInByb2Zlc3Npb25hbEVtYWlsIjogImpvcmdlcHEyMDAxOEBnbWFpbC5jb20iLAogICAgImxpbmtlZGluIjogImh0dHBzOi8vd3d3LmxpbmtlZGluLmNvbS9pbi9qb3JnZS1wdWVudGUtZ2FyYyVDMyVBRGEiLAogICAgInNjb3BlIjogIkVubGFjZXMgeSBjb250ZW5pZG8gdmlzaWJsZXMgY29tcHJvYmFkb3M7IG5vIHNlIGhhIGVudmlhZG8gY29ycmVvIG5pIGF1dGVudGljYWRvIGVuIExpbmtlZEluIgogIH0sCiAgewogICAgImxvY2FsZSI6ICJlbi8iLAogICAgInByb2Zlc3Npb25hbEVtYWlsIjogImpvcmdlcHEyMDAxOEBnbWFpbC5jb20iLAogICAgImxpbmtlZGluIjogImh0dHBzOi8vd3d3LmxpbmtlZGluLmNvbS9pbi9qb3JnZS1wdWVudGUtZ2FyYyVDMyVBRGEiLAogICAgInNjb3BlIjogIkVubGFjZXMgeSBjb250ZW5pZG8gdmlzaWJsZXMgY29tcHJvYmFkb3M7IG5vIHNlIGhhIGVudmlhZG8gY29ycmVvIG5pIGF1dGVudGljYWRvIGVuIExpbmtlZEluIgogIH0KXQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "011fa7fa68e6d0a1bfc7-f9f52df7d3db9e9c6a14",
+          "file": "help-feedback.spec.mjs",
+          "line": 35,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-16T17:02:48.241Z",
+    "duration": 3406.488,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "scope": "full",
+  "command": "pnpm test",
+  "finished": "2026-11-16T17:03:32.349Z",
+  "exitCode": 0,
+  "report": "runs/playwright-full-2026-11-16T17-02-55-373Z-2404.json",
+  "sha256": "ba5f5b9b55ecb1c6423cf23846e3c13a1d2167e82f8b5d357392d532e89c247b",
+  "stats": {
+    "startTime": "2026-11-16T17:02:55.778Z",
+    "duration": 36551.862,
+    "expected": 57,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

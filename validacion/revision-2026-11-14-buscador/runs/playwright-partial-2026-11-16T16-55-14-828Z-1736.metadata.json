@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "scope": "partial",
+  "command": "pnpm test tests/orientation.spec.mjs",
+  "finished": "2026-11-16T16:55:21.065Z",
+  "exitCode": 0,
+  "report": "runs/playwright-partial-2026-11-16T16-55-14-828Z-1736.json",
+  "sha256": "f363ce1b68af89fc5a92f3182825290b5c5645304ab70e1408d34b8d285c4813",
+  "stats": {
+    "startTime": "2026-11-16T16:55:15.361Z",
+    "duration": 5685.215,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

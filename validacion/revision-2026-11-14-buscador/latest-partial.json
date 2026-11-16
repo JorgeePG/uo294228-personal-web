@@ -1,15 +1,15 @@
 {
   "schema": 1,
   "scope": "partial",
-  "command": "pnpm test tests/search.spec.mjs",
-  "finished": "2026-11-14T16:21:29.216Z",
+  "command": "pnpm test tests/help-feedback.spec.mjs",
+  "finished": "2026-11-16T17:02:51.666Z",
   "exitCode": 0,
-  "report": "runs/playwright-partial-2026-11-14T16-21-13-163Z-18348.json",
-  "sha256": "ba3d24066e16394a455817fccd7ca71bf28346b32ba0cf0f81b2642a6b4f7dd2",
+  "report": "runs/playwright-partial-2026-11-16T17-02-47-842Z-21768.json",
+  "sha256": "d378f7627d53a9eb6cc5cd4d6fb0cac62f877037271d6c40c196eda4d30c7543",
   "stats": {
-    "startTime": "2026-11-14T16:21:14.018Z",
-    "duration": 15169.773000000001,
-    "expected": 18,
+    "startTime": "2026-11-16T17:02:48.241Z",
+    "duration": 3406.488,
+    "expected": 3,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
