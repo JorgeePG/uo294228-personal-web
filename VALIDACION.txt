@@ -3,10 +3,10 @@ Fuente: rama feat/mejoras-ux-accesibilidad; trabajo local posterior a las sesion
 de V2. La V2 evaluada y los JSON originales permanecen intactos.
 
 PRUEBAS Y ALCANCE
-69 pruebas completas, 0 fallidas, 0 omitidas.
+70 pruebas completas, 0 fallidas, 0 omitidas.
 Incluyen 23 escenarios específicos del buscador; no sumar ambos recuentos.
-Informe completo: validacion/revision-2026-11-18-v3-etiquetas/runs/playwright-full-2026-11-18T18-29-26-360Z-17164.json
-SHA256 076afbf9698de0a7b72f7d4339b157873f62eb4e43ef718f3c5f381631c56945
+Informe completo: validacion/revision-2026-11-18-v3-revision-manual/runs/playwright-full-2026-11-18T21-52-46-114Z-10028.json
+SHA256 ab94ba2bbebfec7a75c19075de2030cee782453bff2b7b8eb7d0990a118a75e4
 HTML/CSS: 19 html, 0 mensajes; 23 css, 0 mensajes.
 Recursos locales ausentes: 0.
 Los archivos íntegros, parciales e intentos de desarrollo tienen nombres propios.
@@ -36,8 +36,11 @@ Los cinco ajustes de lectura tienen asociación explícita for/id (H44), tras
 localizar en el informe detallado de TAW sus 40 incidencias en la misma línea.
 Los perfiles LinkedIn tienen nombres accesibles individualizados y las
 alternativas de descarga distinguen vídeo/audio. Objetivos de resultados y
-referencias ampliados a 44 px. La nueva comprobación de TAW sigue pendiente;
-no se afirma que el contador haya bajado hasta disponer de su resultado real.
+referencias ampliados a 44 px. El resultado manual posterior de TAW confirmó
+0 problemas en AAA (21 advertencias
+y 33 no verificados). La transcripción delimita contenido inglés (main) e
+interfaz española, incluidos los controles de lectura. Las comprobaciones
+humanas y su firma se registran aparte, nunca por preparar esta revisión.
 No hay una regla especial para T-72. Se conservan las fuentes, paleta y geometría
 de imágenes, tarjetas abiertas/cerradas y opciones de accesibilidad.
 

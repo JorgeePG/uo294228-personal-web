@@ -24,3 +24,10 @@ test('native language links work without JavaScript and transcript declares its 
   await page.goto('/public/transcripciones/war-on-wheels.html');const link=page.getByRole('group',{name:'Idioma',exact:true}).getByRole('link',{name:'English',exact:true});await expect(link).toHaveAccessibleDescription(/sección multimedia en inglés/);await link.click();await expect(page).toHaveURL(/\/en\/multimedia\/index\.html$/);
  }finally{await context.close();}
 });
+test('shared transcript declares English content and Spanish reading controls separately',async({page})=>{
+ await page.goto('/public/transcripciones/war-on-wheels.html');
+ await expect(page.locator('html')).toHaveAttribute('lang','es');await expect(page.locator('main')).toHaveAttribute('lang','en');
+ for(const selector of ['body > header','footer','[data-reading-trigger]','[data-reading-settings]'])expect(await page.locator(selector).evaluate(element=>element.closest('[lang]').getAttribute('lang'))).toBe('es');
+ await page.locator('[data-reading-trigger]').click();await expect(page.getByLabel('Tamaño del texto',{exact:true})).toBeVisible();
+ const entries=JSON.parse(fs.readFileSync('public/search-index-en.json','utf8'));expect(entries.find(entry=>entry.url.includes('war-on-wheels.html')).lang).toBe('en');
+});

@@ -1,6 +1,6 @@
 // Resumen generado desde el último cierre completo y sus validadores.
 import fs from 'node:fs/promises';
-const testDir=process.env.UX_EVIDENCE_DIR||'validacion/revision-2026-11-18-v3-etiquetas';
+const testDir=process.env.UX_EVIDENCE_DIR||'validacion/revision-2026-11-18-v3-revision-manual';
 const full=JSON.parse(await fs.readFile(testDir+'/latest-full.json','utf8'));
 const validation=JSON.parse(await fs.readFile((process.env.UX_VALIDATION_OUTPUT||testDir+'/nu')+'/validation-summary.json','utf8'));
 const searchCount=(await fs.readFile('tests/search.spec.mjs','utf8')).match(/^scenario\(/gm).length;
@@ -43,8 +43,11 @@ Los cinco ajustes de lectura tienen asociación explícita for/id (H44), tras
 localizar en el informe detallado de TAW sus 40 incidencias en la misma línea.
 Los perfiles LinkedIn tienen nombres accesibles individualizados y las
 alternativas de descarga distinguen vídeo/audio. Objetivos de resultados y
-referencias ampliados a 44 px. La nueva comprobación de TAW sigue pendiente;
-no se afirma que el contador haya bajado hasta disponer de su resultado real.
+referencias ampliados a 44 px. El resultado manual posterior de TAW confirmó
+0 problemas en AAA (21 advertencias
+y 33 no verificados). La transcripción delimita contenido inglés (main) e
+interfaz española, incluidos los controles de lectura. Las comprobaciones
+humanas y su firma se registran aparte, nunca por preparar esta revisión.
 No hay una regla especial para T-72. Se conservan las fuentes, paleta y geometría
 de imágenes, tarjetas abiertas/cerradas y opciones de accesibilidad.
 

@@ -21,8 +21,8 @@ validacion/revision-2026-11-14-buscador/runs. latest-full.json y
 latest-partial.json son punteros que declaran alcance, comando, resultado y hash.
 El JSON antiguo de revision-2026-11-12 se conserva como histórico.
 Para guardar pruebas y validadores de la V3 en otra carpeta, en PowerShell:
-  $env:UX_EVIDENCE_DIR='validacion/revision-2026-11-18-v3-etiquetas'
-  $env:UX_VALIDATION_OUTPUT='validacion/revision-2026-11-18-v3-etiquetas/nu'
+  $env:UX_EVIDENCE_DIR='validacion/revision-2026-11-18-v3-revision-manual'
+  $env:UX_VALIDATION_OUTPUT='validacion/revision-2026-11-18-v3-revision-manual/nu'
   pnpm test
   pnpm validate
 Estos parámetros no alteran el contenido público ni la V2 congelada.
