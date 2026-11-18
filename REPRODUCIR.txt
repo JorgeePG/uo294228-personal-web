@@ -21,8 +21,8 @@ validacion/revision-2026-11-14-buscador/runs. latest-full.json y
 latest-partial.json son punteros que declaran alcance, comando, resultado y hash.
 El JSON antiguo de revision-2026-11-12 se conserva como histórico.
 Para guardar pruebas y validadores de la V3 en otra carpeta, en PowerShell:
-  $env:UX_EVIDENCE_DIR='validacion/revision-2026-11-18-v3-idiomas'
-  $env:UX_VALIDATION_OUTPUT='validacion/revision-2026-11-18-v3-idiomas/nu'
+  $env:UX_EVIDENCE_DIR='validacion/revision-2026-11-18-v3-etiquetas'
+  $env:UX_VALIDATION_OUTPUT='validacion/revision-2026-11-18-v3-etiquetas/nu'
   pnpm test
   pnpm validate
 Estos parámetros no alteran el contenido público ni la V2 congelada.
@@ -57,6 +57,10 @@ y una marca del idioma actual. public/js/language.js conserva parámetros y
 fragmento al cambiar; sin JavaScript los enlaces siguen abriendo la página
 equivalente. No hay redirecciones automáticas por idioma o ubicación. La
 transcripción inglesa única avisa de que el cambio lleva a multimedia en inglés.
+El panel se mantiene en scripts/reading-settings.mjs: sus cinco casillas usan
+for/id explícitos (H44), además de conservar la etiqueta anidada. Esto mejora
+la compatibilidad de validadores sin quitar etiquetas ni opciones. Los nombres
+accesibles de referencias se generan en build; no editar las versiones EN.
 La consulta de cabecera aparece en una URL GET: puede quedar en historial y
 registros del alojamiento. El cálculo de relevancia se hace en el navegador.
 

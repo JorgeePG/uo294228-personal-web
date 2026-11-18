@@ -54,6 +54,7 @@ html[lang="en"] #vehiculos main > ul figure a::after { content: 'Enlarge +'; }
 #sobre-mi [data-profile] [data-reference-cards] { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; padding: 0; list-style: none; }
 #sobre-mi [data-reference-card] { display: flex; align-items: flex-start; gap: 1rem; margin: 0; padding: 1rem; border: 2px solid var(--line); background: #fff; min-width: 0; }
 #sobre-mi [data-reference-card] > div { min-width: 0; overflow-wrap: anywhere; }
+#sobre-mi [data-reference-card] a { display: inline-flex; align-items: center; min-height: 44px; }
 #sobre-mi img[data-reference-portrait] { width: 96px; height: 96px; aspect-ratio: 1; object-fit: cover; flex: 0 0 96px; border-radius: 4px; }
 @media (max-width: 900px) { #sobre-mi [data-profile] [data-reference-cards] { grid-template-columns: 1fr; } }
 #transcript-page main { max-width: 75ch; padding-block: 1.5rem; }
@@ -120,7 +121,7 @@ main[data-search-page] { width: min(760px, calc(100% - 3rem)); padding-top: 1rem
 [data-search-page] [data-results-status] { color: var(--muted); margin-bottom: 1rem; }
 [data-search-page] [data-results] { margin: 0; padding: 0; list-style: none; }
 [data-search-page] [data-results] li { margin: 0; padding: 1.25rem 0; border-top: 1px solid var(--line); }
-[data-search-page] [data-results] a { display: inline-block; font-size: 1.4rem; line-height: 1.35; }
+[data-search-page] [data-results] a { display: inline-flex; align-items: center; min-height: 44px; font-size: 1.4rem; line-height: 1.35; }
 [data-search-page] [data-results] p { margin: .6rem 0 0; overflow-wrap: anywhere; }
 /* Acceso flotante y diálogo nativo: opciones con scroll y cierre siempre visible. */
 [data-reading-trigger] { display: none; position: fixed; right: max(12px, env(safe-area-inset-right)); bottom: max(12px, env(safe-area-inset-bottom)); z-index: 20; align-items: center; justify-content: center; gap: .5rem; max-width: calc(100% - 24px); min-height: 48px; padding: .7rem 1rem; font: 700 .9rem 'IBM Plex Sans', Arial, sans-serif; color: #fff; background: #111; border: 2px solid #fff; border-radius: 999px; box-shadow: 0 3px 16px #0005; cursor: pointer; }
