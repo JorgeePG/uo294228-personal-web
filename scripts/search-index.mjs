@@ -46,8 +46,11 @@ export async function buildSearchIndexes() {
   const lang=attr(main,'lang')||attr(all(tree,n=>n.tagName==='html')[0],'lang')||'es';
   const title=clean(content(all(main,n=>n.tagName==='h1')[0]||main));
   const text=clean(content(main));
+  // Los nombres de tarjetas y secciones expresan el tema de la página. Se
+  // conservan aparte para distinguirlos de una mención incidental o un alt.
+  const headings=all(main,n=>/^h[2-6]$/.test(n.tagName||'')).map(n=>clean(content(n))).filter(Boolean);
   if(!text||!title)throw new Error(`Search coverage: empty content in ${file}`);
-  documents.set(file,{title,text,lang});
+  documents.set(file,{title,text,headings,lang});
   for(const anchor of all(tree,n=>n.tagName==='a')){
    const href=attr(anchor,'href');if(!href)continue;
    const url=new URL(href,origin+file);
@@ -67,7 +70,7 @@ export async function buildSearchIndexes() {
  // HTML conocidos 404/resultados se contabilizan aunque no sean destinos del menú.
  const coverage={schema:1,pages:[...new Set([...knownPages,...linked])].sort().map(file=>({file,state:exclusions.has(file)?'excluded':'indexed',reason:exclusions.get(file)||'Contenido principal enlazado',language:documents.get(file)?.lang|| (file.startsWith('en/')?'en':'es')})),links,nonHTMLAssets:[...assets].sort(),indexes:{},pairs:[]};
  for(const lang of ['es','en']){
-  const entries=[...documents].filter(([file])=>file.startsWith('en/')=== (lang==='en') || file.startsWith('public/transcripciones/')).map(([file,item])=>({title:item.title,url:path.posix.relative('public',file),lang:item.lang,text:item.text})).sort((a,b)=>a.url<b.url?-1:a.url>b.url?1:0);
+  const entries=[...documents].filter(([file])=>file.startsWith('en/')=== (lang==='en') || file.startsWith('public/transcripciones/')).map(([file,item])=>({title:item.title,url:path.posix.relative('public',file),lang:item.lang,text:item.text,headings:item.headings})).sort((a,b)=>a.url<b.url?-1:a.url>b.url?1:0);
   const filename=`public/search-index${lang==='en'?'-en':''}.json`;
   const json=JSON.stringify(entries,null,2)+'\n';
   await fs.writeFile(filename,json);

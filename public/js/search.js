@@ -26,11 +26,14 @@ async function loadIndex() {
       if (!Array.isArray(items)) throw new Error('Invalid index');
       return items.map(item => {
         if (typeof item.title !== 'string' || typeof item.text !== 'string' || typeof item.url !== 'string') throw new Error('Invalid document');
+        // Un índice anterior sin headings sigue siendo válido durante un despliegue.
+        const headings = item.headings ?? [];
+        if (!Array.isArray(headings) || headings.some(heading => typeof heading !== 'string')) throw new Error('Invalid headings');
         const url = new URL(item.url,indexURL);
         // Defensa adicional: el índice de datos no puede introducir javascript:,
         // sitios ajenos o enlaces que escapen de la base de este despliegue.
         if (url.origin !== siteRoot.origin || !url.pathname.startsWith(siteRoot.pathname) || !url.pathname.endsWith('.html')) throw new Error('Unsafe result URL');
-        return {...item,href:url.href,titleKey:normalize(item.title),textKey:normalize(item.text)};
+        return {...item,href:url.href,titleKey:normalize(item.title),textKey:normalize(item.text),headingKey:normalize(headings.join(' '))};
       });
     } catch (error) {
       pendingIndex = undefined; // Un fallo no envenena la caché: Reintentar vuelve a pedirlo.
@@ -58,10 +61,12 @@ async function search() {
     if (current !== revision) return; // Solo la consulta más reciente puede actualizar la interfaz.
     const terms = [...new Set(normalize(query).split(/\s+/))];
     // AND: deben aparecer TODOS los términos. Un término repetido no altera el
-    // ranking. Cada término aporta 4 por título y 1 por contenido (acumulables).
+    // ranking. Cada término aporta 8 por título, 4 por encabezados de tarjetas o
+    // secciones y 1 por contenido (acumulables). Así una ficha temática precede
+    // a una portada que solo menciona el término; no hay excepciones por vehículo.
     // El desempate por URL es explícito, reproducible y no depende del idioma del SO.
     const results = index.filter(item => terms.every(term => (item.titleKey+' '+item.textKey).includes(term)))
-      .map(item => ({...item,score:terms.reduce((score,term)=>score+(item.titleKey.includes(term)?4:0)+(item.textKey.includes(term)?1:0),0)}))
+      .map(item => ({...item,score:terms.reduce((score,term)=>score+(item.titleKey.includes(term)?8:0)+(item.headingKey.includes(term)?4:0)+(item.textKey.includes(term)?1:0),0)}))
       .sort((a,b) => b.score-a.score || (a.url<b.url?-1:a.url>b.url?1:0));
     for (const item of results) {
       const li = document.createElement('li'); const a = document.createElement('a'); const p = document.createElement('p');
@@ -69,7 +74,13 @@ async function search() {
       // se trata como texto; los destinos ya se han validado al cargar el índice.
       a.href = item.href; a.textContent = item.title;
       if (item.lang === 'en') { a.lang='en'; a.hreflang='en'; }
-      p.textContent = item.text.slice(0,220)+(item.text.length>220?'…':'');
+      // Mostrar el contexto de la coincidencia evita resúmenes que solo repiten
+      // la introducción. Los límites se calculan por palabras, conservando tildes.
+      const words = item.text.split(/\s+/);
+      const firstMatch = words.findIndex(word => terms.some(term => normalize(word).includes(term)));
+      const start = Math.max(0,firstMatch-8);
+      const excerpt = words.slice(start).join(' ');
+      p.textContent = (start?'… ':'')+excerpt.slice(0,220)+(excerpt.length>220?'…':'');
       li.append(a,p);
       if (item.lang === 'en' && !english) {
         const language = document.createElement('small');language.textContent='Contenido en inglés';li.append(language);

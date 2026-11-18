@@ -7,10 +7,11 @@ import {searchPage} from './search-page.mjs';
 import {buildSearchIndexes} from './search-index.mjs';
 import {applySiteOrientation} from './site-orientation.mjs';
 import {applyHelpFeedback} from './help-feedback.mjs';
+import {languageSwitcher} from './language-switcher.mjs';
 const pages=['index.html','404.html',...['sobre-mi','intereses','multimedia','series-y-peliculas','videojuegos','buscar','ayuda'].map(p=>p+'/index.html')];
 const translations=JSON.parse(await fs.readFile('scripts/translations.json','utf8'));
 Object.assign(translations,JSON.parse(await fs.readFile('scripts/translation-details.json','utf8')));
-Object.assign(translations,{'Buscar en el sitio':'Search this site','Buscar en la web':'Search the website','Resultados de búsqueda':'Search results','13 de noviembre de 2026':'13 November 2026','14 de noviembre de 2026':'14 November 2026','16 de noviembre de 2026':'16 November 2026'});
+Object.assign(translations,{'Buscar en el sitio':'Search this site','Buscar en la web':'Search the website','Resultados de búsqueda':'Search results','13 de noviembre de 2026':'13 November 2026','14 de noviembre de 2026':'14 November 2026','16 de noviembre de 2026':'16 November 2026','18 de noviembre de 2026':'18 November 2026'});
 const profile=JSON.parse(await fs.readFile('profile.pending.json','utf8'));
 const escape=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const label=value=>{if(typeof value==='string')return escape(value);if(value?.es&&value?.en){translations[escape(value.es)]=escape(value.en);return escape(value.es);}return '';};
@@ -46,16 +47,23 @@ for(const file of [...pages,'public/transcripciones/war-on-wheels.html']) {
   const old=text.slice(headerStart,headerEnd);
   const brand=old.match(/<a\b[\s\S]*?<\/a>/)[0];
   const nav=old.match(/<nav\b[\s\S]*?<\/nav>/)[0];
-  const language=old.match(/<a data-language[\s\S]*?<\/a>/)[0];
+  const target=file.startsWith('public/')?'en/multimedia/index.html':'en/'+file;
+  const language=languageSwitcher('es',path.posix.relative(path.posix.dirname(file),target),{sharedTranscript:file.startsWith('public/')});
   const action=file.startsWith('public/')?'../../buscar/index.html':file.includes('/')?'../buscar/index.html':'buscar/index.html';
   const form=`<form data-header-search role="search" aria-label="Buscar en el sitio" action="${action}" method="get"><label for="busqueda-cabecera">Buscar en el sitio</label><input id="busqueda-cabecera" type="search" name="q" placeholder="Buscar en la web" maxlength="120" required><button type="submit"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="7" cy="7" r="5"></circle><path d="M11 11l5 5"></path></svg><span>Buscar</span></button></form>`;
   text=text.slice(0,headerStart)+old.match(/^<header[^>]*>/)[0]+brand+form+language+nav+'</header>'+text.slice(headerEnd);
  }
  text=text.replace(/<!-- reading-widget -->[\s\S]*?<!-- \/reading-widget -->/,'');
  text=text.replace('</body>',`<!-- reading-widget -->${readingPanel}<!-- /reading-widget --></body>`);
- text=text.replace(/datetime="2026-11-\d{2}">\d{1,2} de noviembre de 2026/g,'datetime="2026-11-16">16 de noviembre de 2026');
+ text=text.replace(/datetime="2026-11-\d{2}">\d{1,2} de noviembre de 2026/g,'datetime="2026-11-18">18 de noviembre de 2026');
  // Única plantilla comentada para los controles ES/EN; no mantener copias a mano.
- if(file==='buscar/index.html')text=text.replace(/<form role="search"[\s\S]*?<\/script>/,searchPage(label));
+ if(file==='buscar/index.html'){
+  // Retirar el encabezado de la plantilla anterior; la nueva coloca el campo
+  // compacto antes del título de resultados. El reemplazo es idempotente.
+  text=text.replace(/(<main\b[^>]*>)\s*<header><h1>[^<]*<\/h1><\/header>/,'$1');
+  if(!text.includes('data-search-page'))text=text.replace('<main ','<main data-search-page ');
+  text=text.replace(/<form role="search"[\s\S]*?<\/script>/,searchPage(label));
+ }
  if(file==='ayuda/index.html'){
   text=text.replace(/<!-- reading-help -->[\s\S]*?<!-- \/reading-help -->/,'');
   const heading=label({es:'Ajusta la lectura a tu gusto',en:'Adjust reading to your preferences'});
@@ -66,6 +74,8 @@ for(const file of [...pages,'public/transcripciones/war-on-wheels.html']) {
  // Incluir rutas ../: antes se omitía la variante intermedia en páginas interiores.
  text=text.replace(/([\w./-]+)-480\.webp 480w, ([\w./-]+)-960\.webp 960w/g,'$1-480.webp 480w, $1-768.webp 768w, $2-960.webp 960w');
  const prefix=file.startsWith('public/')?'../':file.includes('/')?'../public/':'public/';
+ text=text.replace(/\s*<script\b[^>]*src="[^"]*\/language\.js[^\"]*"[^>]*><\/script>/g,'');
+ text=text.replace('</head>',`<script src="${prefix}js/language.js" defer></script>\n</head>`);
  text=text.replace(/href="([^"?]*fonts\/fonts\.css)(?:\?[^"]*)?"/g,`href="$1?v=${fontsVersion}"`);
  text=text.replace(/\s*<script\b[^>]*src="[^"]*reading-settings\.js[^\"]*"[^>]*><\/script>/g,'');
  text=text.replace('</head>',`<script src="${prefix}js/reading-settings.js"></script>\n</head>`);
@@ -102,7 +112,7 @@ for(const file of [...pages,'public/transcripciones/war-on-wheels.html']) {
    const target=pages.includes(resolved)?'en/'+resolved:resolved;
    return `${attr}="${path.posix.relative(path.posix.dirname('en/'+file),target)}${query?'?'+query:''}"`;
  });
- english=english.replace(/<a data-language[^>]*>.*?<\/a>/,`<a data-language href="${path.posix.relative(path.posix.dirname('en/'+file),file)}" lang="es" hreflang="es">Español</a>`);
+ english=english.replace(/<!-- language-switch -->[\s\S]*?<!-- \/language-switch -->/,languageSwitcher('en',path.posix.relative(path.posix.dirname('en/'+file),file)));
  english=english.replace('aria-label="Ruta de navegación"','aria-label="Breadcrumb"');
  english=english.replace('en/en/','en/');
  const dest='en/'+file;await fs.mkdir(path.dirname(dest),{recursive:true});await fs.writeFile(dest,english);

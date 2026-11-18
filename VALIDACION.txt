@@ -1,11 +1,12 @@
-CIERRE TÉCNICO V2 — 16/11/2026
-Fuente: rama feat/mejoras-ux-accesibilidad. No es una V3 posterior a usuarios.
+VERIFICACIÓN TÉCNICA V3 — BUSCADOR E IDIOMAS 18/11/2026
+Fuente: rama feat/mejoras-ux-accesibilidad; trabajo local posterior a las sesiones
+de V2. La V2 evaluada y los JSON originales permanecen intactos.
 
 PRUEBAS Y ALCANCE
-58 pruebas completas, 0 fallidas, 0 omitidas.
-Incluyen 18 escenarios específicos del buscador; no sumar ambos recuentos.
-Informe completo: validacion/revision-2026-11-14-buscador/runs/playwright-full-2026-11-16T17-18-44-218Z-3112.json
-SHA256 13a61d341059fe18a4bc7ea3049c75dc1f9208d13a89ecd5efbc4155c8920f40
+67 pruebas completas, 0 fallidas, 0 omitidas.
+Incluyen 23 escenarios específicos del buscador; no sumar ambos recuentos.
+Informe completo: validacion/revision-2026-11-18-v3-idiomas/runs/playwright-full-2026-11-18T17-42-56-887Z-12760.json
+SHA256 49139dc6eb499724faffa588b5937cdf3b5d5a303ab3ea367dbad88eee619724
 HTML/CSS: 19 html, 0 mensajes; 23 css, 0 mensajes.
 Recursos locales ausentes: 0.
 Los archivos íntegros, parciales e intentos de desarrollo tienen nombres propios.
@@ -16,26 +17,28 @@ COMPROBACIONES
 Navegación de las 19 rutas sin gráficos, estilos ni JavaScript; no se presenta
 como una sesión con lector de pantalla. Axe sin infracciones detectadas en las
 comprobaciones ejecutadas. Nu no es un comprobador de accesibilidad.
-La conformidad AAA se estudia separadamente para V3: no se certifica aquí.
+Estas comprobaciones no certifican conformidad AAA.
 
-RENDIMIENTO DE LABORATORIO
-home: rendimiento 100/100, LCP 1.09 s, CLS 0; carga observada 141 ms
-about: rendimiento 100/100, LCP 1.17 s, CLS 0; carga observada 213 ms
-media: rendimiento 100/100, LCP 1.11 s, CLS 0; carga observada 219 ms
-search: rendimiento 100/100, LCP 1.10 s, CLS 0; carga observada 169 ms
-vehicles: rendimiento 96/100, LCP 2.77 s, CLS 0; carga observada 130 ms
-films: rendimiento 100/100, LCP 1.27 s, CLS 0.01925920843245973; carga observada 359 ms
-games: rendimiento 98/100, LCP 2.22 s, CLS 0; carga observada 185 ms
-Fuente validacion/revision-2026-11-16-v2/performance-summary.json. Emulación móvil localhost; no son
-mediciones de producción ni tiempos de personas.
+RENDIMIENTO
+No se ha repetido Lighthouse en este cambio. Las mediciones del 16/11 son
+históricas de V2 y no se presentan como resultados nuevos de V3.
 
-CAMBIOS
-Mapa jerárquico completo y migas antes del main; ayuda ES/EN; mapa ante cero
-resultados y 404; correo/LinkedIn visibles; variantes intermedias WebP también
-en rutas ../; referencias y aficiones confirmadas por Jorge el 16/11.
-Se conserva el estilo, la geometría de imágenes, las tarjetas abiertas igualadas
-y las cerradas compactas. OpenDyslexic y panel flotante siguen siendo opcionales.
+CAMBIOS DERIVADOS DE LAS OBSERVACIONES COMUNICADAS POR JORGE
+Campo de cabecera más ancho y con etiqueta visible. Formulario de resultados
+compacto y centrado, sin explicación repetida. Encabezados de tarjetas/secciones
+incluidos en el índice: pesos por término título 8, encabezados 4, texto 1.
+T-72 devuelve primero Vehículos y museos en ES/EN. Resúmenes junto a coincidencias.
+Selector Idioma/Language con Español y English visibles, idioma actual marcado,
+opciones de 44 px y navegación nativa sin JavaScript. Con JavaScript conserva
+consulta, parámetros y fragmento al pasar a la página equivalente. El recurso
+único de transcripción identifica que su enlace lleva a multimedia en inglés.
+No hay una regla especial para T-72. Se conservan las fuentes, paleta y geometría
+de imágenes, tarjetas abiertas/cerradas y opciones de accesibilidad.
 
 DEPENDENCIAS
-Las tres sesiones reales, su análisis y una V3 derivada de usuarios siguen pendientes.
+Jorge confirma tres sesiones de V2. La tercera exportación está etiquetada por
+error como PILOTO/PC: su aclaración U03/móvil se guarda aparte sin modificarla.
+Faltan consolidar fichas y análisis; revisar avisos de calidad de mirada;
+completar evaluación/manual AAA y las herramientas exigidas sobre V3.
+No se ha realizado una nueva tanda humana sobre V3 ni se ha publicado este cambio.
 La valoración experta de la métrica no garantiza la nota académica.

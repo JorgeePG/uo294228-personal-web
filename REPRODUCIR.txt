@@ -20,6 +20,12 @@ Cada ejecución escribe un JSON nuevo (full/partial + fecha + PID) en
 validacion/revision-2026-11-14-buscador/runs. latest-full.json y
 latest-partial.json son punteros que declaran alcance, comando, resultado y hash.
 El JSON antiguo de revision-2026-11-12 se conserva como histórico.
+Para guardar pruebas y validadores de la V3 en otra carpeta, en PowerShell:
+  $env:UX_EVIDENCE_DIR='validacion/revision-2026-11-18-v3-idiomas'
+  $env:UX_VALIDATION_OUTPUT='validacion/revision-2026-11-18-v3-idiomas/nu'
+  pnpm test
+  pnpm validate
+Estos parámetros no alteran el contenido público ni la V2 congelada.
 
 Cierre V2 16/11: 58 pruebas completas (18 del buscador incluidas). La prueba de
 navegación sin gráficos también bloquea CSS/JavaScript en las 19 rutas.
@@ -28,7 +34,11 @@ Para medir rendimiento sin sustituir los informes anteriores, en PowerShell:
 Después: node scripts/report.mjs
 Las fechas reales de cada ejecución figuran dentro de los JSON. El nombre del
 directorio revision-2026-11-14-buscador es histórico; los runs tienen fecha propia.
-AAA y las pruebas de usuarios se documentan aparte: esta web es V2, no V3.
+La V2 cerrada el 16/11 se conserva en el workspace de UX como copia congelada.
+Esta fuente incorpora las mejoras V3 del 18/11 derivadas de las sesiones de V2:
+campo de cabecera identificable, resultados compactos y relevancia de tarjetas.
+Las comprobaciones AAA y los resultados de usuarios se documentan aparte;
+no se certifica conformidad AAA ni una evaluación humana de V3 aquí.
 
 Editar fuente ES, public/js/search.js, scripts/search-index.mjs y
 scripts/search-page.mjs. No editar en/ ni los índices JSON a mano; pnpm build
@@ -37,6 +47,16 @@ minificar y conservan comentarios. CSS minificado se regenera desde sus fuentes.
 Las consultas son AND por subcadenas, insensibles a tildes/mayúsculas, hasta 120
 unidades UTF-16. No hay sinónimos ni corrección ortográfica ni búsqueda en PDF,
 audio, vídeo o webs externas; sí se incluye la transcripción HTML inglesa.
+El índice añade headings (encabezados H2-H6). Cada término aporta 8 puntos en
+el título, 4 en encabezados y 1 en contenido, acumulables. No se multiplica por
+frecuencia ni se trata un vehículo de forma especial. El desempate es por URL.
+Los índices anteriores sin headings siguen admitidos durante un despliegue.
+El resumen muestra hasta 220 caracteres del contexto de una coincidencia.
+Los idiomas se generan desde scripts/language-switcher.mjs, con enlaces nativos
+y una marca del idioma actual. public/js/language.js conserva parámetros y
+fragmento al cambiar; sin JavaScript los enlaces siguen abriendo la página
+equivalente. No hay redirecciones automáticas por idioma o ubicación. La
+transcripción inglesa única avisa de que el cambio lleva a multimedia en inglés.
 La consulta de cabecera aparece en una URL GET: puede quedar en historial y
 registros del alojamiento. El cálculo de relevancia se hace en el navegador.
 

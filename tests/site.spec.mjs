@@ -82,6 +82,6 @@ test('header search works by button and Enter in both languages and on transcrip
  for(const [route,term,title,viaEnter] of [['sobre-mi/','tanques','Buscar',false],['en/intereses/','tanks','Search',true],['public/transcripciones/war-on-wheels.html','coleccionismo','Buscar',true],['404.html','T-90M','Buscar',false]]){
   await page.goto('/'+route);const header=page.locator('body > header');await header.getByRole('searchbox').fill(term);
   if(viaEnter)await header.getByRole('searchbox').press('Enter');else await header.getByRole('button',{name:title,exact:true}).click();
-  await expect(page.locator('main h1')).toHaveText(title);await expect(page.locator('[data-results] li').first()).toBeVisible();
+  await expect(page.locator('main h1')).toHaveText(title==='Search'?'Search results':'Resultados de búsqueda');await expect(page.locator('[data-results] li').first()).toBeVisible();
  }
 });

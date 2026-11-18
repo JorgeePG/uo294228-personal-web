@@ -1,4 +1,4 @@
-WEB PERSONAL — REVISIÓN 14/11/2026
+WEB PERSONAL — V3 LOCAL, MEJORAS DE BÚSQUEDA 18/11/2026
 
 GitHub Pages publica esta web desde feat/mejoras-ux-accesibilidad, carpeta /.
 URL: https://jorgeepg.github.io/uo294228-personal-web/
@@ -13,10 +13,10 @@ pnpm images              Normaliza JPG y genera WebP 480/768/960
 pnpm build               Genera CSS minificado, versiones EN e índices de búsqueda
 pnpm test                Pruebas funcionales, responsive y axe en Chrome
 pnpm validate            Validador Nu HTML/CSS y rutas de recursos locales
-pnpm performance         Lighthouse de las seis secciones (requiere pnpm dev)
+pnpm performance         Lighthouse de siete páginas (requiere pnpm dev)
 node scripts/screenshots.mjs   Capturas de QA (requiere pnpm dev)
 node scripts/reading-settings-qa.mjs  Capturas de preferencias (requiere pnpm dev)
-node scripts/report.mjs        Actualiza evidencias resumidas y manifiesto
+node scripts/report.mjs        Actualiza VALIDACION.txt desde pruebas completas
 
 La web sigue siendo estática y no necesita Node en producción. El buscador
 requiere HTTP y JavaScript; sin JavaScript hay enlace al mapa del sitio.

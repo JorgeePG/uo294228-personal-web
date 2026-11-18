@@ -3,7 +3,7 @@ import path from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url);
-const output='validacion/revision-2026-11-12';await fs.mkdir(output,{recursive:true});
+const output=process.env.UX_VALIDATION_OUTPUT||'validacion/revision-2026-11-12';await fs.mkdir(output,{recursive:true});
 // Validar las páginas públicas; excluir copias de investigación y salidas de QA.
 // El rastreador del índice usa las mismas exclusiones de directorios de trabajo.
 async function collect(dir,ext){const out=[];for(const item of await fs.readdir(dir,{withFileTypes:true})){if(['node_modules','validacion','test-results','playwright-report','.cache','.git','scripts'].includes(item.name))continue;const p=path.join(dir,item.name);if(item.isDirectory())out.push(...await collect(p,ext));else if(p.endsWith(ext))out.push(p);}return out;}

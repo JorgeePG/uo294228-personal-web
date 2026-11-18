@@ -918,14 +918,14 @@
     "es": {
       "file": "public/search-index.json",
       "entries": 8,
-      "bytes": 34262,
-      "sha256": "ca80c95a3b90ff22e10a87cb76cd5bfe0d20638bffc93832c2809edbc24ae87e"
+      "bytes": 35139,
+      "sha256": "1b8e97593f6f0af7148eb43056d70651c391b1fdcc6356b519297582cfa25e10"
     },
     "en": {
       "file": "public/search-index-en.json",
       "entries": 8,
-      "bytes": 33858,
-      "sha256": "d8e4848fb4742162fc6963ec15931803d05271e3bff74e225a49121b18c29d1f"
+      "bytes": 34735,
+      "sha256": "8d2d231e7272549c683a1354511a809ad44e4c071a48fc250999cc547f0382d6"
     }
   },
   "pairs": [

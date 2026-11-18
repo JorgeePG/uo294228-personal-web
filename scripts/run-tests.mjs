@@ -8,7 +8,7 @@ import {createHash} from 'node:crypto';
 const args=process.argv.slice(2).filter(arg=>arg!=='--');
 const scope=args.length?'partial':'full';
 const stamp=new Date().toISOString().replace(/[:.]/g,'-');
-const directory='validacion/revision-2026-11-14-buscador';
+const directory=process.env.UX_EVIDENCE_DIR||'validacion/revision-2026-11-14-buscador';
 await fs.mkdir(directory+'/runs',{recursive:true});
 const reportFile=`${directory}/runs/playwright-${scope}-${stamp}-${process.pid}.json`;
 const result=spawnSync(process.execPath,['node_modules/@playwright/test/cli.js','test',...args],{

@@ -47,7 +47,7 @@ scenario('S09','HTTP failure retry and memory cache','Primer índice HTTP 503; r
  await expect(fields(page).status).toContainText('No se ha podido');await expect(page.getByRole('link',{name:'Consultar el mapa del sitio',exact:true})).toBeVisible();await page.getByRole('button',{name:'Reintentar búsqueda',exact:true}).click();await expect(fields(page).links).not.toHaveCount(0);await expect(page.locator('[data-search-retry]')).not.toBeVisible();const retryResult=await fields(page).links.allTextContents();await submit(page,'T-90M');expect(requests).toBe(2);return {requests,retryResult,final:await fields(page).status.textContent()};
 });
 scenario('S10','malformed and unsafe indexes fail closed','JSON sintético inválido; enlace javascript:','Recuperación accesible sin renderizar resultados inseguros',async({page})=>{
- const results=[];for(const json of [{bad:true},[{title:'Inseguro',text:'tanque',url:'javascript:alert(1)'}]]){
+ const results=[];for(const json of [{bad:true},[{title:'Inseguro',text:'tanque',url:'javascript:alert(1)'}],[{title:'Encabezados inválidos',text:'tanque',url:'../intereses/index.html',headings:'tanque'}]]){
   await page.route('**/search-index.json',route=>route.fulfill({json}));await page.goto('/buscar/?q=tanque');await expect(fields(page).status).toContainText('No se ha podido');await expect(fields(page).links).toHaveCount(0);results.push(await fields(page).status.textContent());await page.unroute('**/search-index.json');
  }return {synthetic:true,results};
 });
@@ -92,6 +92,45 @@ scenario('S18','deployment under an arbitrary subdirectory','Servidor local mont
  try {
   await new Promise((resolve,reject)=>{server.stdout.once('data',resolve);server.once('error',reject);server.once('exit',code=>{if(code)reject(new Error('Mounted server failed: '+code));});});
   const base='http://127.0.0.1:4174/curso/portfolio/';await page.goto(base+'sobre-mi/');await page.locator('body > header').getByRole('searchbox').fill('aviacion');await page.locator('body > header').getByRole('searchbox').press('Enter');await expect(fields(page).links).not.toHaveCount(0);
-  const hrefs=await fields(page).links.evaluateAll(nodes=>nodes.map(n=>n.href));for(const href of hrefs){expect(href.startsWith(base)).toBe(true);expect((await request.get(href)).status()).toBe(200);}return {url:page.url(),hrefs};
+  const hrefs=await fields(page).links.evaluateAll(nodes=>nodes.map(n=>n.href));for(const href of hrefs){expect(href.startsWith(base)).toBe(true);expect((await request.get(href)).status()).toBe(200);}
+  await page.getByRole('link',{name:'English',exact:true}).click();expect(page.url().startsWith(base+'en/buscar/')).toBe(true);expect(new URL(page.url()).searchParams.get('q')).toBe('aviacion');await expect(page.locator('#consulta')).toHaveValue('aviacion');return {url:page.url(),hrefs};
  } finally {server.kill();}
+});
+scenario('S19','vehicle card precedes incidental homepage mention','T-72 desde ES y EN','Vehículos primero, portada después y resumen que menciona T-72',async({page})=>{
+ const observed=[];
+ for(const lang of ['', 'en/']){
+  await page.goto('/'+lang+'buscar/?q=t-72');const ui=fields(page);await expect(ui.links.first()).toHaveAttribute('href',new RegExp('/'+lang+'intereses/index\\.html$'));
+  const hrefs=await ui.links.evaluateAll(nodes=>nodes.map(n=>n.href));expect(hrefs.findIndex(href=>new URL(href).pathname==='/'+lang+'index.html')).toBeGreaterThan(0);
+  const excerpt=await page.locator('[data-results] li').first().locator('p').textContent();expect(excerpt.toLowerCase()).toContain('t-72');observed.push({lang,hrefs,excerpt});
+ }
+ return observed;
+});
+scenario('S20','heading relevance without vehicle-specific exceptions','Índice sintético: título, encabezado, veinte menciones en cuerpo','Título primero, encabezado segundo y menciones incidentales después',async({page})=>{
+ await page.route('**/search-index.json',route=>route.fulfill({json:[
+  {title:'Portada',text:'Strela-10 '.repeat(20),url:'../index.html'},
+  {title:'Vehículos',headings:['Strela-10'],text:'Ficha Strela-10',url:'../intereses/index.html'},
+  {title:'Strela-10',text:'Defensa antiaérea',url:'../sobre-mi/index.html'}
+ ]}));
+ await page.goto('/buscar/');const result=await submit(page,'Strela-10');expect(result.titles).toEqual(['Strela-10','Vehículos','Portada']);return {synthetic:true,...result};
+});
+scenario('S21','header field has a visible label and usable width','Portada ES/EN a 320, 768 y 1280 px','Etiqueta legible, campo >=140 px y sin desbordamiento',async({page})=>{
+ const observed=[];for(const lang of ['', 'en/'])for(const width of [320,768,1280]){
+  await page.setViewportSize({width,height:900});await page.goto('/'+lang);const header=page.locator('body > header');const label=header.locator('label');const input=header.getByRole('searchbox');
+  await expect(input).toHaveAccessibleName(lang?'Search this site':'Buscar en el sitio');
+  const labelBox=await label.boundingBox(),inputBox=await input.boundingBox();expect(labelBox.width).toBeGreaterThan(80);expect(labelBox.height).toBeGreaterThan(12);expect(inputBox.width).toBeGreaterThanOrEqual(140);expect(inputBox.height).toBeGreaterThanOrEqual(44);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);observed.push({lang,width,labelBox,inputBox});
+  if(!lang&&width!==768){const directory=(process.env.UX_EVIDENCE_DIR||'validacion')+'/screenshots';fs.mkdirSync(directory,{recursive:true});await page.screenshot({path:`${directory}/home-${width}-${Date.now()}.png`,fullPage:true});}
+ }return observed;
+});
+scenario('S22','compact centered form and prominent results','Consulta t-72 a 320, 768 y 1280 px','Una fila de búsqueda antes del título; columna centrada; sin explicación visible',async({page})=>{
+ const observed=[];for(const width of [320,768,1280]){
+  await page.setViewportSize({width,height:900});await page.goto('/buscar/?q=t-72');const ui=fields(page);await expect(ui.links.first()).toBeVisible();await expect(page.locator('main h1')).toHaveText('Resultados de búsqueda');await expect(page.locator('#search-help')).toHaveCount(0);
+  const formBox=await ui.form.boundingBox(),mainBox=await page.locator('main').boundingBox(),headingBox=await page.locator('main h1').boundingBox();expect(formBox.height).toBeLessThanOrEqual(60);expect(formBox.y+formBox.height).toBeLessThan(headingBox.y);expect(Math.abs(formBox.x+formBox.width/2-width/2)).toBeLessThan(2);expect(Math.abs(mainBox.x+mainBox.width/2-width/2)).toBeLessThan(2);
+  await expect(ui.input).toHaveAccessibleName('Buscar en el sitio');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);observed.push({width,formBox,mainBox,headingBox});
+  const directory=(process.env.UX_EVIDENCE_DIR||'validacion')+'/screenshots';fs.mkdirSync(directory,{recursive:true});await page.screenshot({path:`${directory}/search-${width}-${Date.now()}.png`,fullPage:true});
+ }return observed;
+});
+scenario('S23','search remains usable with enlarged text','375 px; ajustes de texto al 200 %','Sin desbordamiento; búsqueda y resultado accesibles con teclado; axe sin infracciones',async({page})=>{
+ await page.setViewportSize({width:375,height:900});await page.goto('/buscar/');await page.evaluate(()=>document.documentElement.dataset.readingSize='200');const ui=fields(page);await ui.input.focus();await page.keyboard.type('t-72');await page.keyboard.press('Tab');await expect(ui.form.getByRole('button',{name:'Buscar',exact:true})).toBeFocused();await page.keyboard.press('Enter');await expect(ui.links.first()).toHaveAttribute('href',/\/intereses\/index\.html$/);await page.keyboard.press('Tab');await expect(ui.links.first()).toBeFocused();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.addScriptTag({path:'node_modules/axe-core/axe.min.js'});const violations=await page.evaluate(async()=> (await axe.run()).violations.map(v=>v.id));expect(violations).toEqual([]);return {width:375,textSize:'200%',violations};
 });
